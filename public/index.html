@@ -427,6 +427,15 @@
                 </h4>
                 <p class="pt-0 -mt-2 text-gray-400 sm:text-lg py-7 px-7" x-transition:enter="transition-all ease-out duration-300" x-transition:enter-start="opacity-0 transform -translate-y-4" x-transition:enter-end="opacity-100 transform -translate-y-0" x-transition:leave="transition-all ease-out hidden duration-200" x-transition:leave-start="opacity-100 transform -translate-y-0" x-transition:leave-end="opacity-0 transform -translate-y-4" x-show="show" data-c2c-process="1" style="display: none;">By using popular integration services such as IFTTT, Zapier, Integromat and more, you'll have virtually infinite choices on how and where you want to be notified.</p>
             </div>
+
+            <!-- Question 6 -->
+            <div x-data="{ show: false }" class="relative overflow-hidden border-2 border-gray-200 rounded-lg select-none hover:bg-white">
+                <h4 @click="show=!show" class="flex items-center justify-between text-lg font-medium text-gray-700 dark:text-gray-300 cursor-pointer sm:text-xl px-7 py-7 hover:text-gray-800">
+                    <span class="">How are you "infinitely scalable" and instant everywhere?</span>
+                    <svg class="w-6 h-6 transition-all duration-200 ease-out transform rotate-0" :class="{ '-rotate-45' : show }" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" class=""></path></svg>
+                </h4>
+                <p class="pt-0 -mt-2 text-gray-400 sm:text-lg py-7 px-7" x-transition:enter="transition-all ease-out duration-300" x-transition:enter-start="opacity-0 transform -translate-y-4" x-transition:enter-end="opacity-100 transform -translate-y-0" x-transition:leave="transition-all ease-out hidden duration-200" x-transition:leave-start="opacity-100 transform -translate-y-0" x-transition:leave-end="opacity-0 transform -translate-y-4" x-show="show" data-c2c-process="1" style="display: none;">Our website and webapps literally "live" on the cloud edge (also called CDN) of Cloudflare. We leverage the power of their thousands of servers worldwide (193 cities) by using their Pages + Worker services, and as an added bonus, we're DDoS protected too!</p>
+            </div>
         </div>
     </div>
 </section>
