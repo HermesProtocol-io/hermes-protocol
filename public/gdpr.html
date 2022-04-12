@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hermes Protocol | Homepage</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.2/tailwind.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="tailwind.css" rel="stylesheet">
+    <link rel="shortcut icon" href="images/hermes-logo.svg" />
+</head>
+
+<body>
+
+    <!-- Section 1 -->
+    <section class="pb-40 antialiased bg-white dark:bg-gray-800">
+        <div class="px-12 mx-auto max-w-7xl">
+            <!-- Header Bar -->
+            <div class="flex flex-wrap items-center justify-between w-full h-24 text-black"
+                x-data="{ showMenu: false }">
+                <div
+                    class="relative z-10 flex items-center w-auto px-0 leading-10 md:px-2 lg:flex-grow-0 lg:flex-shrink-0 lg:text-left">
+                    <a href="#_"
+                        class="inline-block font-sans text-2xl font-extrabold text-left text-black no-underline bg-transparent cursor-pointer focus:no-underline">
+                        <img class="object-contain w-20 h-20 " src="images/hermes-logo.svg">
+                        <!--  <svg class="w-10 h-10 text-black fill-current" viewBox="0 0 39 15" xmlns="http://www.w3.org/2000/svg">
+                   <path d="M11.252 1.152C4.184 2.526.454 6.918.061 14.329c1.963-4.049 4.798-5.975 8.503-5.778 2.115.112 3.84 1.295 5.75 2.603 3.11 2.133 6.712 4.601 13.281 3.324 7.068-1.374 10.798-5.766 11.191-13.177-1.963 4.049-4.798 5.975-8.503 5.779-2.115-.113-3.84-1.296-5.75-2.604-3.11-2.133-6.712-4.601-13.281-3.324z" fill-rule="evenodd" class=""></path>
+               </svg>-->
+                    </a>
+                </div>
+                <div class="left-0 z-0 flex-col justify-center w-full px-4 space-y-3 font-semibold leading-10 md:space-y-0 lg:flex-grow-0 md:flex-row lg:text-left lg:text-center hidden md:flex absolute"
+                    :class="{'flex z-30 top-0 bg-white h-full fixed': showMenu, 'hidden md:flex absolute': !showMenu }">
+                    <a href="/"
+                        class="box-border inline-block text-center text-gray-900 no-underline bg-transparent cursor-pointer md:mr-4 hover:text-muddywaters-500 focus:no-underline">
+                        Home
+                    </a>
+                    <a href="/#Features"
+                        class="box-border inline-block text-center text-gray-900 no-underline bg-transparent cursor-pointer md:mx-4 hover:text-muddywaters-500 focus:no-underline">
+                        Features
+                    </a>
+                    <a href="/#OurTeam"
+                        class="box-border inline-block text-center text-gray-900 no-underline bg-transparent cursor-pointer md:mx-4 hover:text-muddywaters-500 focus:no-underline">Team</a>
+                    <a href="/#FAQs"
+                        class="box-border inline-block text-center text-gray-900 no-underline bg-transparent cursor-pointer md:mx-4 hover:text-muddywaters-500 focus:no-underline">
+                        FAQs
+                    </a>
+
+                </div>
+                <div
+                    class="relative hidden mt-2 font-medium leading-10 md:inline-block lg:flex-grow-0 lg:flex-shrink-0 lg:mt-0 lg:text-right">
+                    <a href="#_"
+                        class="px-5 py-4 text-lg font-medium text-white bg-muddywaters-500 shadow-xl hover:bg-muddywaters-600 rounded-2xl cursor-not-allowed">Webapp</a>
+                </div>
+
+                <div @click="showMenu = !showMenu"
+                    class="absolute right-0 z-40 flex flex-col items-center items-end justify-center w-10 h-10 mr-8 rounded-full cursor-pointer md:hidden hover:bg-gray-100">
+                    <svg class="w-6 h-6 text-gray-700" x-show="!showMenu" fill="none" stroke-linecap="round"
+                        stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
+                        <path d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                    <svg class="w-6 h-6 text-gray-700" x-show="showMenu" fill="none" stroke="currentColor"
+                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="display: none;">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                        </path>
+                    </svg>
+                </div>
+
+            </div>
+            <!-- End Header Bar -->
+
+            <!-- Start Main Content -->
+            <div class="flex flex-col items-center w-full mt-24 lg:space-x-10 lg:flex-row">
+                <div class="relative z-10 w-full">
+                    <h1 class="w-full text-3xl font-bold text-center sm:text-4xl md:text-5xl text-center">GDPR
+                    </h1>
+                    <h3 class="mt-6 mb-2 text-xl sm:text-left md:text-2xl">GDPR Privacy Notice to EU Residents</h3>
+                    <p class="text-base text-gray-500 sm:text-lg" data-c2c-process="1">
+                        If you are a resident of the European Union (“EU”), United Kingdom, Lichtenstein, Norway, or
+                        Iceland, you may have additional rights under the EU General Data Protection Regulation (the
+                        “GDPR”) with respect to your Personal Data, as outlined below.
+                    </p>
+                    <p class="text-base text-gray-500 sm:text-lg" data-c2c-process="1">
+                        This GDPR Privacy Notice supplements the Company’s Privacy Policy (the “Privacy Policy”). If you
+                        have any questions about this notice or whether any of the following applies to you, please
+                        contact us at <a href="mailto:gdpr@momentum-free.com" class="underline">gdpr@momentum-free.com</a>.
+                    </p>
+                    <h3 class="mt-6 mb-2 text-xl sm:text-left md:text-2xl">What Personal Data Do We Collect from You?
+                    </h3>
+                    <p class="text-base text-gray-500 sm:text-lg" data-c2c-process="1">
+                        We collect Personal Data about you when you provide such information directly to us, when third
+                        parties such as our business partners or service providers provide us with Personal Data about
+                        you, or when Personal Data about you is automatically collected in connection with your use of
+                        our Services.
+                    </p>
+                    <h3 class="mt-6 mb-2 text-xl sm:text-left md:text-2xl">Information we collect directly from you:
+                    </h3>
+                    <p class="text-base text-gray-500 sm:text-lg" data-c2c-process="1">
+                        We receive Personal Data directly from you when you provide us with such Personal Data,
+                        including without limitation the following:
+                    </p>
+                    <ol class="list-decimal ml-5">
+                        <li class="mb-2">Website:<br>
+                            <ol class="ml-6">
+                                <li>
+                                    a) Nick name
+                                </li>
+                                <li>
+                                    b) Email
+                                </li>
+                                <li>
+                                    c) Dados de navegação de user
+                                </li>
+                            </ol>
+                        </li>
+                        <li class="mb-2">Bots de discord:<br>
+                            <ol class="ml-6">
+                                <li>
+                                    a) Bots de discord:<br>
+                                    <ol class="ml-7">
+                                        <li>
+                                            i) Discord userID
+                                        </li>
+                                        <li>
+                                            ii) IP address
+                                        </li>
+                                    </ol>
+                                </li>
+                                <li class="mb-2">
+                                    b) Hermes protocol:<br>
+                                    <ol class="ml-7">
+                                        <li>
+                                            i) Discord userID
+                                        </li>
+                                        <li>
+                                            ii) Crypto wallet address
+                                        </li>
+                                        <li>
+                                            iii) Guild/channel IDs
+                                        </li>
+                                    </ol>
+                                </li>
+                                <li class="mb-2">
+                                    c) Client projects that we host the database can store the following
+                                    information:<br>
+                                    <ol class="ml-7">
+                                        <li>
+                                            i) Discord userID
+                                        </li>
+                                        <li>
+                                            ii) Client score (score formula provided by the client)
+                                        </li>
+                                    </ol>
+                                </li>
+                                <li>
+                                    d) Other bots:<br>
+                                    <ol class="ml-7">
+                                        <li>
+                                            i) Discord userID
+                                        </li>
+                                    </ol>
+                                </li>
+                            </ol>
+                        </li>
+                    </ol>
+                    <h3 class="mt-6 mb-2 text-xl sm:text-left md:text-2xl">Information we receive from third party
+                        sources:
+                    </h3>
+                    <p class="text-base text-gray-500 sm:text-lg" data-c2c-process="1">
+                        If you interact with a third party service when using our Services, such as if you use a third
+                        party service to log-in to our Services (e.g.Discord), or if you share content from our Services
+                        through a third party social media service, the third party service may send us information
+                        about you, such as information from your public profile, if the third party service and your
+                        account settings allow such sharing. The information we receive will depend on the policies and
+                        your account settings with the third-party service.
+                    </p>
+                    <h3 class="mt-6 mb-2 text-xl sm:text-left md:text-2xl">How Do We Use Your Personal Data?
+                    </h3>
+                    <p class="text-base text-gray-500 sm:text-lg" data-c2c-process="1">
+                        We process Personal Data to operate, improve, understand and personalize our Services. We will
+                        only process your Personal Data if we have a lawful basis for doing so. We do not share or sell
+                        your personal information for advertising or marketing purposes.
+                    </p>
+                    <h3 class="mt-6 mb-2 text-xl sm:text-left md:text-2xl">How and With Whom Do We Share Your Data?
+                    </h3>
+                    <p class="text-base text-gray-500 sm:text-lg" data-c2c-process="1">
+                        We don’t share your personal information with any third-parties, except when we believe it is
+                        necessary to comply with applicable law.
+                    </p>
+                    <h3 class="mt-6 mb-2 text-xl sm:text-left md:text-2xl">How Long Do We Retain Your Personal Data?
+                    </h3>
+                    <p class="text-base text-gray-500 sm:text-lg" data-c2c-process="1">
+                        We retain Personal Data about you for as long as you have an open account with us.
+                    </p>
+                    <h3 class="mt-6 mb-2 text-xl sm:text-left md:text-2xl">What Security Measures Do We Use?
+                    </h3>
+                    <p class="text-base text-gray-500 sm:text-lg" data-c2c-process="1">
+                        We use commercially reasonable means to protect your Personal Data.
+                    </p>
+                    <h3 class="mt-6 mb-2 text-xl sm:text-left md:text-2xl">Personal Data of Children:
+                    </h3>
+                    <p class="text-base text-gray-500 sm:text-lg" data-c2c-process="1">
+                        As noted in the Terms of Use, we do not knowingly collect or solicit Personal Data from anyone
+                        under the age of 16. If you are under 16, please do not attempt to register for the Services or
+                        send any Personal Data about yourself to us. If we learn that we have collected Personal Data
+                        from a child under age 16, we will delete that information as quickly as possible. If you
+                        believe that a child under 16 may have provided us Personal Data, please contact us at
+                        <a href="mailto:gdpr@momentum-free.com" class="underline">gdpr@momentum-free.com</a>
+                    </p>
+                </div>
+            </div>
+            <!-- End Main Content -->
+        </div>
+    </section>
+
+    <!-- Section 8 -->
+    <section class="bg-white dark:bg-gray-800">
+        <div class="px-8 py-12 mx-auto text-gray-600 bg-white xl:pb-24 max-w-7xl xl:px-12">
+            <div class="grid gap-6 mx-auto md:grid-cols-2 lg:grid-cols-4 lg:gap-x-8">
+                <div class="mb-6 lg:mb-8">
+                    <div class="col-span-3">
+                        <a class="text-xl font-black leading-none text-gray-900 select-none logo">
+                            <img class="object-contain w-32 h-32 " src="images/hermes-full-logo.svg">
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h5 class="text-xl font-bold text-gray-700">Product</h5>
+                    <nav class="mt-4">
+                        <ul class="space-y-2">
+                            <li>
+                                <a href="#" class="text-base dark:text-gray-300 hover:text-gray-500">Features</a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-base dark:text-gray-300 hover:text-gray-500">Integrations</a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-base dark:text-gray-300 hover:text-gray-500">Documentation</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div>
+                    <h5 class="text-xl font-bold dark:text-gray-300 text-gray-700">About</h5>
+                    <nav class="mt-4">
+                        <ul class="space-y-2">
+                            <li>
+                                <a href="/#OurTeam" class="text-base dark:text-gray-300 hover:text-gray-500">Our
+                                    Team</a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-base dark:text-gray-300 hover:text-gray-500">Work With
+                                    Us</a>
+                            </li>
+                            <!-- <li>
+                        <a href="#Partners" class="text-base hover:text-gray-500 dark:text-gray-300">Partners</a>
+                    </li> -->
+                        </ul>
+                    </nav>
+                </div>
+                <div>
+                    <h5 class="text-xl font-bold text-gray-700 dark:text-gray-300">Resources</h5>
+                    <nav class="mt-4">
+                        <ul class="space-y-2">
+                            <li>
+                                <a href="#" class="text-base hover:text-gray-500 dark:text-gray-300">Help Center</a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-base hover:text-gray-500 dark:text-gray-300">Developer
+                                    API</a>
+                            </li>
+                            <!--<li class="">
+                        <a href="#" class="text-base hover:text-gray-500">Our Blog</a>
+                    </li>-->
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+
+            <div
+                class="flex flex-col items-center justify-between mx-auto mt-16 space-y-4 md:space-y-0 md:flex-row lg:mt-20">
+                <div class="space-y-4 text-sm text-center md:space-y-0 md:text-left">
+                    <p class="text-gray-500 dark:text-gray-300">© 2021 <a href="https://momentum-free.com"
+                            class="text-base hover:text-gray-500">Momentum Free</a>. All rights reserved.</p>
+                    <p class="my-4 text-xs leading-normal text-gray-500 dark:text-gray-300" data-c2c-process="1">
+                        Creating beautiful websites since 2020.</p>
+                </div>
+                <a href="https://app.hermesprotocol.io"
+                    class="inline-block px-5 py-4 font-semibold text-white rounded-lg bg-gradient-to-br from-muddywaters-500 to-muddywaters-600 hover:from-muddywaters-400 hover:to-muddywaters-600 lg:px-8 cursor-not-allowed">Get
+                    Started Today</a>
+            </div>
+            <div
+                class="flex flex-col items-center justify-between mx-auto mt-8 space-y-4 md:space-y-0 md:flex-row lg:mt-16">
+                <nav class="flex flex-wrap justify-center space-x-6">
+                    <a href="privacy_policy.html" class="mb-2 text-sm hover:text-gray-700 dark:text-gray-300">Privacy
+                        Policy</a>
+                    <a href="terms.html" class="mb-2 text-sm hover:text-gray-700 dark:text-gray-300">Terms and
+                        Conditions</a>
+                    <a href="gdpr.html" class="mb-2 text-sm hover:text-gray-700 dark:text-gray-300">GDPR</a>
+                </nav>
+                <nav class="flex items-center space-x-2">
+                    <a href="https://twitter.com/hermesprotocol" target="_blank"
+                        class="text-gray-500 hover:text-gray-600 dark:text-gray-300">
+                        <span class="sr-only">Twitter</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 18 18">
+                            <path
+                                d="M5.9 15.7c5.3 0 9.6-4.2 9.7-9.5v-.1-.4c.7-.5 1.2-1.1 1.7-1.8-.6.3-1.3.5-2 .5.7-.4 1.2-1.1 1.5-1.8-.7.4-1.4.7-2.2.8C13.3 2 11.1 2 9.8 3.3c-.6.6-1 1.5-1 2.3 0 .3 0 .5.1.8-2.7-.1-5.3-1.4-7-3.5-.9 1.6-.5 3.5 1 4.5-.5 0-1-.1-1.5-.4 0 1.6 1.1 3 2.7 3.3-.3.1-.6.1-.9.1-.2 0-.4 0-.6-.1.4 1.4 1.7 2.3 3.2 2.3-1.2.9-2.7 1.4-4.2 1.4H.8c1.5 1.2 3.3 1.7 5.1 1.7">
+                            </path>
+                        </svg>
+                    </a>
+                    <a href="https://discord.com/invite/RkZvDsWaGk" target="_blank"
+                        class="text-gray-500 hover:text-gray-600 dark:text-gray-300">
+                        <span class="sr-only">Discord</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 18 18">
+                            <path
+                                d="M15.8 4.2c-1.2-1-2.7-1.5-4.3-1.6l-.2.2c1.4.4 2.7 1.1 3.8 2-1.4-.8-3-1.3-4.6-1.5-1-.1-2.1-.1-3.1 0h-.3c-1.2.2-2.4.5-3.5 1-.6.3-1 .4-1 .4 1.2-1 2.5-1.6 4-2l-.1-.1c-1.6 0-3.1.6-4.3 1.6C.8 6.9 0 10 0 13.1c1.1 1.5 2.8 2.4 4.7 2.4 0 0 .6-.7 1-1.3-1.1-.3-2-.9-2.7-1.8.1.1.3.2.4.3h.1l.1.1c.4.2.7.4 1.1.5.7.3 1.5.6 2.3.8 1.3.2 2.7.2 4 0 .8-.1 1.5-.4 2.2-.7.6-.2 1.2-.5 1.8-.9-.7.9-1.7 1.6-2.8 1.8l1 1.2c1.9 0 3.6-.8 4.7-2.4 0-3.1-.7-6.2-2.1-8.9zm-9.7 7.5c-.9 0-1.6-.8-1.6-1.7 0-.9.7-1.7 1.6-1.7h.1c.8 0 1.5.7 1.5 1.6v.1c0 .9-.7 1.6-1.6 1.7zm5.7 0c-.9 0-1.6-.8-1.6-1.7 0-.9.6-1.7 1.5-1.7s1.6.8 1.6 1.7c.1.9-.7 1.6-1.5 1.7z">
+                            </path>
+                        </svg>
+                    </a>
+                    <a href="https://t.me/Hermes_Protocol" target="_blank"
+                        class="text-gray-500 hover:text-gray-600 dark:text-gray-300">
+                        <span class="sr-only">Telegram</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <defs></defs>
+                            <path fill-rule="evenodd"
+                                d="M18.4 21.8c.3.2.7.3 1.1.1.4-.1.6-.5.7-.8.9-4.1 3-14.4 3.8-18.1.1-.3 0-.6-.3-.8-.2-.2-.5-.3-.8-.2C18.7 3.6 5.8 8.4.5 10.4c-.3.1-.5.4-.5.8s.2.7.6.8c2.4.7 5.5 1.7 5.5 1.7s1.5 4.4 2.2 6.6c.1.3.3.5.6.6.3.1.6 0 .8-.2 1.2-1.1 3.1-2.9 3.1-2.9s3.6 2.5 5.6 4zm-11-8.7l1.7 5.5.4-3.5S16 9.2 19.7 5.9c.1-.1.1-.3 0-.4-.1-.1-.3-.1-.4-.1C15 8.2 7.4 13.1 7.4 13.1z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                    </a>
+                    <a href="https://github.com/HermesProtocol-io" target="_blank"
+                        class="text-gray-500 hover:text-gray-600 dark:text-gray-300">
+                        <span class="sr-only">GitHub</span>
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path fill-rule="evenodd"
+                                d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                    </a>
+                </nav>
+            </div>
+        </div>
+    </section>
+    <!-- AlpineJS Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/2.8.0/alpine.js"></script>
+
+</body>
+
+</html>
