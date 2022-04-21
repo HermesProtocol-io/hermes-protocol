@@ -21,7 +21,7 @@
                 x-data="{ showMenu: false }">
                 <div
                     class="relative z-10 flex items-center w-auto px-0 leading-10 md:px-2 lg:flex-grow-0 lg:flex-shrink-0 lg:text-left">
-                    <a href="#_"
+                    <a href="/"
                         class="inline-block font-sans text-2xl font-extrabold text-left text-black no-underline bg-transparent cursor-pointer focus:no-underline">
                         <img class="object-contain w-20 h-20 " src="images/hermes-logo.svg">
                         <!--  <svg class="w-10 h-10 text-black fill-current" viewBox="0 0 39 15" xmlns="http://www.w3.org/2000/svg">
@@ -855,7 +855,7 @@
             <div
                 class="flex flex-col items-center justify-between mx-auto mt-16 space-y-4 md:space-y-0 md:flex-row lg:mt-20">
                 <div class="space-y-4 text-sm text-center md:space-y-0 md:text-left">
-                    <p class="text-gray-500 dark:text-gray-300">© 2021 <a href="https://momentum-free.com"
+                    <p class="text-gray-500 dark:text-gray-300">© <span id="currentYear"></span> <a href="https://momentum-free.com"
                             class="text-base hover:text-gray-500">Momentum Free</a>. All rights reserved.</p>
                     <p class="my-4 text-xs leading-normal text-gray-500 dark:text-gray-300" data-c2c-process="1">
                         Creating beautiful websites since 2020.</p>
@@ -916,7 +916,10 @@
     </section>
     <!-- AlpineJS Library -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/2.8.0/alpine.js"></script>
-
+    <script>
+        //Fill current Year
+        document.getElementById('currentYear').innerHTML = new Date().getFullYear();
+    </script>
 </body>
 
 </html>
