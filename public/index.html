@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,124 +10,165 @@
     <link href="tailwind.css" rel="stylesheet">
     <link rel="shortcut icon" href="images/hermes-logo.svg" />
 </head>
+
 <body>
 
-<!-- Section 1 -->
-<section class="pb-40 antialiased bg-white dark:bg-gray-800">
-    <div class="px-12 mx-auto max-w-7xl">
-        <!-- Header Bar -->
-        <div class="flex flex-wrap items-center justify-between w-full h-24 text-black" x-data="{ showMenu: false }">
-            <div class="relative z-10 flex items-center w-auto px-0 leading-10 md:px-2 lg:flex-grow-0 lg:flex-shrink-0 lg:text-left">
-                <a href="#_" class="inline-block font-sans text-2xl font-extrabold text-left text-black no-underline bg-transparent cursor-pointer focus:no-underline">
-                   <img class="object-contain w-20 h-20 " src="images/hermes-logo.svg">
-                    <!--  <svg class="w-10 h-10 text-black fill-current" viewBox="0 0 39 15" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M11.252 1.152C4.184 2.526.454 6.918.061 14.329c1.963-4.049 4.798-5.975 8.503-5.778 2.115.112 3.84 1.295 5.75 2.603 3.11 2.133 6.712 4.601 13.281 3.324 7.068-1.374 10.798-5.766 11.191-13.177-1.963 4.049-4.798 5.975-8.503 5.779-2.115-.113-3.84-1.296-5.75-2.604-3.11-2.133-6.712-4.601-13.281-3.324z" fill-rule="evenodd" class=""></path>
-                    </svg>-->
-                </a>
-            </div>
-            <div class="left-0 z-0 flex-col justify-center w-full px-4 space-y-3 font-semibold leading-10 md:space-y-0 lg:flex-grow-0 md:flex-row lg:text-left lg:text-center hidden md:flex absolute" :class="{'flex z-30 top-0 bg-white h-full fixed': showMenu, 'hidden md:flex absolute': !showMenu }">
-                <a href="#_" class="box-border inline-block text-center text-gray-900 no-underline bg-transparent cursor-pointer md:mr-4 hover:text-muddywaters-500 focus:no-underline">
-                    Home
-                </a>
-                <a href="#Features" class="box-border inline-block text-center text-gray-900 no-underline bg-transparent cursor-pointer md:mx-4 hover:text-muddywaters-500 focus:no-underline">
-                    Features
-                </a>
-                <a href="#OurTeam" class="box-border inline-block text-center text-gray-900 no-underline bg-transparent cursor-pointer md:mx-4 hover:text-muddywaters-500 focus:no-underline">Team</a>
-                <a href="#FAQs" class="box-border inline-block text-center text-gray-900 no-underline bg-transparent cursor-pointer md:mx-4 hover:text-muddywaters-500 focus:no-underline">
-                    FAQs
-                </a>
-                
-            </div>
-            <div class="relative hidden mt-2 font-medium leading-10 md:inline-block lg:flex-grow-0 lg:flex-shrink-0 lg:mt-0 lg:text-right">
-                <a href="#_" class="px-5 py-4 text-lg font-medium text-white bg-muddywaters-500 shadow-xl hover:bg-muddywaters-600 rounded-2xl cursor-not-allowed">Webapp</a>
-            </div>
+    <!-- Section 1 -->
+    <section class="pb-40 antialiased bg-white dark:bg-gray-800">
+        <div class="px-12 mx-auto max-w-7xl">
+            <!-- Header Bar -->
+            <div class="flex flex-wrap items-center justify-between w-full h-24 text-black"
+                x-data="{ showMenu: false }">
+                <div
+                    class="relative z-10 flex items-center w-auto px-0 leading-10 md:px-2 lg:flex-grow-0 lg:flex-shrink-0 lg:text-left">
+                    <a href="#_"
+                        class="inline-block font-sans text-2xl font-extrabold text-left text-black no-underline bg-transparent cursor-pointer focus:no-underline">
+                        <img class="object-contain w-20 h-20 " src="images/hermes-logo.svg">
+                        <!--  <svg class="w-10 h-10 text-black fill-current" viewBox="0 0 39 15" xmlns="http://www.w3.org/2000/svg">
+                   <path d="M11.252 1.152C4.184 2.526.454 6.918.061 14.329c1.963-4.049 4.798-5.975 8.503-5.778 2.115.112 3.84 1.295 5.75 2.603 3.11 2.133 6.712 4.601 13.281 3.324 7.068-1.374 10.798-5.766 11.191-13.177-1.963 4.049-4.798 5.975-8.503 5.779-2.115-.113-3.84-1.296-5.75-2.604-3.11-2.133-6.712-4.601-13.281-3.324z" fill-rule="evenodd" class=""></path>
+               </svg>-->
+                    </a>
+                </div>
+                <div class="left-0 z-0 flex-col justify-center w-full px-4 space-y-3 font-semibold leading-10 md:space-y-0 lg:flex-grow-0 md:flex-row lg:text-left lg:text-center hidden md:flex absolute"
+                    :class="{'flex z-30 top-0 bg-white h-full fixed': showMenu, 'hidden md:flex absolute': !showMenu }">
+                    <a href="/"
+                        class="box-border inline-block text-center text-gray-900 no-underline bg-transparent cursor-pointer md:mr-4 hover:text-muddywaters-500 focus:no-underline">
+                        Home
+                    </a>
+                    <a href="/#Features"
+                        class="box-border inline-block text-center text-gray-900 no-underline bg-transparent cursor-pointer md:mx-4 hover:text-muddywaters-500 focus:no-underline">
+                        Features
+                    </a>
+                    <a href="/#OurTeam"
+                        class="box-border inline-block text-center text-gray-900 no-underline bg-transparent cursor-pointer md:mx-4 hover:text-muddywaters-500 focus:no-underline">Team</a>
+                    <a href="/#FAQs"
+                        class="box-border inline-block text-center text-gray-900 no-underline bg-transparent cursor-pointer md:mx-4 hover:text-muddywaters-500 focus:no-underline">
+                        FAQs
+                    </a>
 
-            <div @click="showMenu = !showMenu" class="absolute right-0 z-40 flex flex-col items-center items-end justify-center w-10 h-10 mr-8 rounded-full cursor-pointer md:hidden hover:bg-gray-100">
-                <svg class="w-6 h-6 text-gray-700" x-show="!showMenu" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
-                    <path d="M4 6h16M4 12h16M4 18h16"></path>
-                </svg>
-                <svg class="w-6 h-6 text-gray-700" x-show="showMenu" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="display: none;">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-                </svg>
+                </div>
+                <div
+                    class="relative hidden mt-2 font-medium leading-10 md:inline-block lg:flex-grow-0 lg:flex-shrink-0 lg:mt-0 lg:text-right">
+                    <a href="#_"
+                        class="px-5 py-4 text-lg font-medium text-white bg-muddywaters-500 shadow-xl hover:bg-muddywaters-600 rounded-2xl cursor-not-allowed">Webapp</a>
+                </div>
+
+                <div @click="showMenu = !showMenu"
+                    class="absolute right-0 z-40 flex flex-col items-center items-end justify-center w-10 h-10 mr-8 rounded-full cursor-pointer md:hidden hover:bg-gray-100">
+                    <svg class="w-6 h-6 text-gray-700" x-show="!showMenu" fill="none" stroke-linecap="round"
+                        stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
+                        <path d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                    <svg class="w-6 h-6 text-gray-700" x-show="showMenu" fill="none" stroke="currentColor"
+                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="display: none;">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                        </path>
+                    </svg>
+                </div>
+
             </div>
+            <!-- End Header Bar -->
 
-        </div>
-        <!-- End Header Bar -->
-
-        <!-- Start Main Content -->
-        <div class="flex flex-col items-center w-full mt-24 lg:space-x-10 lg:flex-row">
-            <div class="relative z-10 w-full space-y-10 lg:w-1/2">
-                <h1 class="text-5xl font-bold sm:text-7xl xl:text-8xl">Hermes Protocol</h1>
-                <p class="text-base text-gray-500 sm:text-lg" data-c2c-process="1">Good or bad news, we can deliver the information straight to your device or app of choice. Sleep well knowing that you will be alerted when something of interest is happening.</p>
-                <div class="flex flex-col items-center w-full space-x-5 lg:flex-row">
-                        <a href="#_" class="w-full px-6 py-6 text-xl font-medium text-center text-white bg-muddywaters-500 shadow-xl hover:bg-muddywaters-600 xl:px-12 xl:text-2xl lg:w-auto  rounded-3xl cursor-not-allowed">Try for free</a>
-                        <a href="https://youtu.be/4ItojFIAL7Y" target="_blank" class="flex items-center justify-center w-full px-4 py-6 mt-5 text-lg font-medium text-center text-muddywaters-500 underline xl:px-10 xl:text-xl lg:mt-0 lg:w-auto rounded-3xl hover:bg-gray-50">
-                            <svg class="w-6 h-6 mt-1 mr-2 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 847 1058.75" fill-rule="evenodd" clip-rule="evenodd">
+            <!-- Start Main Content -->
+            <div class="flex flex-col items-center w-full mt-24 lg:space-x-10 lg:flex-row">
+                <div class="relative z-10 w-full space-y-10 lg:w-1/2">
+                    <h1 class="text-5xl font-bold sm:text-7xl xl:text-8xl">Hermes Protocol</h1>
+                    <p class="text-base text-gray-500 sm:text-lg" data-c2c-process="1">Good or bad news, we can deliver
+                        the information straight to your device or app of choice. Sleep well knowing that you will be
+                        alerted when something of interest is happening.</p>
+                    <div class="flex flex-col items-center w-full space-x-5 lg:flex-row">
+                        <a href="#_"
+                            class="w-full px-6 py-6 text-xl font-medium text-center text-white bg-muddywaters-500 shadow-xl hover:bg-muddywaters-600 xl:px-12 xl:text-2xl lg:w-auto  rounded-3xl cursor-not-allowed">Try
+                            for free</a>
+                        <a href="https://youtu.be/4ItojFIAL7Y" target="_blank"
+                            class="flex items-center justify-center w-full px-4 py-6 mt-5 text-lg font-medium text-center text-muddywaters-500 underline xl:px-10 xl:text-xl lg:mt-0 lg:w-auto rounded-3xl hover:bg-gray-50">
+                            <svg class="w-6 h-6 mt-1 mr-2 fill-current" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 847 1058.75" fill-rule="evenodd" clip-rule="evenodd">
                                 <defs></defs>
-                                <path class="fil0" d="M636 459L447 583 257 708c-20 12-46 7-59-13-5-7-7-15-7-23V174c0-23 19-42 42-42 10 0 18 3 25 8l189 124 189 124c20 13 25 39 13 58-4 6-8 10-13 13z"></path>
+                                <path class="fil0"
+                                    d="M636 459L447 583 257 708c-20 12-46 7-59-13-5-7-7-15-7-23V174c0-23 19-42 42-42 10 0 18 3 25 8l189 124 189 124c20 13 25 39 13 58-4 6-8 10-13 13z">
+                                </path>
                             </svg>
                             <span class="">See The Demo</span>
                         </a>
+                    </div>
+                </div>
+
+                <div class="relative z-0 w-full mt-8 lg:w-1/2">
+                    <!-- <img src="https://cdn.devdojo.com/images/december2020/drag-drop-hero.png" class="transform xl:translate-x-20 lg:ml-0 lg:translate-y-20 lg:scale-125"> -->
+                    <img src="images/webapp-screen.png"
+                        class="transform xl:translate-x-20 lg:ml-0 lg:translate-y-20 lg:scale-125">
                 </div>
             </div>
-
-            <div class="relative z-0 w-full mt-8 lg:w-1/2">
-                <!-- <img src="https://cdn.devdojo.com/images/december2020/drag-drop-hero.png" class="transform xl:translate-x-20 lg:ml-0 lg:translate-y-20 lg:scale-125"> -->
-                <img src="images/webapp-screen.png" class="transform xl:translate-x-20 lg:ml-0 lg:translate-y-20 lg:scale-125">
-            </div>
+            <!-- End Main Content -->
         </div>
-        <!-- End Main Content -->
-    </div>
-</section>
+    </section>
 
-<!-- Section 2 -->
-<section class="pt-24 pb-32 bg-white dark:bg-gray-800">
-    <div class="px-8 mx-auto max-w-7xl lg:px-12 xl:px-16">
-        <div class="flex items-start flex-col lg:flex-row">
+    <!-- Section 2 -->
+    <section class="pt-24 pb-32 bg-white dark:bg-gray-800">
+        <div class="px-8 mx-auto max-w-7xl lg:px-12 xl:px-16">
+            <div class="flex items-start flex-col lg:flex-row">
 
-            <!-- Left Content -->
-            <div class="flex items-center w-full lg:w-1/2 lg:pr-10">
-                <div class="relative max-w-lg mx-auto font-sans text-center text-gray-700 border-gray-200 lg:text-left">
-                    <h1 class="m-0 text-3xl font-extrabold leading-tight text-left text-darkgold border-solid sm:text-4xl md:text-6xl">Built around the dApps you love</h1>
-                    <p class="pr-5 mx-0 my-4 text-base text-left text-gray-500 xl:leading-9 lg:my-8 xl:text-xl" data-c2c-process="1">Be it Anchor Protocol, Mirror, Apollo or Pylon, we can support any Terra dApp, and Cosmos soon™️.</p>
-                    <div class="relative flex items-start justify-start block w-full max-w-md text-center lg:mx-0">
-                        <a href="#_" class="flex items-center justify-center px-8 font-medium text-white bg-muddywaters-500 shadow-xl hover:bg-muddywaters-600 rounded-2xl h-14 cursor-not-allowed">Get Started Today</a>
-                    </div>
+                <!-- Left Content -->
+                <div class="flex items-center w-full lg:w-1/2 lg:pr-10">
+                    <div
+                        class="relative max-w-lg mx-auto font-sans text-center text-gray-700 border-gray-200 lg:text-left">
+                        <h1
+                            class="m-0 text-3xl font-extrabold leading-tight text-left text-darkgold border-solid sm:text-4xl md:text-6xl">
+                            Built around the dApps you love</h1>
+                        <p class="pr-5 mx-0 my-4 text-base text-left text-gray-500 xl:leading-9 lg:my-8 xl:text-xl"
+                            data-c2c-process="1">Be it Anchor Protocol, Mirror, Apollo or Pylon, we can support any
+                            Terra dApp, and Cosmos soon™️.</p>
+                        <div class="relative flex items-start justify-start block w-full max-w-md text-center lg:mx-0">
+                            <a href="#_"
+                                class="flex items-center justify-center px-8 font-medium text-white bg-muddywaters-500 shadow-xl hover:bg-muddywaters-600 rounded-2xl h-14 cursor-not-allowed">Get
+                                Started Today</a>
+                        </div>
 
-                    <div class="mt-10 leading-6 text-left border-solid">
-                        <p class="m-0 font-sans text-sm font-bold tracking-wider text-gray-400 uppercase lg:text-xs">GROWING LIST OF COMPATIBLE DAPPS</p>
-                        <div class="flex mt-5 space-x-4">
-                            <a href="https://terra.money" target="_blank"><img src="images/partners/terra_ico.png" class="w-6 h-6"></a>
-                            <a href="https://anchorprotocol.com" target="_blank"><img src="images/partners/Anchor_Icon.png" class="w-6 h-6"></a>
-                            <a href="https://terra.mirror.finance/" target="_blank"><img src="images/partners/mirror_ico.png" class="w-6 h-6"></a>
-                            <a href="https://apollo.farm" target="_blank"><img src="images/partners/apollodao-icon.ico" class="w-6 h-6"></a>
-                         </div>
+                        <div class="mt-10 leading-6 text-left border-solid">
+                            <p
+                                class="m-0 font-sans text-sm font-bold tracking-wider text-gray-400 uppercase lg:text-xs">
+                                GROWING LIST OF COMPATIBLE DAPPS</p>
+                            <div class="flex mt-5 space-x-4">
+                                <a href="https://terra.money" target="_blank"><img src="images/partners/terra_ico.png"
+                                        class="w-6 h-6"></a>
+                                <a href="https://anchorprotocol.com" target="_blank"><img
+                                        src="images/partners/Anchor_Icon.png" class="w-6 h-6"></a>
+                                <a href="https://terra.mirror.finance/" target="_blank"><img
+                                        src="images/partners/mirror_ico.png" class="w-6 h-6"></a>
+                                <a href="https://apollo.farm" target="_blank"><img
+                                        src="images/partners/apollodao-icon.ico" class="w-6 h-6"></a>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- Right Images -->
-            <div class="relative w-full mt-20 lg:w-1/2 lg:mt-0">
-                <div class="relative z-20 grid w-full grid-cols-4 gap-5 mt-4 transform -rotate-6 lg:mt-10">
-                    <div class="flex items-center justify-center w-full h-auto col-span-2 p-3 overflow-hidden transform bg-white rounded-lg shadow-xl -rotate-3">
-                        <img src="images/notification.svg" class="w-full h-auto">
-                    </div>
-                    <div class="flex items-center justify-center w-full h-auto col-span-2 p-3 overflow-hidden transform bg-white rounded-lg shadow-xl -rotate-3">
-                        <img src="images/loan_to_value.svg" class="w-full h-auto">
-                    </div>
-                    <div class="flex items-center justify-center w-full h-auto col-span-2 p-3 overflow-hidden transform bg-white rounded-lg shadow-xl -rotate-3">
-                        <img src="images/price_alert.svg" class="w-full h-auto">
-                    </div>
-                    <div class="flex items-center justify-center w-full h-auto col-span-2 p-3 overflow-hidden transform bg-white rounded-lg shadow-xl -rotate-3">
-                        <img src="images/social.svg" class="w-full h-auto">
-                    </div>
-                    <!-- <div class="flex items-center justify-center w-full h-auto col-span-2 p-3 overflow-hidden transform bg-white rounded-lg shadow-xl -rotate-3">
+                <!-- Right Images -->
+                <div class="relative w-full mt-20 lg:w-1/2 lg:mt-0">
+                    <div class="relative z-20 grid w-full grid-cols-4 gap-5 mt-4 transform -rotate-6 lg:mt-10">
+                        <div
+                            class="flex items-center justify-center w-full h-auto col-span-2 p-3 overflow-hidden transform bg-white rounded-lg shadow-xl -rotate-3">
+                            <img src="images/notification.svg" class="w-full h-auto">
+                        </div>
+                        <div
+                            class="flex items-center justify-center w-full h-auto col-span-2 p-3 overflow-hidden transform bg-white rounded-lg shadow-xl -rotate-3">
+                            <img src="images/loan_to_value.svg" class="w-full h-auto">
+                        </div>
+                        <div
+                            class="flex items-center justify-center w-full h-auto col-span-2 p-3 overflow-hidden transform bg-white rounded-lg shadow-xl -rotate-3">
+                            <img src="images/price_alert.svg" class="w-full h-auto">
+                        </div>
+                        <div
+                            class="flex items-center justify-center w-full h-auto col-span-2 p-3 overflow-hidden transform bg-white rounded-lg shadow-xl -rotate-3">
+                            <img src="images/social.svg" class="w-full h-auto">
+                        </div>
+                        <!-- <div class="flex items-center justify-center w-full h-auto col-span-2 p-3 overflow-hidden transform bg-white rounded-lg shadow-xl -rotate-3">
                         <img src="images/social channels.png" class="w-full h-auto">
                     </div>
                     <div class="flex items-center justify-center w-full h-auto col-span-2 p-3 overflow-hidden transform bg-white rounded-lg shadow-xl -rotate-3">
                         <a>I am not a Normie!</a>
                     </div>-->
-                    <!-- <div class="flex items-center justify-center w-full h-auto col-span-2 p-3 overflow-hidden transform bg-white rounded-lg shadow-xl -rotate-3">
+                        <!-- <div class="flex items-center justify-center w-full h-auto col-span-2 p-3 overflow-hidden transform bg-white rounded-lg shadow-xl -rotate-3">
                         <img src="https://cdn.devdojo.com/images/january2021/image2.png" class="w-full h-auto">
                     </div>
                     <div class="flex items-center justify-center w-full h-auto col-span-2 p-3 overflow-hidden transform bg-white rounded-lg shadow-xl -rotate-3">
@@ -141,262 +183,420 @@
                     <div class="flex items-center justify-center w-full h-auto col-span-2 p-3 overflow-hidden transform bg-white rounded-lg shadow-xl -rotate-3">
                         <img src="https://cdn.devdojo.com/images/january2021/image6.png" class="w-full h-auto">
                     </div> -->
-                </div>
+                    </div>
 
-               <!-- <div class="absolute top-0 right-0 z-10 w-full h-full mt-4 -mr-5 transform scale-125 rotate-45">
+                    <!-- <div class="absolute top-0 right-0 z-10 w-full h-full mt-4 -mr-5 transform scale-125 rotate-45">
                     <svg class="absolute top-0 w-full h-full transform opacity-50 fill-current lg:scale-x-150 text-yellow-50" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
                         <path d="M37.3,-64.3C51.3,-56.4,67.9,-52.6,76.3,-42.5C84.7,-32.5,84.9,-16.3,80.3,-2.7C75.6,10.9,66.2,21.8,60.2,36.1C54.2,50.3,51.8,67.9,42.3,76.4C32.9,84.9,16.4,84.3,2.4,80.2C-11.7,76.2,-23.4,68.5,-36.8,62.3C-50.1,56,-65,51.1,-73.2,40.9C-81.4,30.7,-82.9,15.4,-78.6,2.5C-74.4,-10.4,-64.3,-20.9,-58.2,-34.6C-52,-48.3,-49.7,-65.3,-40.7,-76C-31.6,-86.8,-15.8,-91.4,-2.1,-87.8C11.6,-84.1,23.2,-72.2,37.3,-64.3Z" transform="translate(100 100)" class=""></path>
                     </svg>
                 </div>-->
-            </div>
+                </div>
 
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- Section 3 -->
-<section class="py-20 bg-white dark:bg-gray-800" id="Features">
-    <div class="flex flex-col px-8 mx-auto space-y-12 max-w-7xl xl:px-12">
-        <div class="relative">
-            <h2 class="w-full text-3xl font-bold text-center sm:text-4xl md:text-5xl">Make It Yours</h2>
-            <p class="w-full py-8 mx-auto -mt-2 text-lg text-center text-gray-700 intro sm:max-w-3xl">Choose and use only the chat applications or platforms which you love the most for a curated feed of notifications of your favorite dApps.</p>
+    <!-- Section 3 -->
+    <section class="py-20 bg-white dark:bg-gray-800" id="Features">
+        <div class="flex flex-col px-8 mx-auto space-y-12 max-w-7xl xl:px-12">
+            <div class="relative">
+                <h2 class="w-full text-3xl font-bold text-center sm:text-4xl md:text-5xl">Make It Yours</h2>
+                <p class="w-full py-8 mx-auto -mt-2 text-lg text-center text-gray-700 intro sm:max-w-3xl">Choose and use
+                    only the chat applications or platforms which you love the most for a curated feed of notifications
+                    of your favorite dApps.</p>
+            </div>
+            <div class="flex flex-col mb-8 animated fadeIn sm:flex-row">
+                <div class="items-center mb-8 sm:w-1/2 md:w-5/12 sm:order-last relative">
+                    <img src="images/easy_decisions.svg" alt="Hermes Protocol East Decisions">
+                </div>
+                <div class="flex flex-col justify-center mt-5 mb-8 md:mt-0 sm:w-1/2 md:w-7/12 sm:pr-16">
+                    <p class="mb-2 text-sm font-semibold leading-none text-left text-muddywaters-500 uppercase">EASY
+                        ON/OFF TOGGLES</p>
+                    <h3 class="mt-2 text-2xl sm:text-left md:text-4xl">Easy Decisions</h3>
+                    <p class="mt-5 text-lg text-gray-700 text md:text-left" data-c2c-process="1">Your experience should
+                        be effortless, so we've built our interface with an intuitive way which you will love to
+                        configure and optimise over time.</p>
+                </div>
+            </div>
+            <div class="flex flex-col mb-8 animated fadeIn sm:flex-row">
+                <div class="flex items-center mb-8 sm:w-1/2 md:w-5/12">
+                    <img src="images/tailored_for_you.svg" alt="Hermes Protocol Tailored For You">
+                </div>
+                <div class="flex flex-col justify-center mt-5 mb-8 md:mt-0 sm:w-1/2 md:w-7/12 sm:pl-16">
+                    <p class="mb-2 text-sm font-semibold leading-none text-left text-muddywaters-500 uppercase">
+                        EVERYGROWING LIST OF CHOICES AND APPS</p>
+                    <h3 class="mt-2 text-2xl sm:text-left md:text-4xl" data-c2c-process="1">Tailored For You</h3>
+                    <p class="mt-5 text-lg text-gray-700 text md:text-left" data-c2c-process="1">Login with your wallet
+                        or social account, enable the dApps you want, and subscribe only to the type of notifications
+                        that are important to you.</p>
+                </div>
+            </div>
+            <div class="flex flex-col mb-8 animated fadeIn sm:flex-row">
+                <div class="flex items-center mb-8 sm:w-1/2 md:w-5/12 sm:order-last">
+                    <img src="images/make_it_your_own.svg" alt="Hermes Protocol Make It Your Own">
+                </div>
+                <div class="flex flex-col justify-center mt-5 mb-8 md:mt-0 sm:w-1/2 md:w-7/12 sm:pr-16">
+                    <p class="mb-2 text-sm font-semibold leading-none text-left text-muddywaters-500 uppercase">Easy to
+                        customize</p>
+                    <h3 class="mt-2 text-2xl sm:text-left md:text-4xl">Make It Your Own</h3>
+                    <p class="mt-5 text-lg text-gray-700 text md:text-left" data-c2c-process="1">Mix and Match between
+                        different social platforms and dApps. Only want Mirror notifications on Discord, but want SMS
+                        alerts for Anchor liquidations? We got your back! You can even start playing Stairway To Heaven
+                        when Luna hits 100$ automatically!</p>
+                </div>
+            </div>
         </div>
-        <div class="flex flex-col mb-8 animated fadeIn sm:flex-row">
-            <div class="items-center mb-8 sm:w-1/2 md:w-5/12 sm:order-last relative">
-                <img src="images/easy_decisions.svg" alt="Hermes Protocol East Decisions">
-            </div>
-            <div class="flex flex-col justify-center mt-5 mb-8 md:mt-0 sm:w-1/2 md:w-7/12 sm:pr-16">
-                <p class="mb-2 text-sm font-semibold leading-none text-left text-muddywaters-500 uppercase">EASY ON/OFF TOGGLES</p>
-                <h3 class="mt-2 text-2xl sm:text-left md:text-4xl">Easy Decisions</h3>
-                <p class="mt-5 text-lg text-gray-700 text md:text-left" data-c2c-process="1">Your experience should be effortless, so we've built our interface with an intuitive way which you will love to configure and optimise over time.</p>
-            </div>
-        </div>
-        <div class="flex flex-col mb-8 animated fadeIn sm:flex-row">
-            <div class="flex items-center mb-8 sm:w-1/2 md:w-5/12">
-                <img src="images/tailored_for_you.svg" alt="Hermes Protocol Tailored For You">
-            </div>
-            <div class="flex flex-col justify-center mt-5 mb-8 md:mt-0 sm:w-1/2 md:w-7/12 sm:pl-16">
-                <p class="mb-2 text-sm font-semibold leading-none text-left text-muddywaters-500 uppercase">EVERYGROWING LIST OF CHOICES AND APPS</p>
-                <h3 class="mt-2 text-2xl sm:text-left md:text-4xl" data-c2c-process="1">Tailored For You</h3>
-                <p class="mt-5 text-lg text-gray-700 text md:text-left" data-c2c-process="1">Login with your wallet or social account, enable the dApps you want, and subscribe only to the type of notifications that are important to you.</p>
-            </div>
-        </div>
-        <div class="flex flex-col mb-8 animated fadeIn sm:flex-row">
-            <div class="flex items-center mb-8 sm:w-1/2 md:w-5/12 sm:order-last">
-                <img src="images/make_it_your_own.svg" alt="Hermes Protocol Make It Your Own">
-            </div>
-            <div class="flex flex-col justify-center mt-5 mb-8 md:mt-0 sm:w-1/2 md:w-7/12 sm:pr-16">
-                <p class="mb-2 text-sm font-semibold leading-none text-left text-muddywaters-500 uppercase">Easy to customize</p>
-                <h3 class="mt-2 text-2xl sm:text-left md:text-4xl">Make It Your Own</h3>
-                <p class="mt-5 text-lg text-gray-700 text md:text-left" data-c2c-process="1">Mix and Match between different social platforms and dApps. Only want Mirror notifications on Discord, but want SMS alerts for Anchor liquidations? We got your back! You can even start playing Stairway To Heaven when Luna hits 100$ automatically!</p>
-            </div>
-        </div>
-    </div>
-</section>
+    </section>
 
-<!-- Section 4 -->
-<section class="hightlight-section flex items-center justify-center py-0 bg-white dark:bg-gray-800 bg-gradient-to-br from-muddywaters-700 via-muddywaters-500 to-teal-400 min-w-screen">
-    <div class="relative flex flex-col items-center w-full max-w-6xl px-4 py-8 mx-auto text-center lg:text-left lg:block sm:px-6 md:pb-0 md:pt-12 lg:px-12 lg:py-12">
-        <h2 class="my-4 text-3xl font-extrabold tracking-tight text-white sm:text-4xl md:text-5xl lg:my-0 xl:text-4xl sm:leading-tight">
-            A service that is <span class="block text-muddywaters-300 xl:inline">out of this world</span>
-        </h2>
-        <p class="mt-1 mb-10 text-sm font-medium text-muddywaters-50 uppercase xl:text-base xl:tracking-wider lg:mb-0">INFINITELY SCALABLE AND INSTANT WHEREVER YOU ARE</p>
-        <div class="flex mb-8 lg:mt-6 lg:mb-0">
-            <div class="inline-flex">
-                <a href="#_" class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-muddywaters-600 transition duration-150 ease-in-out bg-muddywaters-50 border border-transparent rounded-md hover:text-muddywaters-500 hover:bg-muddywaters-50 focus:outline-none focus:shadow-outline focus:border-muddywaters-100 cursor-not-allowed">Sign Up Soon™️</a>
+    <!-- Section 4 -->
+    <section
+        class="hightlight-section flex items-center justify-center py-0 bg-white dark:bg-gray-800 bg-gradient-to-br from-muddywaters-700 via-muddywaters-500 to-teal-400 min-w-screen">
+        <div
+            class="relative flex flex-col items-center w-full max-w-6xl px-4 py-8 mx-auto text-center lg:text-left lg:block sm:px-6 md:pb-0 md:pt-12 lg:px-12 lg:py-12">
+            <h2
+                class="my-4 text-3xl font-extrabold tracking-tight text-white sm:text-4xl md:text-5xl lg:my-0 xl:text-4xl sm:leading-tight">
+                A service that is <span class="block text-muddywaters-300 xl:inline">out of this world</span>
+            </h2>
+            <p
+                class="mt-1 mb-10 text-sm font-medium text-muddywaters-50 uppercase xl:text-base xl:tracking-wider lg:mb-0">
+                INFINITELY SCALABLE AND INSTANT WHEREVER YOU ARE</p>
+            <div class="flex mb-8 lg:mt-6 lg:mb-0">
+                <div class="inline-flex">
+                    <a href="#_"
+                        class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-muddywaters-600 transition duration-150 ease-in-out bg-muddywaters-50 border border-transparent rounded-md hover:text-muddywaters-500 hover:bg-muddywaters-50 focus:outline-none focus:shadow-outline focus:border-muddywaters-100 cursor-not-allowed">Sign
+                        Up Soon™️</a>
+                </div>
+            </div>
+            <div class="hl-img-section bottom-0 right-0 mb-0 lg:absolute lg:-mb-12">
+                <img src="images/infinitely_scalable.svg"
+                    class="max-w-xs mb-4 md:max-w-2xl lg:max-w-lg xl:mb-0 xl:max-w-md"
+                    alt="Hermes Protocol Infinitely Scalable and Instant Wherever You Are">
             </div>
         </div>
-        <div class="hl-img-section bottom-0 right-0 mb-0 lg:absolute lg:-mb-12">
-            <img src="images/infinitely_scalable.svg" class="max-w-xs mb-4 md:max-w-2xl lg:max-w-lg xl:mb-0 xl:max-w-md" alt="Hermes Protocol Infinitely Scalable and Instant Wherever You Are">
-        </div>
-    </div>
-</section>
+    </section>
 
-<!-- Section 5 -->
-<section class="w-full py-12 bg-white lg:py-24 dark:bg-gray-800" id="OurTeam">
-    <div class="max-w-6xl px-12 mx-auto text-center">
-        <div class="space-y-12 md:text-center">
-            <div class="max-w-3xl mb-20 space-y-5 sm:mx-auto sm:space-y-4">
-                <h2 class="relative text-4xl font-extrabold tracking-tight sm:text-5xl">Our Awesome Team</h2>
-                <p class="text-xl text-gray-500 dark:text-gray-300">We take pride in the people we work with. This is because we all collectively help each other become more awesome every day.</p>
-            </div>
-        </div>
-
-        <div class="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3">
-            <div class="w-full border border-gray-200 rounded-lg shadow-sm">
-
-                <div class="flex flex-col items-center justify-center p-10">
-                    <img class="w-32 h-32 mb-6 rounded-full" src="images/team/chino.png"  alt="Sérgio 'Chinoman10' Rebelo Hermes Protocol">
-                    <h2 class="text-lg font-medium">Sérgio 'Chinoman10' Rebelo</h2>
-                    <p class="font-medium text-blue-500">Team Lead &amp; DevOps</p>
-                    <p class="text-gray-400 dark:text-gray-300">Lunatic as of Feb. 2021</p></div>
-
-                <div class="flex border-t border-gray-200 divide-x divide-gray-200">
-                    <a href="https://twitter.com/Chinoman10_ target="_blank" class="flex-1 block p-5 text-center text-gray-300 transition duration-200 ease-out hover:bg-gray-100 hover:text-gray-500">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mx-auto fill-current" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path></svg>
-                    </a>
-                    <a href="https://linkedin.com/in/Chinoman10" target="_blank" class="flex-1 block p-5 text-center text-gray-300 transition duration-200 ease-out hover:bg-gray-100 hover:text-gray-500">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mx-auto fill-current" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path></svg>
-                    </a>
-                    <a href="https://github.com/Chinoman10" target="_blank" class="flex-1 block p-5 text-center text-gray-300 transition duration-200 ease-out hover:bg-gray-100 hover:text-gray-500">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mx-auto fill-current" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" class=""></path></svg>
-                    </a>
+    <!-- Section 5 -->
+    <section class="w-full py-12 bg-white lg:py-24 dark:bg-gray-800" id="OurTeam">
+        <div class="max-w-6xl px-12 mx-auto text-center">
+            <div class="space-y-12 md:text-center">
+                <div class="max-w-3xl mb-20 space-y-5 sm:mx-auto sm:space-y-4">
+                    <h2 class="relative text-4xl font-extrabold tracking-tight sm:text-5xl">Our Awesome Team</h2>
+                    <p class="text-xl text-gray-500 dark:text-gray-300">We take pride in the people we work with. This
+                        is because we all collectively help each other become more awesome every day.</p>
                 </div>
             </div>
 
-            <div class="w-full border border-gray-200 rounded-lg shadow-sm">
+            <div class="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3">
+                <div class="w-full border border-gray-200 rounded-lg shadow-sm">
 
-                <div class="flex flex-col items-center justify-center p-10">
-                    <img class="w-32 h-32 mb-6 rounded-full" src="images/team/ana.jpg"  alt="Ana Preto Hermes Protocol">
-                    <h2 class="text-lg font-medium">Ana Preto</h2>
-                    <p class="font-medium text-blue-500">Tokenomics &amp; Web-Dev</p>
-                    <p class="text-gray-400 dark:text-gray-300">Risk Modeller since 2015</p>
+                    <div class="flex flex-col items-center justify-center p-10">
+                        <img class="w-32 h-32 mb-6 rounded-full" src="images/team/chino.png"
+                            alt="Sérgio 'Chinoman10' Rebelo Hermes Protocol">
+                        <h2 class="text-lg font-medium">Sérgio 'Chinoman10' Rebelo</h2>
+                        <p class="font-medium text-blue-500">Team Lead &amp; DevOps</p>
+                        <p class="text-gray-400 dark:text-gray-300">Lunatic as of Feb. 2021</p>
+                    </div>
+
+                    <div class="flex border-t border-gray-200 divide-x divide-gray-200">
+                        <a href="https://twitter.com/Chinoman10_ target=" _blank"
+                            class="flex-1 block p-5 text-center text-gray-300 transition duration-200 ease-out hover:bg-gray-100 hover:text-gray-500">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mx-auto fill-current"
+                                viewBox="0 0 24 24">
+                                <path
+                                    d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z">
+                                </path>
+                            </svg>
+                        </a>
+                        <a href="https://linkedin.com/in/Chinoman10" target="_blank"
+                            class="flex-1 block p-5 text-center text-gray-300 transition duration-200 ease-out hover:bg-gray-100 hover:text-gray-500">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mx-auto fill-current"
+                                viewBox="0 0 24 24">
+                                <path
+                                    d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z">
+                                </path>
+                            </svg>
+                        </a>
+                        <a href="https://github.com/Chinoman10" target="_blank"
+                            class="flex-1 block p-5 text-center text-gray-300 transition duration-200 ease-out hover:bg-gray-100 hover:text-gray-500">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mx-auto fill-current"
+                                viewBox="0 0 24 24">
+                                <path
+                                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
+                                    class=""></path>
+                            </svg>
+                        </a>
+                    </div>
                 </div>
 
-                <div class="flex border-t border-gray-200 divide-x divide-gray-200">
-                    <a href="https://www.linkedin.com/in/anafcpreto/" target="_blank" class="flex-1 block p-5 text-center text-gray-300 transition duration-200 ease-out hover:bg-gray-100 hover:text-gray-500">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mx-auto fill-current" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path></svg>
-                    </a>
-                    <a href="https://github.com/AnaFCPreto" target="_blank" class="flex-1 block p-5 text-center text-gray-300 transition duration-200 ease-out hover:bg-gray-100 hover:text-gray-500">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mx-auto fill-current" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"></path></svg>
-                    </a>
-                    <a href="https://twitter.com/AnaPreto8" target="_blank" class="flex-1 block p-5 text-center text-gray-300 transition duration-200 ease-out hover:bg-gray-100 hover:text-gray-500">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mx-auto fill-current" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z" class=""></path></svg>
-                    </a>
+                <div class="w-full border border-gray-200 rounded-lg shadow-sm">
+
+                    <div class="flex flex-col items-center justify-center p-10">
+                        <img class="w-32 h-32 mb-6 rounded-full" src="images/team/ana.jpg"
+                            alt="Ana Preto Hermes Protocol">
+                        <h2 class="text-lg font-medium">Ana Preto</h2>
+                        <p class="font-medium text-blue-500">Tokenomics &amp; Web-Dev</p>
+                        <p class="text-gray-400 dark:text-gray-300">Risk Modeller since 2015</p>
+                    </div>
+
+                    <div class="flex border-t border-gray-200 divide-x divide-gray-200">
+                        <a href="https://www.linkedin.com/in/anafcpreto/" target="_blank"
+                            class="flex-1 block p-5 text-center text-gray-300 transition duration-200 ease-out hover:bg-gray-100 hover:text-gray-500">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mx-auto fill-current"
+                                viewBox="0 0 24 24">
+                                <path
+                                    d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z">
+                                </path>
+                            </svg>
+                        </a>
+                        <a href="https://github.com/AnaFCPreto" target="_blank"
+                            class="flex-1 block p-5 text-center text-gray-300 transition duration-200 ease-out hover:bg-gray-100 hover:text-gray-500">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mx-auto fill-current"
+                                viewBox="0 0 24 24">
+                                <path
+                                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z">
+                                </path>
+                            </svg>
+                        </a>
+                        <a href="https://twitter.com/AnaPreto8" target="_blank"
+                            class="flex-1 block p-5 text-center text-gray-300 transition duration-200 ease-out hover:bg-gray-100 hover:text-gray-500">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mx-auto fill-current"
+                                viewBox="0 0 24 24">
+                                <path
+                                    d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"
+                                    class=""></path>
+                            </svg>
+                        </a>
+                    </div>
                 </div>
-            </div>
 
-            <div class="w-full border border-gray-200 rounded-lg shadow-sm">
-                <div class="flex flex-col items-center justify-center p-10">
-                    <img class="w-32 h-32 mb-6 rounded-full" src="images/team/dudu.jpg"  alt="Duarte 'Dudu' Ribeiro Hermes Protocol">
-                    <h2 class="text-lg font-medium">Duarte 'Dudu' Ribeiro</h2>
-                    <p class="font-medium text-blue-500">Bot Developer</p>
-                    <p class="text-gray-400 dark:text-gray-300">BUIDLing projects as of 2016</p></div>
+                <div class="w-full border border-gray-200 rounded-lg shadow-sm">
+                    <div class="flex flex-col items-center justify-center p-10">
+                        <img class="w-32 h-32 mb-6 rounded-full" src="images/team/dudu.jpg"
+                            alt="Duarte 'Dudu' Ribeiro Hermes Protocol">
+                        <h2 class="text-lg font-medium">Duarte 'Dudu' Ribeiro</h2>
+                        <p class="font-medium text-blue-500">Bot Developer</p>
+                        <p class="text-gray-400 dark:text-gray-300">BUIDLing projects as of 2016</p>
+                    </div>
 
-                <div class="flex border-t border-gray-200 divide-x divide-gray-200">
-                    <!--<a href="#_" class="flex-1 block p-5 text-center text-gray-300 transition duration-200 ease-out hover:bg-gray-100 hover:text-gray-500">
+                    <div class="flex border-t border-gray-200 divide-x divide-gray-200">
+                        <!--<a href="#_" class="flex-1 block p-5 text-center text-gray-300 transition duration-200 ease-out hover:bg-gray-100 hover:text-gray-500">
                         <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mx-auto fill-current" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path></svg>
                     </a>-->
-                    <a href="https://github.com/Duarib" target="_blank" class="flex-1 block p-5 text-center text-gray-300 transition duration-200 ease-out hover:bg-gray-100 hover:text-gray-500">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mx-auto fill-current" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"></path></svg>
-                    </a>
-                    <a href="https://www.linkedin.com/in/duarte-ribeiro/" target="_blank" class="flex-1 block p-5 text-center text-gray-300 transition duration-200 ease-out hover:bg-gray-100 hover:text-gray-500">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mx-auto fill-current" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" class=""></path></svg>
-                    </a>
+                        <a href="https://github.com/Duarib" target="_blank"
+                            class="flex-1 block p-5 text-center text-gray-300 transition duration-200 ease-out hover:bg-gray-100 hover:text-gray-500">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mx-auto fill-current"
+                                viewBox="0 0 24 24">
+                                <path
+                                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z">
+                                </path>
+                            </svg>
+                        </a>
+                        <a href="https://www.linkedin.com/in/duarte-ribeiro/" target="_blank"
+                            class="flex-1 block p-5 text-center text-gray-300 transition duration-200 ease-out hover:bg-gray-100 hover:text-gray-500">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mx-auto fill-current"
+                                viewBox="0 0 24 24">
+                                <path
+                                    d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
+                                    class=""></path>
+                            </svg>
+                        </a>
+                    </div>
                 </div>
-            </div>
-            <div class="w-full border border-gray-200 rounded-lg shadow-sm">
-                <div class="flex flex-col items-center justify-center p-10">
-                    <img class="w-32 h-32 mb-6 rounded-full" src="images/team/joaofilipe.jpg"  alt="João Filipe Hermes Protocol">
-                    <h2 class="text-lg font-medium">João Filipe</h2>
-                    <p class="font-medium text-blue-500">Creative Director</p>
-                    <p class="text-gray-400 dark:text-gray-300">All-round creative producer</p>
+                <div class="w-full border border-gray-200 rounded-lg shadow-sm">
+                    <div class="flex flex-col items-center justify-center p-10">
+                        <img class="w-32 h-32 mb-6 rounded-full" src="images/team/joaofilipe.jpg"
+                            alt="João Filipe Hermes Protocol">
+                        <h2 class="text-lg font-medium">João Filipe</h2>
+                        <p class="font-medium text-blue-500">Creative Director</p>
+                        <p class="text-gray-400 dark:text-gray-300">All-round creative producer</p>
+                    </div>
+
+                    <div class="flex border-t border-gray-200 divide-x divide-gray-200">
+                        <a href="https://twitter.com/joaofilipe__" target="_blank"
+                            class="flex-1 block p-5 text-center text-gray-300 transition duration-200 ease-out hover:bg-gray-100 hover:text-gray-500">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mx-auto fill-current"
+                                viewBox="0 0 24 24">
+                                <path
+                                    d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z">
+                                </path>
+                            </svg>
+                        </a>
+                        <a href="https://www.linkedin.com/in/joaofilipecreative/" target="_blank"
+                            class="flex-1 block p-5 text-center text-gray-300 transition duration-200 ease-out hover:bg-gray-100 hover:text-gray-500">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mx-auto fill-current"
+                                viewBox="0 0 24 24">
+                                <path
+                                    d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z">
+                                </path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="w-full border border-gray-200 rounded-lg shadow-sm">
+                    <div class="flex flex-col items-center justify-center p-10">
+                        <img class="w-32 h-32 mb-6 rounded-full" src="images/team/khrys.png"
+                            alt="Khrystyna Shvets Hermes Protocol">
+                        <h2 class="text-lg font-medium">Khrystyna Shvets</h2>
+                        <p class="font-medium text-blue-500">Front-end Developer</p>
+                        <p class="text-gray-400 dark:text-gray-300">UX/UI Developer since 2017</p>
+                    </div>
+
+                    <div class="flex border-t border-gray-200 divide-x divide-gray-200">
+                        <a href="https://github.com/krys-s21" target="_blank"
+                            class="flex-1 block p-5 text-center text-gray-300 transition duration-200 ease-out hover:bg-gray-100 hover:text-gray-500">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mx-auto fill-current"
+                                viewBox="0 0 24 24">
+                                <path
+                                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z">
+                                </path>
+                            </svg>
+                        </a>
+                        <a href="https://www.linkedin.com/in/krystyna-shvets-6769b310a/" target="_blank"
+                            class="flex-1 block p-5 text-center text-gray-300 transition duration-200 ease-out hover:bg-gray-100 hover:text-gray-500">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mx-auto fill-current"
+                                viewBox="0 0 24 24">
+                                <path
+                                    d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z">
+                                </path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="w-full border border-gray-200 rounded-lg shadow-sm">
+                    <div class="flex flex-col items-center justify-center p-10">
+                        <img class="w-32 h-32 mb-6 rounded-full" src="images/team/wellioli.jpg"
+                            alt="Wellington Calôr Hermes Protocol">
+                        <h2 class="text-lg font-medium">Wellington Calôr</h2>
+                        <p class="font-medium text-blue-500">Back-end Developer</p>
+                        <p class="text-gray-400 dark:text-gray-300">SD & CR Manager since 2014</p>
+                    </div>
+
+                    <div class="flex border-t border-gray-200 divide-x divide-gray-200">
+                        <a href="https://github.com/Calor21" target="_blank"
+                            class="flex-1 block p-5 text-center text-gray-300 transition duration-200 ease-out hover:bg-gray-100 hover:text-gray-500">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mx-auto fill-current"
+                                viewBox="0 0 24 24">
+                                <path
+                                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z">
+                                </path>
+                            </svg>
+                        </a>
+                        <a href="https://www.linkedin.com/in/wtco" target="_blank"
+                            class="flex-1 block p-5 text-center text-gray-300 transition duration-200 ease-out hover:bg-gray-100 hover:text-gray-500">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mx-auto fill-current"
+                                viewBox="0 0 24 24">
+                                <path
+                                    d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z">
+                                </path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="w-full border border-gray-200 rounded-lg shadow-sm">
+                    <div class="flex flex-col items-center justify-center p-10">
+                        <img class="w-32 h-32 mb-6 rounded-full" src="images/team/ines.jpg"
+                            alt="Inês Hermínio Hermes Protocol">
+                        <h2 class="text-lg font-medium">Inês Hermínio</h2>
+                        <p class="font-medium text-blue-500">Full Stack Developer</p>
+                        <p class="text-gray-400 dark:text-gray-300">Passionate about challenges</p>
+                    </div>
+
+                    <div class="flex border-t border-gray-200 divide-x divide-gray-200">
+                        <a href="https://github.com/inesherminio" target="_blank"
+                            class="flex-1 block p-5 text-center text-gray-300 transition duration-200 ease-out hover:bg-gray-100 hover:text-gray-500">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mx-auto fill-current"
+                                viewBox="0 0 24 24">
+                                <path
+                                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z">
+                                </path>
+                            </svg>
+                        </a>
+                        <a href="https://www.linkedin.com/in/ines-herminio/" target="_blank"
+                            class="flex-1 block p-5 text-center text-gray-300 transition duration-200 ease-out hover:bg-gray-100 hover:text-gray-500">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mx-auto fill-current"
+                                viewBox="0 0 24 24">
+                                <path
+                                    d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z">
+                                </path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="w-full border border-gray-200 rounded-lg shadow-sm">
+                    <div class="flex flex-col items-center justify-center p-10">
+                        <img class="w-32 h-32 mb-6 rounded-full" src="images/team/lugiatos.jpg"
+                            alt="Diogo 'Lugiatos' Montoia Hermes Protocol">
+                        <h2 class="text-lg font-medium">Diogo 'Lugiatos' Montoia</h2>
+                        <p class="font-medium text-blue-500">Blockchain Developer</p>
+                        <p class="text-gray-400 dark:text-gray-300">VR Enthusiast since 2018</p>
+                    </div>
+
+                    <div class="flex border-t border-gray-200 divide-x divide-gray-200">
+                        <a href="https://github.com/Dimont" target="_blank"
+                            class="flex-1 block p-5 text-center text-gray-300 transition duration-200 ease-out hover:bg-gray-100 hover:text-gray-500">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mx-auto fill-current"
+                                viewBox="0 0 24 24">
+                                <path
+                                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z">
+                                </path>
+                            </svg>
+                        </a>
+                        <a href="https://www.linkedin.com/in/diogo-montoia-98768b113/" target="_blank"
+                            class="flex-1 block p-5 text-center text-gray-300 transition duration-200 ease-out hover:bg-gray-100 hover:text-gray-500">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mx-auto fill-current"
+                                viewBox="0 0 24 24">
+                                <path
+                                    d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z">
+                                </path>
+                            </svg>
+                        </a>
+                    </div>
                 </div>
 
-                <div class="flex border-t border-gray-200 divide-x divide-gray-200">
-                    <a href="https://twitter.com/joaofilipe__" target="_blank" class="flex-1 block p-5 text-center text-gray-300 transition duration-200 ease-out hover:bg-gray-100 hover:text-gray-500">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mx-auto fill-current" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path></svg>
-                    </a>
-                    <a href="https://www.linkedin.com/in/joaofilipecreative/" target="_blank" class="flex-1 block p-5 text-center text-gray-300 transition duration-200 ease-out hover:bg-gray-100 hover:text-gray-500">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mx-auto fill-current" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path></svg>
-                    </a>
-                </div>
-            </div>
-            <div class="w-full border border-gray-200 rounded-lg shadow-sm">
-                <div class="flex flex-col items-center justify-center p-10">
-                    <img class="w-32 h-32 mb-6 rounded-full" src="images/team/khrys.png"  alt="Khrystyna Shvets Hermes Protocol">
-                    <h2 class="text-lg font-medium">Khrystyna Shvets</h2>
-                    <p class="font-medium text-blue-500">Front-end Developer</p>
-                    <p class="text-gray-400 dark:text-gray-300">UX/UI Developer since 2017</p>
-                </div>
+                <div class="w-full border border-gray-200 rounded-lg shadow-sm">
+                    <div class="flex flex-col items-center justify-center p-10">
+                        <img class="w-32 h-32 mb-6 rounded-full" src="images/team/antonio.jpg">
+                        <h2 class="text-lg font-medium">Antonio Cabrerizo</h2>
+                        <p class="font-medium text-blue-500">Business Developer</p>
+                        <p class="text-gray-400 dark:text-gray-300">PM & Coordinator as of 2018</p>
+                    </div>
 
-                <div class="flex border-t border-gray-200 divide-x divide-gray-200">
-                    <a href="https://github.com/krys-s21" target="_blank" class="flex-1 block p-5 text-center text-gray-300 transition duration-200 ease-out hover:bg-gray-100 hover:text-gray-500">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mx-auto fill-current" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"></path></svg>
-                    </a>
-                    <a href="https://www.linkedin.com/in/krystyna-shvets-6769b310a/" target="_blank" class="flex-1 block p-5 text-center text-gray-300 transition duration-200 ease-out hover:bg-gray-100 hover:text-gray-500">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mx-auto fill-current" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path></svg>
-                    </a>
-                </div>
-            </div>
-            <div class="w-full border border-gray-200 rounded-lg shadow-sm">
-                <div class="flex flex-col items-center justify-center p-10">
-                    <img class="w-32 h-32 mb-6 rounded-full" src="images/team/wellioli.jpg"  alt="Wellington Calôr Hermes Protocol">
-                    <h2 class="text-lg font-medium">Wellington Calôr</h2>
-                    <p class="font-medium text-blue-500">Back-end Developer</p>
-                    <p class="text-gray-400 dark:text-gray-300">SD & CR Manager since 2014</p>
-                </div>
-
-                <div class="flex border-t border-gray-200 divide-x divide-gray-200">
-                    <a href="https://github.com/Calor21" target="_blank" class="flex-1 block p-5 text-center text-gray-300 transition duration-200 ease-out hover:bg-gray-100 hover:text-gray-500">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mx-auto fill-current" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"></path></svg>
-                    </a>
-                    <a href="https://www.linkedin.com/in/wtco" target="_blank" class="flex-1 block p-5 text-center text-gray-300 transition duration-200 ease-out hover:bg-gray-100 hover:text-gray-500">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mx-auto fill-current" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path></svg>
-                    </a>
-                </div>
-            </div>
-            <div class="w-full border border-gray-200 rounded-lg shadow-sm">
-                <div class="flex flex-col items-center justify-center p-10">
-                    <img class="w-32 h-32 mb-6 rounded-full" src="images/team/ines.jpg"  alt="Inês Hermínio Hermes Protocol">
-                    <h2 class="text-lg font-medium">Inês Hermínio</h2>
-                    <p class="font-medium text-blue-500">Full Stack Developer</p>
-                    <p class="text-gray-400 dark:text-gray-300">Passionate about challenges</p>
-                </div>
-
-                <div class="flex border-t border-gray-200 divide-x divide-gray-200">
-                    <a href="https://github.com/inesherminio" target="_blank" class="flex-1 block p-5 text-center text-gray-300 transition duration-200 ease-out hover:bg-gray-100 hover:text-gray-500">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mx-auto fill-current" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"></path></svg>
-                    </a>
-                    <a href="https://www.linkedin.com/in/ines-herminio/" target="_blank" class="flex-1 block p-5 text-center text-gray-300 transition duration-200 ease-out hover:bg-gray-100 hover:text-gray-500">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mx-auto fill-current" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path></svg>
-                    </a>
-                </div>
-            </div>
-            <div class="w-full border border-gray-200 rounded-lg shadow-sm">
-                <div class="flex flex-col items-center justify-center p-10">
-                    <img class="w-32 h-32 mb-6 rounded-full" src="images/team/lugiatos.jpg" alt="Diogo 'Lugiatos' Montoia Hermes Protocol">
-                    <h2 class="text-lg font-medium">Diogo 'Lugiatos' Montoia</h2>
-                    <p class="font-medium text-blue-500">Blockchain Developer</p>
-                    <p class="text-gray-400 dark:text-gray-300">VR Enthusiast since 2018</p>
-                </div>
-
-                <div class="flex border-t border-gray-200 divide-x divide-gray-200">
-                    <a href="https://github.com/Dimont" target="_blank" class="flex-1 block p-5 text-center text-gray-300 transition duration-200 ease-out hover:bg-gray-100 hover:text-gray-500">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mx-auto fill-current" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"></path></svg>
-                    </a>
-                    <a href="https://www.linkedin.com/in/diogo-montoia-98768b113/" target="_blank" class="flex-1 block p-5 text-center text-gray-300 transition duration-200 ease-out hover:bg-gray-100 hover:text-gray-500">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mx-auto fill-current" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path></svg>
-                    </a>
-                </div>
-            </div>
-            
-            <div class="w-full border border-gray-200 rounded-lg shadow-sm">
-                <div class="flex flex-col items-center justify-center p-10">
-                    <img class="w-32 h-32 mb-6 rounded-full" src="images/team/antonio.jpg">
-                    <h2 class="text-lg font-medium">Antonio Cabrerizo</h2>
-                    <p class="font-medium text-blue-500">Business Developer</p>
-                    <p class="text-gray-400 dark:text-gray-300">PM & Coordinator as of 2018</p>
-                </div>
-
-                <div class="flex border-t border-gray-200 divide-x divide-gray-200">
-                    <a href="https://twitter.com/AntonioCabreri2" target="_blank" class="flex-1 block p-5 text-center text-gray-300 transition duration-200 ease-out hover:bg-gray-100 hover:text-gray-500">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mx-auto fill-current" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path></svg>
-                    </a>
-                    <a href="https://github.com/acabrerizoubeda" target="_blank" class="flex-1 block p-5 text-center text-gray-300 transition duration-200 ease-out hover:bg-gray-100 hover:text-gray-500">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mx-auto fill-current" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"></path></svg>
-                    </a>
-                    <a href="https://www.linkedin.com/in/antonio-cabrerizo-ba6892115/" target="_blank" class="flex-1 block p-5 text-center text-gray-300 transition duration-200 ease-out hover:bg-gray-100 hover:text-gray-500">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mx-auto fill-current" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path></svg>
-                    </a>
+                    <div class="flex border-t border-gray-200 divide-x divide-gray-200">
+                        <a href="https://twitter.com/AntonioCabreri2" target="_blank"
+                            class="flex-1 block p-5 text-center text-gray-300 transition duration-200 ease-out hover:bg-gray-100 hover:text-gray-500">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mx-auto fill-current"
+                                viewBox="0 0 24 24">
+                                <path
+                                    d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z">
+                                </path>
+                            </svg>
+                        </a>
+                        <a href="https://github.com/acabrerizoubeda" target="_blank"
+                            class="flex-1 block p-5 text-center text-gray-300 transition duration-200 ease-out hover:bg-gray-100 hover:text-gray-500">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mx-auto fill-current"
+                                viewBox="0 0 24 24">
+                                <path
+                                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z">
+                                </path>
+                            </svg>
+                        </a>
+                        <a href="https://www.linkedin.com/in/antonio-cabrerizo-ba6892115/" target="_blank"
+                            class="flex-1 block p-5 text-center text-gray-300 transition duration-200 ease-out hover:bg-gray-100 hover:text-gray-500">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mx-auto fill-current"
+                                viewBox="0 0 24 24">
+                                <path
+                                    d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z">
+                                </path>
+                            </svg>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- Section 6 -->
-<!-- <section class="w-full py-16 pb-20 bg-white dark:bg-gray-800" id="Partners">
+    <!-- Section 6 -->
+    <!-- <section class="w-full py-16 pb-20 bg-white dark:bg-gray-800" id="Partners">
     <div class="container px-8 mx-auto sm:px-12 lg:px-20">
         <h1 class="mb-3 text-3xl font-bold leading-tight text-center text-gray-900 dark:text-gray-300 md:text-4xl">Trusted by a multitude of partners</h1>
         <p class="text-lg text-center text-gray-600 dark:text-gray-300">We've been trusted and used by some of the best dApps in the industry.</p>
@@ -426,183 +626,297 @@
     </div>
 </section> -->
 
-<!-- Section 7 -->
-<section class="py-24 bg-gray-50" id="FAQs">
-    <div class="max-w-4xl px-8 mx-auto lg:px-16">
-        <h2 class="mb-2 text-xl font-bold text-center md:text-3xl dark:text-gray-300">Frequently Asked Questions</h2>
+    <!-- Section 7 -->
+    <section class="py-24 bg-gray-50" id="FAQs">
+        <div class="max-w-4xl px-8 mx-auto lg:px-16">
+            <h2 class="mb-2 text-xl font-bold text-center md:text-3xl dark:text-gray-300">Frequently Asked Questions
+            </h2>
 
-        <div class="relative mt-2 mt-12 space-y-5">
-            <!-- Question 1 -->
-            <div x-data="{ show: false }" class="relative overflow-hidden border-2 border-gray-200 rounded-lg select-none hover:bg-white">
-                <h4 @click="show=!show" class="flex items-center justify-between text-lg font-medium text-gray-700 dark:text-gray-300 cursor-pointer sm:text-xl px-7 py-7 hover:text-gray-800">
-                    <span class="">Which social apps are you compatible with?</span>
-                    <svg class="w-6 h-6 transition-all duration-200 ease-out transform rotate-0" :class="{ '-rotate-45' : show }" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" class=""></path></svg>
-                </h4>
-                <p class="pt-0 -mt-2 text-gray-400 sm:text-lg py-7 px-7" x-transition:enter="transition-all ease-out duration-300" x-transition:enter-start="opacity-0 transform -translate-y-4" x-transition:enter-end="opacity-100 transform -translate-y-0" x-transition:leave="transition-all ease-out hidden duration-200" x-transition:leave-start="opacity-100 transform -translate-y-0" x-transition:leave-end="opacity-0 transform -translate-y-4" x-show="show" data-c2c-process="1" style="display: none;">
-                    We're starting of with Discord, Telegram and Twitter. Feel free to tell us which one you'd love to see next!</p>
-            </div>
-
-            <!-- Question 2 -->
-            <div x-data="{ show: false }" class="relative overflow-hidden border-2 border-gray-200 rounded-lg select-none hover:bg-white">
-                <h4 @click="show=!show" class="flex items-center justify-between text-lg font-medium text-gray-700  dark:text-gray-300 cursor-pointer sm:text-xl px-7 py-7 hover:text-gray-800">
-                    <span class="">Which dApps can I subscribe to events?</span>
-                    <svg class="w-6 h-6 transition-all duration-200 ease-out transform rotate-0" :class="{ '-rotate-45' : show }" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" class=""></path></svg>
-                </h4>
-                <p class="pt-0 -mt-2 text-gray-400 sm:text-lg py-7 px-7" x-transition:enter="transition-all ease-out duration-300" x-transition:enter-start="opacity-0 transform -translate-y-4" x-transition:enter-end="opacity-100 transform -translate-y-0" x-transition:leave="transition-all ease-out hidden duration-200" x-transition:leave-start="opacity-100 transform -translate-y-0" x-transition:leave-end="opacity-0 transform -translate-y-4" x-show="show" data-c2c-process="1" style="display: none;">
-                    We aim to support as many Terra dApps as possible by EoY, and eventually become multi-chain native.</p>
-            </div>
-
-            <!-- Question 3 -->
-            <div x-data="{ show: false }" class="relative overflow-hidden border-2 border-gray-200 rounded-lg select-none hover:bg-white">
-                <h4 @click="show=!show" class="flex items-center justify-between text-lg font-medium text-gray-700 dark:text-gray-300 cursor-pointer sm:text-xl px-7 py-7 hover:text-gray-800">
-                    <span class="">How much will it cost me?</span>
-                    <svg class="w-6 h-6 transition-all duration-200 ease-out transform rotate-0" :class="{ '-rotate-45' : show }" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" class=""></path></svg>
-                </h4>
-                <p class="pt-0 -mt-2 text-gray-400 sm:text-lg py-7 px-7" x-transition:enter="transition-all ease-out duration-300" x-transition:enter-start="opacity-0 transform -translate-y-4" x-transition:enter-end="opacity-100 transform -translate-y-0" x-transition:leave="transition-all ease-out hidden duration-200" x-transition:leave-start="opacity-100 transform -translate-y-0" x-transition:leave-end="opacity-0 transform -translate-y-4" x-show="show" data-c2c-process="1" style="display: none;">
-                    Nought, nil, nada, nothing, zero, zilch and zip. The platform will be 100% free to retail (non-business) users.</p>
-            </div>
-
-             <!-- Question 4 -->
-             <div x-data="{ show: false }" class="relative overflow-hidden border-2 border-gray-200 rounded-lg select-none hover:bg-white">
-                <h4 @click="show=!show" class="flex items-center justify-between text-lg font-medium text-gray-700 dark:text-gray-300 cursor-pointer sm:text-xl px-7 py-7 hover:text-gray-800">
-                    <span class="" data-c2c-process="1">Will you support SMS notifications? What about mobile apps?</span>
-                    <svg class="w-6 h-6 transition-all duration-200 ease-out transform rotate-0" :class="{ '-rotate-45' : show }" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" class=""></path></svg>
-                </h4>
-                <p class="pt-0 -mt-2 text-gray-400 sm:text-lg py-7 px-7" x-transition:enter="transition-all ease-out duration-300" x-transition:enter-start="opacity-0 transform -translate-y-4" x-transition:enter-end="opacity-100 transform -translate-y-0" x-transition:leave="transition-all ease-out hidden duration-200" x-transition:leave-start="opacity-100 transform -translate-y-0" x-transition:leave-end="opacity-0 transform -translate-y-4" x-show="show" data-c2c-process="1" style="display: none;">
-                    Yes, at some point, but it's not a priority on our roadmap. We are also planning to release Android & iOS apps down the line, but probably not in 2022.</p>
-            </div>
-
-            <!-- Question 5 -->
-            <div x-data="{ show: false }" class="relative overflow-hidden border-2 border-gray-200 rounded-lg select-none hover:bg-white">
-                <h4 @click="show=!show" class="flex items-center justify-between text-lg font-medium text-gray-700 dark:text-gray-300 cursor-pointer sm:text-xl px-7 py-7 hover:text-gray-800">
-                    <span class="">What about my Smart Home appliances? Lightbulbs, music player, etc.</span>
-                    <svg class="w-6 h-6 transition-all duration-200 ease-out transform rotate-0" :class="{ '-rotate-45' : show }" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" class=""></path></svg>
-                </h4>
-                <p class="pt-0 -mt-2 text-gray-400 sm:text-lg py-7 px-7" x-transition:enter="transition-all ease-out duration-300" x-transition:enter-start="opacity-0 transform -translate-y-4" x-transition:enter-end="opacity-100 transform -translate-y-0" x-transition:leave="transition-all ease-out hidden duration-200" x-transition:leave-start="opacity-100 transform -translate-y-0" x-transition:leave-end="opacity-0 transform -translate-y-4" x-show="show" data-c2c-process="1" style="display: none;">
-                    By using popular integration services such as IFTTT, Zapier, Make and more, you'll have virtually infinite choices on how and where you want to be notified.</p>
-            </div>
-
-            <!-- Question 6 -->
-            <div x-data="{ show: false }" class="relative overflow-hidden border-2 border-gray-200 rounded-lg select-none hover:bg-white">
-                <h4 @click="show=!show" class="flex items-center justify-between text-lg font-medium text-gray-700 dark:text-gray-300 cursor-pointer sm:text-xl px-7 py-7 hover:text-gray-800">
-                    <span class="">How are you "infinitely scalable" and instant everywhere?</span>
-                    <svg class="w-6 h-6 transition-all duration-200 ease-out transform rotate-0" :class="{ '-rotate-45' : show }" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" class=""></path></svg>
-                </h4>
-                <p class="pt-0 -mt-2 text-gray-400 sm:text-lg py-7 px-7" x-transition:enter="transition-all ease-out duration-300" x-transition:enter-start="opacity-0 transform -translate-y-4" x-transition:enter-end="opacity-100 transform -translate-y-0" x-transition:leave="transition-all ease-out hidden duration-200" x-transition:leave-start="opacity-100 transform -translate-y-0" x-transition:leave-end="opacity-0 transform -translate-y-4" x-show="show" data-c2c-process="1" style="display: none;">
-                    Our website and webapps literally "live" on the cloud edge (also called CDN) of Cloudflare. We leverage the power of their thousands of servers worldwide (193 cities) by using their Pages + Worker services, and as an added bonus, we're DDoS protected too!</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Section 8 -->
-<section class="bg-white dark:bg-gray-800">
-    <div class="px-8 py-12 mx-auto text-gray-600 bg-white xl:pb-24 max-w-7xl xl:px-12">
-        <div class="mx-auto mb-6 lg:mb-8">
-            <div class="col-span-3">
-                <a class="text-xl font-black leading-none text-gray-900 select-none logo">
-                    <img class="object-contain w-32 h-32 " src="images/hermes-full-logo.svg">
-                </a>
-            </div>
-        </div>
-        <div class="grid gap-6 mx-auto md:grid-cols-2 lg:grid-cols-3 lg:gap-x-8">
-            <div>
-                <h5 class="text-xl font-bold text-gray-700">Product</h5>
-                <nav class="mt-4">
-                    <ul class="space-y-2">
-                        <li>
-                            <a href="#" class="text-base dark:text-gray-300 hover:text-gray-500">Features</a>
-                        </li>
-                        <li>
-                            <a href="#" class="text-base dark:text-gray-300 hover:text-gray-500">Integrations</a>
-                        </li>
-                        <li>
-                            <a href="#" class="text-base dark:text-gray-300 hover:text-gray-500">Documentation</a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-            <div>
-                <h5 class="text-xl font-bold dark:text-gray-300 text-gray-700">About</h5>
-                <nav class="mt-4">
-                    <ul class="space-y-2">
-                        <li>
-                            <a href="#OurTeam" class="text-base dark:text-gray-300 hover:text-gray-500">Our Team</a>
-                        </li>
-                        <li>
-                            <a href="#" class="text-base dark:text-gray-300 hover:text-gray-500">Work With Us</a>
-                        </li>
-                        <!-- <li>
-                            <a href="#Partners" class="text-base hover:text-gray-500 dark:text-gray-300">Partners</a>
-                        </li> -->
-                    </ul>
-                </nav>
-            </div>
-            <div>
-                <h5 class="text-xl font-bold text-gray-700 dark:text-gray-300">Resources</h5>
-                <nav class="mt-4">
-                    <ul class="space-y-2">
-                        <li>
-                            <a href="#" class="text-base hover:text-gray-500 dark:text-gray-300">Help Center</a>
-                        </li>
-                        <li>
-                            <a href="#" class="text-base hover:text-gray-500 dark:text-gray-300">Developer API</a>
-                        </li>
-                        <!--<li class="">
-                            <a href="#" class="text-base hover:text-gray-500">Our Blog</a>
-                        </li>-->
-                    </ul>
-                </nav>
-            </div>
-        </div>
-        <div class="flex flex-col items-center justify-between mx-auto mt-16 space-y-4 md:space-y-0 md:flex-row lg:mt-20">
-            <div class="space-y-4 text-sm text-center md:space-y-0 md:text-left">
-                <p class="text-gray-500 dark:text-gray-300">© 2021 <a href="https://momentum-free.com" class="text-base hover:text-gray-500">Momentum Free</a>. All rights reserved.</p>
-                <p class="my-4 text-xs leading-normal text-gray-500 dark:text-gray-300" data-c2c-process="1">Creating beautiful websites since 2020.</p>
-            </div>
-            <a href="https://app.hermesprotocol.io" class="inline-block px-5 py-4 font-semibold text-white rounded-lg bg-gradient-to-br from-muddywaters-500 to-muddywaters-600 hover:from-muddywaters-400 hover:to-muddywaters-600 lg:px-8 cursor-not-allowed">Get Started Today</a>
-        </div>
-        <div class="flex flex-col items-center justify-between mx-auto mt-8 space-y-4 md:space-y-0 md:flex-row lg:mt-16">
-            <nav class="flex flex-wrap justify-center space-x-6">
-                <a href="#" class="mb-2 text-sm hover:text-gray-700 dark:text-gray-300">Privacy Policy</a>
-                <a href="#" class="mb-2 text-sm hover:text-gray-700 dark:text-gray-300">Disclaimers</a>
-                <a href="#" class="mb-2 text-sm hover:text-gray-700 dark:text-gray-300">Terms and Conditions</a>
-                <a href="#" class="mb-2 text-sm hover:text-gray-700 dark:text-gray-300">Refund Policy</a>
-                <a href="#" class="mb-2 text-sm hover:text-gray-700 dark:text-gray-300">Legal</a>
-            </nav>
-            <nav class="flex items-center space-x-2">
-                <a href="https://twitter.com/hermesprotocol" target="_blank" class="text-gray-500 hover:text-gray-600 dark:text-gray-300">
-                    <span class="sr-only">Twitter</span>
-                    <svg xmlns="http://www.w3.org/2000/svg"  class="w-6 h-6" fill="currentColor"  viewBox="0 0 18 18" >
-                        <path d="M5.9 15.7c5.3 0 9.6-4.2 9.7-9.5v-.1-.4c.7-.5 1.2-1.1 1.7-1.8-.6.3-1.3.5-2 .5.7-.4 1.2-1.1 1.5-1.8-.7.4-1.4.7-2.2.8C13.3 2 11.1 2 9.8 3.3c-.6.6-1 1.5-1 2.3 0 .3 0 .5.1.8-2.7-.1-5.3-1.4-7-3.5-.9 1.6-.5 3.5 1 4.5-.5 0-1-.1-1.5-.4 0 1.6 1.1 3 2.7 3.3-.3.1-.6.1-.9.1-.2 0-.4 0-.6-.1.4 1.4 1.7 2.3 3.2 2.3-1.2.9-2.7 1.4-4.2 1.4H.8c1.5 1.2 3.3 1.7 5.1 1.7"></path>
-                    </svg>
-                </a>
-                <a href="https://discord.com/invite/RkZvDsWaGk" target="_blank" class="text-gray-500 hover:text-gray-600 dark:text-gray-300">
-                    <span class="sr-only">Discord</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 18 18">
-                            <path d="M15.8 4.2c-1.2-1-2.7-1.5-4.3-1.6l-.2.2c1.4.4 2.7 1.1 3.8 2-1.4-.8-3-1.3-4.6-1.5-1-.1-2.1-.1-3.1 0h-.3c-1.2.2-2.4.5-3.5 1-.6.3-1 .4-1 .4 1.2-1 2.5-1.6 4-2l-.1-.1c-1.6 0-3.1.6-4.3 1.6C.8 6.9 0 10 0 13.1c1.1 1.5 2.8 2.4 4.7 2.4 0 0 .6-.7 1-1.3-1.1-.3-2-.9-2.7-1.8.1.1.3.2.4.3h.1l.1.1c.4.2.7.4 1.1.5.7.3 1.5.6 2.3.8 1.3.2 2.7.2 4 0 .8-.1 1.5-.4 2.2-.7.6-.2 1.2-.5 1.8-.9-.7.9-1.7 1.6-2.8 1.8l1 1.2c1.9 0 3.6-.8 4.7-2.4 0-3.1-.7-6.2-2.1-8.9zm-9.7 7.5c-.9 0-1.6-.8-1.6-1.7 0-.9.7-1.7 1.6-1.7h.1c.8 0 1.5.7 1.5 1.6v.1c0 .9-.7 1.6-1.6 1.7zm5.7 0c-.9 0-1.6-.8-1.6-1.7 0-.9.6-1.7 1.5-1.7s1.6.8 1.6 1.7c.1.9-.7 1.6-1.5 1.7z"></path>
+            <div class="relative mt-2 mt-12 space-y-5">
+                <!-- Question 1 -->
+                <div x-data="{ show: false }"
+                    class="relative overflow-hidden border-2 border-gray-200 rounded-lg select-none hover:bg-white">
+                    <h4 @click="show=!show"
+                        class="flex items-center justify-between text-lg font-medium text-gray-700 dark:text-gray-300 cursor-pointer sm:text-xl px-7 py-7 hover:text-gray-800">
+                        <span class="">Which social apps are you compatible with?</span>
+                        <svg class="w-6 h-6 transition-all duration-200 ease-out transform rotate-0"
+                            :class="{ '-rotate-45' : show }" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 6v6m0 0v6m0-6h6m-6 0H6" class=""></path>
                         </svg>
-                </a>
-                <a href="https://t.me/Hermes_Protocol" target="_blank" class="text-gray-500 hover:text-gray-600 dark:text-gray-300">
-                    <span class="sr-only">Telegram</span>
-                      <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor"  viewBox="0 0 24 24">
-                        <defs></defs>
-                        <path fill-rule="evenodd" d="M18.4 21.8c.3.2.7.3 1.1.1.4-.1.6-.5.7-.8.9-4.1 3-14.4 3.8-18.1.1-.3 0-.6-.3-.8-.2-.2-.5-.3-.8-.2C18.7 3.6 5.8 8.4.5 10.4c-.3.1-.5.4-.5.8s.2.7.6.8c2.4.7 5.5 1.7 5.5 1.7s1.5 4.4 2.2 6.6c.1.3.3.5.6.6.3.1.6 0 .8-.2 1.2-1.1 3.1-2.9 3.1-2.9s3.6 2.5 5.6 4zm-11-8.7l1.7 5.5.4-3.5S16 9.2 19.7 5.9c.1-.1.1-.3 0-.4-.1-.1-.3-.1-.4-.1C15 8.2 7.4 13.1 7.4 13.1z" clip-rule="evenodd"></path>
-                    </svg>
-                </a>
-                <a href="https://github.com/HermesProtocol-io" target="_blank" class="text-gray-500 hover:text-gray-600 dark:text-gray-300">
-                    <span class="sr-only">GitHub</span>
-                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                        <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path>
-                    </svg>
-                </a>
-            </nav>
-        </div>
-    </div>
-</section>
+                    </h4>
+                    <p class="pt-0 -mt-2 text-gray-400 sm:text-lg py-7 px-7"
+                        x-transition:enter="transition-all ease-out duration-300"
+                        x-transition:enter-start="opacity-0 transform -translate-y-4"
+                        x-transition:enter-end="opacity-100 transform -translate-y-0"
+                        x-transition:leave="transition-all ease-out hidden duration-200"
+                        x-transition:leave-start="opacity-100 transform -translate-y-0"
+                        x-transition:leave-end="opacity-0 transform -translate-y-4" x-show="show" data-c2c-process="1"
+                        style="display: none;">
+                        We're starting of with Discord, Telegram and Twitter. Feel free to tell us which one you'd love
+                        to see next!</p>
+                </div>
 
-<!-- AlpineJS Library -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/2.8.0/alpine.js"></script>
+                <!-- Question 2 -->
+                <div x-data="{ show: false }"
+                    class="relative overflow-hidden border-2 border-gray-200 rounded-lg select-none hover:bg-white">
+                    <h4 @click="show=!show"
+                        class="flex items-center justify-between text-lg font-medium text-gray-700  dark:text-gray-300 cursor-pointer sm:text-xl px-7 py-7 hover:text-gray-800">
+                        <span class="">Which dApps can I subscribe to events?</span>
+                        <svg class="w-6 h-6 transition-all duration-200 ease-out transform rotate-0"
+                            :class="{ '-rotate-45' : show }" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 6v6m0 0v6m0-6h6m-6 0H6" class=""></path>
+                        </svg>
+                    </h4>
+                    <p class="pt-0 -mt-2 text-gray-400 sm:text-lg py-7 px-7"
+                        x-transition:enter="transition-all ease-out duration-300"
+                        x-transition:enter-start="opacity-0 transform -translate-y-4"
+                        x-transition:enter-end="opacity-100 transform -translate-y-0"
+                        x-transition:leave="transition-all ease-out hidden duration-200"
+                        x-transition:leave-start="opacity-100 transform -translate-y-0"
+                        x-transition:leave-end="opacity-0 transform -translate-y-4" x-show="show" data-c2c-process="1"
+                        style="display: none;">
+                        We aim to support as many Terra dApps as possible by EoY, and eventually become multi-chain
+                        native.</p>
+                </div>
+
+                <!-- Question 3 -->
+                <div x-data="{ show: false }"
+                    class="relative overflow-hidden border-2 border-gray-200 rounded-lg select-none hover:bg-white">
+                    <h4 @click="show=!show"
+                        class="flex items-center justify-between text-lg font-medium text-gray-700 dark:text-gray-300 cursor-pointer sm:text-xl px-7 py-7 hover:text-gray-800">
+                        <span class="">How much will it cost me?</span>
+                        <svg class="w-6 h-6 transition-all duration-200 ease-out transform rotate-0"
+                            :class="{ '-rotate-45' : show }" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 6v6m0 0v6m0-6h6m-6 0H6" class=""></path>
+                        </svg>
+                    </h4>
+                    <p class="pt-0 -mt-2 text-gray-400 sm:text-lg py-7 px-7"
+                        x-transition:enter="transition-all ease-out duration-300"
+                        x-transition:enter-start="opacity-0 transform -translate-y-4"
+                        x-transition:enter-end="opacity-100 transform -translate-y-0"
+                        x-transition:leave="transition-all ease-out hidden duration-200"
+                        x-transition:leave-start="opacity-100 transform -translate-y-0"
+                        x-transition:leave-end="opacity-0 transform -translate-y-4" x-show="show" data-c2c-process="1"
+                        style="display: none;">
+                        Nought, nil, nada, nothing, zero, zilch and zip. The platform will be 100% free to retail
+                        (non-business) users.</p>
+                </div>
+
+                <!-- Question 4 -->
+                <div x-data="{ show: false }"
+                    class="relative overflow-hidden border-2 border-gray-200 rounded-lg select-none hover:bg-white">
+                    <h4 @click="show=!show"
+                        class="flex items-center justify-between text-lg font-medium text-gray-700 dark:text-gray-300 cursor-pointer sm:text-xl px-7 py-7 hover:text-gray-800">
+                        <span class="" data-c2c-process="1">Will you support SMS notifications? What about mobile
+                            apps?</span>
+                        <svg class="w-6 h-6 transition-all duration-200 ease-out transform rotate-0"
+                            :class="{ '-rotate-45' : show }" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 6v6m0 0v6m0-6h6m-6 0H6" class=""></path>
+                        </svg>
+                    </h4>
+                    <p class="pt-0 -mt-2 text-gray-400 sm:text-lg py-7 px-7"
+                        x-transition:enter="transition-all ease-out duration-300"
+                        x-transition:enter-start="opacity-0 transform -translate-y-4"
+                        x-transition:enter-end="opacity-100 transform -translate-y-0"
+                        x-transition:leave="transition-all ease-out hidden duration-200"
+                        x-transition:leave-start="opacity-100 transform -translate-y-0"
+                        x-transition:leave-end="opacity-0 transform -translate-y-4" x-show="show" data-c2c-process="1"
+                        style="display: none;">
+                        Yes, at some point, but it's not a priority on our roadmap. We are also planning to release
+                        Android & iOS apps down the line, but probably not in 2022.</p>
+                </div>
+
+                <!-- Question 5 -->
+                <div x-data="{ show: false }"
+                    class="relative overflow-hidden border-2 border-gray-200 rounded-lg select-none hover:bg-white">
+                    <h4 @click="show=!show"
+                        class="flex items-center justify-between text-lg font-medium text-gray-700 dark:text-gray-300 cursor-pointer sm:text-xl px-7 py-7 hover:text-gray-800">
+                        <span class="">What about my Smart Home appliances? Lightbulbs, music player, etc.</span>
+                        <svg class="w-6 h-6 transition-all duration-200 ease-out transform rotate-0"
+                            :class="{ '-rotate-45' : show }" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 6v6m0 0v6m0-6h6m-6 0H6" class=""></path>
+                        </svg>
+                    </h4>
+                    <p class="pt-0 -mt-2 text-gray-400 sm:text-lg py-7 px-7"
+                        x-transition:enter="transition-all ease-out duration-300"
+                        x-transition:enter-start="opacity-0 transform -translate-y-4"
+                        x-transition:enter-end="opacity-100 transform -translate-y-0"
+                        x-transition:leave="transition-all ease-out hidden duration-200"
+                        x-transition:leave-start="opacity-100 transform -translate-y-0"
+                        x-transition:leave-end="opacity-0 transform -translate-y-4" x-show="show" data-c2c-process="1"
+                        style="display: none;">
+                        By using popular integration services such as IFTTT, Zapier, Make and more, you'll have
+                        virtually infinite choices on how and where you want to be notified.</p>
+                </div>
+
+                <!-- Question 6 -->
+                <div x-data="{ show: false }"
+                    class="relative overflow-hidden border-2 border-gray-200 rounded-lg select-none hover:bg-white">
+                    <h4 @click="show=!show"
+                        class="flex items-center justify-between text-lg font-medium text-gray-700 dark:text-gray-300 cursor-pointer sm:text-xl px-7 py-7 hover:text-gray-800">
+                        <span class="">How are you "infinitely scalable" and instant everywhere?</span>
+                        <svg class="w-6 h-6 transition-all duration-200 ease-out transform rotate-0"
+                            :class="{ '-rotate-45' : show }" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 6v6m0 0v6m0-6h6m-6 0H6" class=""></path>
+                        </svg>
+                    </h4>
+                    <p class="pt-0 -mt-2 text-gray-400 sm:text-lg py-7 px-7"
+                        x-transition:enter="transition-all ease-out duration-300"
+                        x-transition:enter-start="opacity-0 transform -translate-y-4"
+                        x-transition:enter-end="opacity-100 transform -translate-y-0"
+                        x-transition:leave="transition-all ease-out hidden duration-200"
+                        x-transition:leave-start="opacity-100 transform -translate-y-0"
+                        x-transition:leave-end="opacity-0 transform -translate-y-4" x-show="show" data-c2c-process="1"
+                        style="display: none;">
+                        Our website and webapps literally "live" on the cloud edge (also called CDN) of Cloudflare. We
+                        leverage the power of their thousands of servers worldwide (193 cities) by using their Pages +
+                        Worker services, and as an added bonus, we're DDoS protected too!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 8 -->
+    <section class="bg-white dark:bg-gray-800">
+        <div class="px-8 py-12 mx-auto text-gray-600 bg-white xl:pb-24 max-w-7xl xl:px-12">
+            <div class="grid gap-6 mx-auto md:grid-cols-2 lg:grid-cols-4 lg:gap-x-8">
+                <div class="mb-6 lg:mb-8">
+                    <div class="col-span-3">
+                        <a class="text-xl font-black leading-none text-gray-900 select-none logo">
+                            <img class="object-contain w-32 h-32 " src="images/hermes-full-logo.svg">
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h5 class="text-xl font-bold text-gray-700">Product</h5>
+                    <nav class="mt-4">
+                        <ul class="space-y-2">
+                            <li>
+                                <a href="#" class="text-base dark:text-gray-300 hover:text-gray-500">Features</a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-base dark:text-gray-300 hover:text-gray-500">Integrations</a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-base dark:text-gray-300 hover:text-gray-500">Documentation</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div>
+                    <h5 class="text-xl font-bold dark:text-gray-300 text-gray-700">About</h5>
+                    <nav class="mt-4">
+                        <ul class="space-y-2">
+                            <li>
+                                <a href="/#OurTeam" class="text-base dark:text-gray-300 hover:text-gray-500">Our
+                                    Team</a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-base dark:text-gray-300 hover:text-gray-500">Work With
+                                    Us</a>
+                            </li>
+                            <!-- <li>
+                        <a href="#Partners" class="text-base hover:text-gray-500 dark:text-gray-300">Partners</a>
+                    </li> -->
+                        </ul>
+                    </nav>
+                </div>
+                <div>
+                    <h5 class="text-xl font-bold text-gray-700 dark:text-gray-300">Resources</h5>
+                    <nav class="mt-4">
+                        <ul class="space-y-2">
+                            <li>
+                                <a href="#" class="text-base hover:text-gray-500 dark:text-gray-300">Help Center</a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-base hover:text-gray-500 dark:text-gray-300">Developer
+                                    API</a>
+                            </li>
+                            <!--<li class="">
+                        <a href="#" class="text-base hover:text-gray-500">Our Blog</a>
+                    </li>-->
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+
+            <div
+                class="flex flex-col items-center justify-between mx-auto mt-16 space-y-4 md:space-y-0 md:flex-row lg:mt-20">
+                <div class="space-y-4 text-sm text-center md:space-y-0 md:text-left">
+                    <p class="text-gray-500 dark:text-gray-300">© 2021 <a href="https://momentum-free.com"
+                            class="text-base hover:text-gray-500">Momentum Free</a>. All rights reserved.</p>
+                    <p class="my-4 text-xs leading-normal text-gray-500 dark:text-gray-300" data-c2c-process="1">
+                        Creating beautiful websites since 2020.</p>
+                </div>
+                <a href="https://app.hermesprotocol.io"
+                    class="inline-block px-5 py-4 font-semibold text-white rounded-lg bg-gradient-to-br from-muddywaters-500 to-muddywaters-600 hover:from-muddywaters-400 hover:to-muddywaters-600 lg:px-8 cursor-not-allowed">Get
+                    Started Today</a>
+            </div>
+            <div
+                class="flex flex-col items-center justify-between mx-auto mt-8 space-y-4 md:space-y-0 md:flex-row lg:mt-16">
+                <nav class="flex flex-wrap justify-center space-x-6">
+                    <a href="privacy_policy.html" class="mb-2 text-sm hover:text-gray-700 dark:text-gray-300">Privacy
+                        Policy</a>
+                    <a href="terms.html" class="mb-2 text-sm hover:text-gray-700 dark:text-gray-300">Terms of Use</a>
+                    <a href="gdpr.html" class="mb-2 text-sm hover:text-gray-700 dark:text-gray-300">GDPR</a>
+                </nav>
+                <nav class="flex items-center space-x-2">
+                    <a href="https://twitter.com/hermesprotocol" target="_blank"
+                        class="text-gray-500 hover:text-gray-600 dark:text-gray-300">
+                        <span class="sr-only">Twitter</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 18 18">
+                            <path
+                                d="M5.9 15.7c5.3 0 9.6-4.2 9.7-9.5v-.1-.4c.7-.5 1.2-1.1 1.7-1.8-.6.3-1.3.5-2 .5.7-.4 1.2-1.1 1.5-1.8-.7.4-1.4.7-2.2.8C13.3 2 11.1 2 9.8 3.3c-.6.6-1 1.5-1 2.3 0 .3 0 .5.1.8-2.7-.1-5.3-1.4-7-3.5-.9 1.6-.5 3.5 1 4.5-.5 0-1-.1-1.5-.4 0 1.6 1.1 3 2.7 3.3-.3.1-.6.1-.9.1-.2 0-.4 0-.6-.1.4 1.4 1.7 2.3 3.2 2.3-1.2.9-2.7 1.4-4.2 1.4H.8c1.5 1.2 3.3 1.7 5.1 1.7">
+                            </path>
+                        </svg>
+                    </a>
+                    <a href="https://discord.com/invite/RkZvDsWaGk" target="_blank"
+                        class="text-gray-500 hover:text-gray-600 dark:text-gray-300">
+                        <span class="sr-only">Discord</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 18 18">
+                            <path
+                                d="M15.8 4.2c-1.2-1-2.7-1.5-4.3-1.6l-.2.2c1.4.4 2.7 1.1 3.8 2-1.4-.8-3-1.3-4.6-1.5-1-.1-2.1-.1-3.1 0h-.3c-1.2.2-2.4.5-3.5 1-.6.3-1 .4-1 .4 1.2-1 2.5-1.6 4-2l-.1-.1c-1.6 0-3.1.6-4.3 1.6C.8 6.9 0 10 0 13.1c1.1 1.5 2.8 2.4 4.7 2.4 0 0 .6-.7 1-1.3-1.1-.3-2-.9-2.7-1.8.1.1.3.2.4.3h.1l.1.1c.4.2.7.4 1.1.5.7.3 1.5.6 2.3.8 1.3.2 2.7.2 4 0 .8-.1 1.5-.4 2.2-.7.6-.2 1.2-.5 1.8-.9-.7.9-1.7 1.6-2.8 1.8l1 1.2c1.9 0 3.6-.8 4.7-2.4 0-3.1-.7-6.2-2.1-8.9zm-9.7 7.5c-.9 0-1.6-.8-1.6-1.7 0-.9.7-1.7 1.6-1.7h.1c.8 0 1.5.7 1.5 1.6v.1c0 .9-.7 1.6-1.6 1.7zm5.7 0c-.9 0-1.6-.8-1.6-1.7 0-.9.6-1.7 1.5-1.7s1.6.8 1.6 1.7c.1.9-.7 1.6-1.5 1.7z">
+                            </path>
+                        </svg>
+                    </a>
+                    <a href="https://t.me/Hermes_Protocol" target="_blank"
+                        class="text-gray-500 hover:text-gray-600 dark:text-gray-300">
+                        <span class="sr-only">Telegram</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <defs></defs>
+                            <path fill-rule="evenodd"
+                                d="M18.4 21.8c.3.2.7.3 1.1.1.4-.1.6-.5.7-.8.9-4.1 3-14.4 3.8-18.1.1-.3 0-.6-.3-.8-.2-.2-.5-.3-.8-.2C18.7 3.6 5.8 8.4.5 10.4c-.3.1-.5.4-.5.8s.2.7.6.8c2.4.7 5.5 1.7 5.5 1.7s1.5 4.4 2.2 6.6c.1.3.3.5.6.6.3.1.6 0 .8-.2 1.2-1.1 3.1-2.9 3.1-2.9s3.6 2.5 5.6 4zm-11-8.7l1.7 5.5.4-3.5S16 9.2 19.7 5.9c.1-.1.1-.3 0-.4-.1-.1-.3-.1-.4-.1C15 8.2 7.4 13.1 7.4 13.1z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                    </a>
+                    <a href="https://github.com/HermesProtocol-io" target="_blank"
+                        class="text-gray-500 hover:text-gray-600 dark:text-gray-300">
+                        <span class="sr-only">GitHub</span>
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path fill-rule="evenodd"
+                                d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                    </a>
+                </nav>
+            </div>
+        </div>
+    </section>
+    <!-- AlpineJS Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/2.8.0/alpine.js"></script>
 
 </body>
+
 </html>
