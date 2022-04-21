@@ -855,7 +855,7 @@
             <div
                 class="flex flex-col items-center justify-between mx-auto mt-16 space-y-4 md:space-y-0 md:flex-row lg:mt-20">
                 <div class="space-y-4 text-sm text-center md:space-y-0 md:text-left">
-                    <p class="text-gray-500 dark:text-gray-300">© 2021 <a href="https://momentum-free.com"
+                    <p class="text-gray-500 dark:text-gray-300">© <span id="currentYear"></span> <a href="https://momentum-free.com"
                             class="text-base hover:text-gray-500">Momentum Free</a>. All rights reserved.</p>
                     <p class="my-4 text-xs leading-normal text-gray-500 dark:text-gray-300" data-c2c-process="1">
                         Creating beautiful websites since 2020.</p>
@@ -916,7 +916,10 @@
     </section>
     <!-- AlpineJS Library -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/2.8.0/alpine.js"></script>
-
+    <script>
+        //Fill current Year
+        document.getElementById('currentYear').innerHTML = new Date().getFullYear();
+    </script>
 </body>
 
 </html>
