@@ -1,0 +1,173 @@
+---
+layout: default
+---
+<!-- Section 1 -->
+<section class="relative py-0 bg-white lg:py-20">
+
+    <div class="flex flex-col items-center justify-between px-10 mx-auto max-w-7xl xl:px-5 lg:flex-row">
+
+        <div class="flex flex-col items-center w-full px-10 pt-5 pb-20 lg:pt-20 lg:flex-row">
+            <div class="relative w-full max-w-md bg-cover lg:max-w-2xl lg:w-7/12">
+                <div class="relative flex flex-col items-center justify-center w-full h-full lg:pr-10">
+                    <img src="assets/images/contact.png">
+                </div>
+            </div>
+
+            <div class="relative z-10 w-full max-w-2xl mt-20 lg:mt-0 lg:w-5/12">
+                <div class="relative z-10 flex flex-col items-start justify-start p-10 bg-white shadow-2xl rounded-xl">
+                    <div class="relative py-20 text-center md:py-32 xl:py-40">
+                        <div class="flex flex-col mb-6 lg:items-start">
+                            <span class="ml-1 font-medium text-muddywaters-500">Contact us</span>
+                            <h3 class="text-2xl  text-white font-bold">We want to know from you!</h3>
+                        </div>
+                        <form onsubmit="event.preventDefault();">
+                            <div class="input-wrapper relative flex flex-wrap items-center mb-4">
+                                <svg class="absolute ml-4 w-8 h-8 stroke-current text-gray-200 mt-0.5" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                                    </path>
+                                </svg>
+                                <input id="email"
+                                    class="w-full py-5 border border-gray-200 rounded-md pl-14 bg-gray-50 focus:bg-white focus:ring-muddywaters-500 focus:ring-2 focus:ring-offset-2 focus:ring-opacity-90 focus:outline-none"
+                                    type="text" placeholder="Email Address">
+                                <span class="pt-3 mb-4 block text-left text-gray-100 text-xs error"><img
+                                        class="inline-block mr-1" src="/assets/images/alert.png"> This field is
+                                    required</span>
+                            </div>
+                            <div class="input-wrapper relative flex items-center mb-4">
+                                <select id="subject"
+                                    class="block appearance-none w-full py-5 border border-gray-200 rounded-md pl-14 bg-gray-50 focus:bg-white focus:ring-muddywaters-500 focus:ring-2 focus:ring-offset-2 focus:ring-opacity-90 focus:outline-none stroke-current text-gray-400">
+                                    <option> Advanced Setup</option>
+                                    <option> Moderation Services</option>
+                                    <option> Bot Development Service</option>
+                                    <option> Bot Configuration</option>
+                                    <option> Coaching and Training</option>
+                                    <option> Partnership</option>
+                                    <option> Other</option>
+                                </select>
+                                <div
+                                    class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                                    <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 20 20">
+                                        <path
+                                            d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="input-wrapper relative flex flex-wrap items-center mb-4">
+                                <textarea id="about" name="about" rows="3"
+                                    class="w-full py-5 border border-gray-200 rounded-md pl-14 bg-gray-50 focus:bg-white focus:ring-muddywaters-500 focus:ring-2 focus:ring-offset-2 focus:ring-opacity-90 focus:outline-none"
+                                    placeholder="Message"></textarea>
+                                <span class="pt-3 mb-4 block text-left text-gray-100 text-xs error"> <img
+                                        class="inline-block mr-1" src="/assets/images/alert.png"> This field is
+                                    required</span>
+                            </div>
+                            <label class="input-wrapper flex flex-wrap items-center mt-1" for="terms">
+                                <input id="terms" class="mr-2" type="checkbox">
+                                <span class="text-xs text-gray-500">By signing up, you agree to our Terms of Service</span>
+                                <span class="pt-3 mb-4 block text-left text-gray-100 text-xs error"><img
+                                        class="inline-block mr-1" src="/assets/images/alert.png"> You need to accept our
+                                    terms to continue</span>
+                            </label>
+                            <button type="submit"
+                                class="w-full px-8 py-3 mt-8 font-bold text-white uppercase bg-muddywaters-500 rounded-md md:mt-5 hover:bg-muddywaters-600 font-heading g-recaptcha"
+                                id="submit-btn" data-sitekey="6Le24oIgAAAAAHiah-3lOfEH8WkRqDUP2LP9wu3N"
+                                data-callback='contactFormSubmit' lang={{ site.lang }} data-action='submit'>Send</button>
+    
+                        </form>
+                    </div>
+
+                    </div>
+
+                </div>
+                <svg class="absolute top-0 left-0 z-0 w-32 h-32 -mt-12 -ml-12 text-gray-200 fill-current" viewBox="0 0 91 91" xmlns="http://www.w3.org/2000/svg"><g stroke="none" stroke-width="1" fill-rule="evenodd"><g fill-rule="nonzero"><g><g><circle cx="3.261" cy="3.445" r="2.72"></circle><circle cx="15.296" cy="3.445" r="2.719"></circle><circle cx="27.333" cy="3.445" r="2.72"></circle><circle cx="39.369" cy="3.445" r="2.72"></circle><circle cx="51.405" cy="3.445" r="2.72"></circle><circle cx="63.441" cy="3.445" r="2.72"></circle><circle cx="75.479" cy="3.445" r="2.72"></circle><circle cx="87.514" cy="3.445" r="2.719"></circle></g><g transform="translate(0 12)"><circle cx="3.261" cy="3.525" r="2.72"></circle><circle cx="15.296" cy="3.525" r="2.719"></circle><circle cx="27.333" cy="3.525" r="2.72"></circle><circle cx="39.369" cy="3.525" r="2.72"></circle><circle cx="51.405" cy="3.525" r="2.72"></circle><circle cx="63.441" cy="3.525" r="2.72"></circle><circle cx="75.479" cy="3.525" r="2.72"></circle><circle cx="87.514" cy="3.525" r="2.719"></circle></g><g transform="translate(0 24)"><circle cx="3.261" cy="3.605" r="2.72"></circle><circle cx="15.296" cy="3.605" r="2.719"></circle><circle cx="27.333" cy="3.605" r="2.72"></circle><circle cx="39.369" cy="3.605" r="2.72"></circle><circle cx="51.405" cy="3.605" r="2.72"></circle><circle cx="63.441" cy="3.605" r="2.72"></circle><circle cx="75.479" cy="3.605" r="2.72"></circle><circle cx="87.514" cy="3.605" r="2.719"></circle></g><g transform="translate(0 36)"><circle cx="3.261" cy="3.686" r="2.72"></circle><circle cx="15.296" cy="3.686" r="2.719"></circle><circle cx="27.333" cy="3.686" r="2.72"></circle><circle cx="39.369" cy="3.686" r="2.72"></circle><circle cx="51.405" cy="3.686" r="2.72"></circle><circle cx="63.441" cy="3.686" r="2.72"></circle><circle cx="75.479" cy="3.686" r="2.72"></circle><circle cx="87.514" cy="3.686" r="2.719"></circle></g><g transform="translate(0 49)"><circle cx="3.261" cy="2.767" r="2.72"></circle><circle cx="15.296" cy="2.767" r="2.719"></circle><circle cx="27.333" cy="2.767" r="2.72"></circle><circle cx="39.369" cy="2.767" r="2.72"></circle><circle cx="51.405" cy="2.767" r="2.72"></circle><circle cx="63.441" cy="2.767" r="2.72"></circle><circle cx="75.479" cy="2.767" r="2.72"></circle><circle cx="87.514" cy="2.767" r="2.719"></circle></g><g transform="translate(0 61)"><circle cx="3.261" cy="2.846" r="2.72"></circle><circle cx="15.296" cy="2.846" r="2.719"></circle><circle cx="27.333" cy="2.846" r="2.72"></circle><circle cx="39.369" cy="2.846" r="2.72"></circle><circle cx="51.405" cy="2.846" r="2.72"></circle><circle cx="63.441" cy="2.846" r="2.72"></circle><circle cx="75.479" cy="2.846" r="2.72"></circle><circle cx="87.514" cy="2.846" r="2.719"></circle></g><g transform="translate(0 73)"><circle cx="3.261" cy="2.926" r="2.72"></circle><circle cx="15.296" cy="2.926" r="2.719"></circle><circle cx="27.333" cy="2.926" r="2.72"></circle><circle cx="39.369" cy="2.926" r="2.72"></circle><circle cx="51.405" cy="2.926" r="2.72"></circle><circle cx="63.441" cy="2.926" r="2.72"></circle><circle cx="75.479" cy="2.926" r="2.72"></circle><circle cx="87.514" cy="2.926" r="2.719"></circle></g><g transform="translate(0 85)"><circle cx="3.261" cy="3.006" r="2.72"></circle><circle cx="15.296" cy="3.006" r="2.719"></circle><circle cx="27.333" cy="3.006" r="2.72"></circle><circle cx="39.369" cy="3.006" r="2.72"></circle><circle cx="51.405" cy="3.006" r="2.72"></circle><circle cx="63.441" cy="3.006" r="2.72"></circle><circle cx="75.479" cy="3.006" r="2.72"></circle><circle cx="87.514" cy="3.006" r="2.719"></circle></g></g></g></g></svg>
+                <svg class="absolute bottom-0 right-0 z-0 w-32 h-32 -mb-12 -mr-12 text-muddywaters-500 fill-current" viewBox="0 0 91 91" xmlns="http://www.w3.org/2000/svg"><g stroke="none" stroke-width="1" fill-rule="evenodd"><g fill-rule="nonzero"><g><g><circle cx="3.261" cy="3.445" r="2.72"></circle><circle cx="15.296" cy="3.445" r="2.719"></circle><circle cx="27.333" cy="3.445" r="2.72"></circle><circle cx="39.369" cy="3.445" r="2.72"></circle><circle cx="51.405" cy="3.445" r="2.72"></circle><circle cx="63.441" cy="3.445" r="2.72"></circle><circle cx="75.479" cy="3.445" r="2.72"></circle><circle cx="87.514" cy="3.445" r="2.719"></circle></g><g transform="translate(0 12)"><circle cx="3.261" cy="3.525" r="2.72"></circle><circle cx="15.296" cy="3.525" r="2.719"></circle><circle cx="27.333" cy="3.525" r="2.72"></circle><circle cx="39.369" cy="3.525" r="2.72"></circle><circle cx="51.405" cy="3.525" r="2.72"></circle><circle cx="63.441" cy="3.525" r="2.72"></circle><circle cx="75.479" cy="3.525" r="2.72"></circle><circle cx="87.514" cy="3.525" r="2.719"></circle></g><g transform="translate(0 24)"><circle cx="3.261" cy="3.605" r="2.72"></circle><circle cx="15.296" cy="3.605" r="2.719"></circle><circle cx="27.333" cy="3.605" r="2.72"></circle><circle cx="39.369" cy="3.605" r="2.72"></circle><circle cx="51.405" cy="3.605" r="2.72"></circle><circle cx="63.441" cy="3.605" r="2.72"></circle><circle cx="75.479" cy="3.605" r="2.72"></circle><circle cx="87.514" cy="3.605" r="2.719"></circle></g><g transform="translate(0 36)"><circle cx="3.261" cy="3.686" r="2.72"></circle><circle cx="15.296" cy="3.686" r="2.719"></circle><circle cx="27.333" cy="3.686" r="2.72"></circle><circle cx="39.369" cy="3.686" r="2.72"></circle><circle cx="51.405" cy="3.686" r="2.72"></circle><circle cx="63.441" cy="3.686" r="2.72"></circle><circle cx="75.479" cy="3.686" r="2.72"></circle><circle cx="87.514" cy="3.686" r="2.719"></circle></g><g transform="translate(0 49)"><circle cx="3.261" cy="2.767" r="2.72"></circle><circle cx="15.296" cy="2.767" r="2.719"></circle><circle cx="27.333" cy="2.767" r="2.72"></circle><circle cx="39.369" cy="2.767" r="2.72"></circle><circle cx="51.405" cy="2.767" r="2.72"></circle><circle cx="63.441" cy="2.767" r="2.72"></circle><circle cx="75.479" cy="2.767" r="2.72"></circle><circle cx="87.514" cy="2.767" r="2.719"></circle></g><g transform="translate(0 61)"><circle cx="3.261" cy="2.846" r="2.72"></circle><circle cx="15.296" cy="2.846" r="2.719"></circle><circle cx="27.333" cy="2.846" r="2.72"></circle><circle cx="39.369" cy="2.846" r="2.72"></circle><circle cx="51.405" cy="2.846" r="2.72"></circle><circle cx="63.441" cy="2.846" r="2.72"></circle><circle cx="75.479" cy="2.846" r="2.72"></circle><circle cx="87.514" cy="2.846" r="2.719"></circle></g><g transform="translate(0 73)"><circle cx="3.261" cy="2.926" r="2.72"></circle><circle cx="15.296" cy="2.926" r="2.719"></circle><circle cx="27.333" cy="2.926" r="2.72"></circle><circle cx="39.369" cy="2.926" r="2.72"></circle><circle cx="51.405" cy="2.926" r="2.72"></circle><circle cx="63.441" cy="2.926" r="2.72"></circle><circle cx="75.479" cy="2.926" r="2.72"></circle><circle cx="87.514" cy="2.926" r="2.719"></circle></g><g transform="translate(0 85)"><circle cx="3.261" cy="3.006" r="2.72"></circle><circle cx="15.296" cy="3.006" r="2.719"></circle><circle cx="27.333" cy="3.006" r="2.72"></circle><circle cx="39.369" cy="3.006" r="2.72"></circle><circle cx="51.405" cy="3.006" r="2.72"></circle><circle cx="63.441" cy="3.006" r="2.72"></circle><circle cx="75.479" cy="3.006" r="2.72"></circle><circle cx="87.514" cy="3.006" r="2.719"></circle></g></g></g></g></svg>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<script>
+
+function isEmail(email) {
+    const re =
+        /(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])/;
+    return re.test(email);
+}
+
+function contactFormSubmit(token) {
+
+    //base variables & constants
+    const myHeaders = new Headers();
+    myHeaders.append("Content-Type", "application/x-www-form-urlencoded");
+
+    const urlencoded = new URLSearchParams();
+    let errorField = [];
+    let formValues = {
+        email: {
+            value: document.getElementById("email").value,
+            label: document.getElementById("email").id
+        },
+        subject: {
+            value: document.getElementById("subject").value,
+            label: document.getElementById("subject").id
+        },
+        about: {
+            value: document.getElementById("about").value,
+            label: document.getElementById("about").id
+        },
+        terms: {
+            value: document.getElementById("terms").checked,
+            label: document.getElementById("terms").id
+        }
+    };
+    //validate if some of required field is empty, if empty add to errorField array field name to show the error message
+    for (const inputName in formValues) {
+        if (formValues[inputName].value == "" || formValues[inputName].value == null) {
+            errorField.push(formValues[inputName].label);
+        }
+    }
+    //validate if some email field in form and validate if a valid email
+    if (!isEmail(document.getElementById("email").value)) {
+        errorField.push(formValues.email.label);
+    }
+    
+    //remove all errors
+    document.querySelectorAll('.input-wrapper').forEach(function (element) {
+        element.classList.remove('error');
+    });
+
+    //if array errorField is empty=no errors found, proceed, call integromat to send emails
+    if (errorField.length === 0) {
+        urlencoded.append("email", formValues.email.value);
+        urlencoded.append("contact_reason", formValues.subject.value);
+        urlencoded.append("message", formValues.about.value);
+
+        var requestOptions = {
+            method: 'POST',
+            headers: myHeaders,
+            body: urlencoded,
+            redirect: 'follow'
+        };
+        fetch("https://hook.eu1.make.com/k6g2hdj4ql9gsmu2yep9p9cjw2413qql", requestOptions)
+            .then(response => response.text())
+            .then(result => {
+                console.log(result)
+                alert("Sucessfull submit");
+            })
+            .catch(error => {
+                console.log('error', error)
+                alert("Error submit form");
+            });
+
+    } else {
+        //if errors found, show errors in form inputs span
+        errorField.forEach(
+            element => document.getElementById(element).parentElement.classList.add("error"))
+
+    }
+}
+</script>

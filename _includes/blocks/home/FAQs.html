@@ -1,0 +1,160 @@
+<section class="py-24 bg-white dark:bg-gray-800" id="FAQs">
+    <div class="max-w-4xl px-8 mx-auto lg:px-16">
+        <h2 class="mb-2 text-xl font-bold text-center md:text-3xl dark:text-gray-300">Frequently Asked Questions
+        </h2>
+
+        <div class="relative mt-2 mt-12 space-y-5">
+            <!-- Question 1 -->
+            <div x-data="{ show: false }"
+                class="relative overflow-hidden border-2 border-gray-200 rounded-lg select-none hover:bg-white">
+                <h4 @click="show=!show"
+                    class="flex items-center justify-between text-lg font-medium text-gray-700 dark:text-gray-300 cursor-pointer sm:text-xl px-7 py-7 hover:text-gray-800">
+                    <span class="">Which social apps are you compatible with?</span>
+                    <svg class="w-6 h-6 transition-all duration-200 ease-out transform rotate-0"
+                        :class="{ '-rotate-45' : show }" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M12 6v6m0 0v6m0-6h6m-6 0H6" class=""></path>
+                    </svg>
+                </h4>
+                <p class="pt-0 -mt-2 text-gray-400 sm:text-lg py-7 px-7"
+                    x-transition:enter="transition-all ease-out duration-300"
+                    x-transition:enter-start="opacity-0 transform -translate-y-4"
+                    x-transition:enter-end="opacity-100 transform -translate-y-0"
+                    x-transition:leave="transition-all ease-out hidden duration-200"
+                    x-transition:leave-start="opacity-100 transform -translate-y-0"
+                    x-transition:leave-end="opacity-0 transform -translate-y-4" x-show="show" data-c2c-process="1"
+                    style="display: none;">
+                    We're starting of with Discord, Telegram and Twitter. Feel free to tell us which one you'd love
+                    to see next!</p>
+            </div>
+
+            <!-- Question 2 -->
+            <div x-data="{ show: false }"
+                class="relative overflow-hidden border-2 border-gray-200 rounded-lg select-none hover:bg-white">
+                <h4 @click="show=!show"
+                    class="flex items-center justify-between text-lg font-medium text-gray-700  dark:text-gray-300 cursor-pointer sm:text-xl px-7 py-7 hover:text-gray-800">
+                    <span class="">Which dApps can I subscribe to events?</span>
+                    <svg class="w-6 h-6 transition-all duration-200 ease-out transform rotate-0"
+                        :class="{ '-rotate-45' : show }" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M12 6v6m0 0v6m0-6h6m-6 0H6" class=""></path>
+                    </svg>
+                </h4>
+                <p class="pt-0 -mt-2 text-gray-400 sm:text-lg py-7 px-7"
+                    x-transition:enter="transition-all ease-out duration-300"
+                    x-transition:enter-start="opacity-0 transform -translate-y-4"
+                    x-transition:enter-end="opacity-100 transform -translate-y-0"
+                    x-transition:leave="transition-all ease-out hidden duration-200"
+                    x-transition:leave-start="opacity-100 transform -translate-y-0"
+                    x-transition:leave-end="opacity-0 transform -translate-y-4" x-show="show" data-c2c-process="1"
+                    style="display: none;">
+                    We aim to support as many Terra dApps as possible by EoY, and eventually become multi-chain
+                    native.</p>
+            </div>
+
+            <!-- Question 3 -->
+            <div x-data="{ show: false }"
+                class="relative overflow-hidden border-2 border-gray-200 rounded-lg select-none hover:bg-white">
+                <h4 @click="show=!show"
+                    class="flex items-center justify-between text-lg font-medium text-gray-700 dark:text-gray-300 cursor-pointer sm:text-xl px-7 py-7 hover:text-gray-800">
+                    <span class="">How much will it cost me?</span>
+                    <svg class="w-6 h-6 transition-all duration-200 ease-out transform rotate-0"
+                        :class="{ '-rotate-45' : show }" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M12 6v6m0 0v6m0-6h6m-6 0H6" class=""></path>
+                    </svg>
+                </h4>
+                <p class="pt-0 -mt-2 text-gray-400 sm:text-lg py-7 px-7"
+                    x-transition:enter="transition-all ease-out duration-300"
+                    x-transition:enter-start="opacity-0 transform -translate-y-4"
+                    x-transition:enter-end="opacity-100 transform -translate-y-0"
+                    x-transition:leave="transition-all ease-out hidden duration-200"
+                    x-transition:leave-start="opacity-100 transform -translate-y-0"
+                    x-transition:leave-end="opacity-0 transform -translate-y-4" x-show="show" data-c2c-process="1"
+                    style="display: none;">
+                    Nought, nil, nada, nothing, zero, zilch and zip. The platform will be 100% free to retail
+                    (non-business) users.</p>
+            </div>
+
+            <!-- Question 4 -->
+            <div x-data="{ show: false }"
+                class="relative overflow-hidden border-2 border-gray-200 rounded-lg select-none hover:bg-white">
+                <h4 @click="show=!show"
+                    class="flex items-center justify-between text-lg font-medium text-gray-700 dark:text-gray-300 cursor-pointer sm:text-xl px-7 py-7 hover:text-gray-800">
+                    <span class="" data-c2c-process="1">Will you support SMS notifications? What about mobile
+                        apps?</span>
+                    <svg class="w-6 h-6 transition-all duration-200 ease-out transform rotate-0"
+                        :class="{ '-rotate-45' : show }" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M12 6v6m0 0v6m0-6h6m-6 0H6" class=""></path>
+                    </svg>
+                </h4>
+                <p class="pt-0 -mt-2 text-gray-400 sm:text-lg py-7 px-7"
+                    x-transition:enter="transition-all ease-out duration-300"
+                    x-transition:enter-start="opacity-0 transform -translate-y-4"
+                    x-transition:enter-end="opacity-100 transform -translate-y-0"
+                    x-transition:leave="transition-all ease-out hidden duration-200"
+                    x-transition:leave-start="opacity-100 transform -translate-y-0"
+                    x-transition:leave-end="opacity-0 transform -translate-y-4" x-show="show" data-c2c-process="1"
+                    style="display: none;">
+                    Yes, at some point, but it's not a priority on our roadmap. We are also planning to release
+                    Android & iOS apps down the line, but probably not in 2022.</p>
+            </div>
+
+            <!-- Question 5 -->
+            <div x-data="{ show: false }"
+                class="relative overflow-hidden border-2 border-gray-200 rounded-lg select-none hover:bg-white">
+                <h4 @click="show=!show"
+                    class="flex items-center justify-between text-lg font-medium text-gray-700 dark:text-gray-300 cursor-pointer sm:text-xl px-7 py-7 hover:text-gray-800">
+                    <span class="">What about my Smart Home appliances? Lightbulbs, music player, etc.</span>
+                    <svg class="w-6 h-6 transition-all duration-200 ease-out transform rotate-0"
+                        :class="{ '-rotate-45' : show }" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M12 6v6m0 0v6m0-6h6m-6 0H6" class=""></path>
+                    </svg>
+                </h4>
+                <p class="pt-0 -mt-2 text-gray-400 sm:text-lg py-7 px-7"
+                    x-transition:enter="transition-all ease-out duration-300"
+                    x-transition:enter-start="opacity-0 transform -translate-y-4"
+                    x-transition:enter-end="opacity-100 transform -translate-y-0"
+                    x-transition:leave="transition-all ease-out hidden duration-200"
+                    x-transition:leave-start="opacity-100 transform -translate-y-0"
+                    x-transition:leave-end="opacity-0 transform -translate-y-4" x-show="show" data-c2c-process="1"
+                    style="display: none;">
+                    By using popular integration services such as IFTTT, Zapier, Make and more, you'll have
+                    virtually infinite choices on how and where you want to be notified.</p>
+            </div>
+
+            <!-- Question 6 -->
+            <div x-data="{ show: false }"
+                class="relative overflow-hidden border-2 border-gray-200 rounded-lg select-none hover:bg-white">
+                <h4 @click="show=!show"
+                    class="flex items-center justify-between text-lg font-medium text-gray-700 dark:text-gray-300 cursor-pointer sm:text-xl px-7 py-7 hover:text-gray-800">
+                    <span class="">How are you "infinitely scalable" and instant everywhere?</span>
+                    <svg class="w-6 h-6 transition-all duration-200 ease-out transform rotate-0"
+                        :class="{ '-rotate-45' : show }" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M12 6v6m0 0v6m0-6h6m-6 0H6" class=""></path>
+                    </svg>
+                </h4>
+                <p class="pt-0 -mt-2 text-gray-400 sm:text-lg py-7 px-7"
+                    x-transition:enter="transition-all ease-out duration-300"
+                    x-transition:enter-start="opacity-0 transform -translate-y-4"
+                    x-transition:enter-end="opacity-100 transform -translate-y-0"
+                    x-transition:leave="transition-all ease-out hidden duration-200"
+                    x-transition:leave-start="opacity-100 transform -translate-y-0"
+                    x-transition:leave-end="opacity-0 transform -translate-y-4" x-show="show" data-c2c-process="1"
+                    style="display: none;">
+                    Our website and webapps literally "live" on the cloud edge (also called CDN) of Cloudflare. We
+                    leverage the power of their thousands of servers worldwide (193 cities) by using their Pages +
+                    Worker services, and as an added bonus, we're DDoS protected too!</p>
+            </div>
+        </div>
+    </div>
+</section>

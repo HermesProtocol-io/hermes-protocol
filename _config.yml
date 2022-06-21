@@ -1,0 +1,60 @@
+# Site settings
+title: Hermes Protocol
+baseurl: ""
+permalink: /:title/
+
+
+
+# Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
+social:
+  - title: email
+    url: mailto:support@hermes-protocol.io
+  - title: facebook-box
+    url: https://facebook.com
+  - title: linkedin
+    url: https://linkedin.com/company/momentum-one
+
+
+footer:
+  copyright:
+    name: Momentum One
+    url: https://momentum-one.io
+
+include:
+  - _pages
+
+exclude:
+  - "README.md"
+  - .jekyll-cache
+
+defaults:
+  - scope:
+      path: '_pages'
+    values:
+      permalink: /:basename:output_ext
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+exclude_from_localizations: ["javascript", "images", "css"]
+default_locale_in_subfolder: false
+
+compress_html:
+  clippings: all
+  comments: all
+  startings: [html, head, body]
+
+
+sass:
+  sass_dir: _sass
+  style: compressed
+
+
+link: "{{link}}"
+caption: "{{caption}}"
+image: "{{image}}"

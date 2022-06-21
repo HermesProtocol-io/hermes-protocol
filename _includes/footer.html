@@ -1,0 +1,30 @@
+<footer>
+<script type="text/javascript">
+    const callback = function (entries) {
+    entries.forEach((entry) => {
+        console.log(entry);
+
+        if (entry.isIntersecting) {
+        entry.target.classList.add("animate-fade");
+        } else {
+        entry.target.classList.remove("animate-fade");
+        }
+    });
+    };
+
+    const observer = new IntersectionObserver(callback);
+
+    const targets = document.querySelectorAll(".js-show-on-scroll");
+    targets.forEach(function (target) {
+    observer.observe(target);
+    });
+</script>
+
+
+    <!-- AlpineJS Library -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/2.8.0/alpine.js"></script>
+   <script src="https://www.google.com/recaptcha/api.js"></script>
+
+
+
+</footer>
