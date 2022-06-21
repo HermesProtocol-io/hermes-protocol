@@ -15,30 +15,29 @@
             </div>
             <div class="left-0 z-0 flex-col justify-center w-full px-4 space-y-3 font-semibold leading-10 md:space-y-0 lg:flex-grow-0 md:flex-row lg:text-left lg:text-center hidden md:flex absolute"
                 :class="{'flex z-30 top-0 bg-white h-full fixed': showMenu, 'hidden md:flex absolute': !showMenu }">
-                <a href="/"
-                    class="box-border inline-block text-center text-gray-900 no-underline bg-transparent cursor-pointer md:mr-4 hover:text-muddywaters-500 focus:no-underline">
+                <a href="/" class="box-border inline-block text-center text-gray-900 no-underline bg-transparent cursor-pointer md:mr-4 hover:text-muddywaters-500 focus:no-underline">
                     Home
                 </a>
-                <a href="{{ '#Features' | relative_url }}"
-                    class="box-border inline-block text-center text-gray-900 no-underline bg-transparent cursor-pointer md:mx-4 hover:text-muddywaters-500 focus:no-underline">
+                <a href="{{ '#Features' | relative_url }}" class="box-border inline-block text-center text-gray-900 no-underline bg-transparent cursor-pointer md:mx-4 hover:text-muddywaters-500 focus:no-underline">
                     Features
                 </a>
-                <a href="{{ '#OurTeam' | relative_url }}"
-                    class="box-border inline-block text-center text-gray-900 no-underline bg-transparent cursor-pointer md:mx-4 hover:text-muddywaters-500 focus:no-underline">Team</a>
-                <a href="{{ '#FAQs' | relative_url }}"
+                <a href="{{ '#OurTeam' | relative_url }}" class="box-border inline-block text-center text-gray-900 no-underline bg-transparent cursor-pointer md:mx-4 hover:text-muddywaters-500 focus:no-underline">
+                    Team
+                </a>
+                <a href="{{ 'roadmap' | relative_url }}" class="box-border inline-block text-center text-gray-900 no-underline bg-transparent cursor-pointer md:mx-4 hover:text-muddywaters-500 focus:no-underline">
+                    Roadmap
+                </a>
+                <a href="{{ 'faqs' | relative_url }}"
                     class="box-border inline-block text-center text-gray-900 no-underline bg-transparent cursor-pointer md:mx-4 hover:text-muddywaters-500 focus:no-underline">
                     FAQs
                 </a>
-                <a href="{{ 'roadmap' | relative_url }}"
-                class="box-border inline-block text-center text-gray-900 no-underline bg-transparent cursor-pointer md:mx-4 hover:text-muddywaters-500 focus:no-underline">
-                Roadmap
-            </a>
+                
 
             </div>
             <div
-                class="relative hidden mt-2 font-medium leading-10 md:inline-block lg:flex-grow-0 lg:flex-shrink-0 lg:mt-0 lg:text-right">
+                class="relative mt-2 font-medium leading-10 md:inline-block lg:flex-grow-0 lg:flex-shrink-0 lg:mt-0 lg:text-right">
                 <a href="{{ 'contact-us' | relative_url }}"
-                    class="px-5 py-4 text-lg font-medium text-white bg-muddywaters-500 shadow-xl hover:bg-muddywaters-600 rounded-2xl cursor-not-allowed">Contact Us</a>
+                    class="px-5 py-4 text-lg font-medium text-white bg-muddywaters-500 shadow-xl hover:bg-muddywaters-600 rounded-2xl">Contact Us</a>
             </div>
 
             <div @click="showMenu = !showMenu"
