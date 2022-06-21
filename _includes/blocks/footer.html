@@ -29,11 +29,11 @@
                 <nav class="mt-4">
                     <ul class="space-y-2">
                         <li class="mb-1">
-                            <a href="/#OurTeam" class="text-base dark:text-gray-300 hover:text-gray-500">Our
+                            <a href="{{ '#OurTeam' | relative_url }}" class="text-base dark:text-gray-300 hover:text-gray-500">Our
                                 Team</a>
                         </li>
                         <li class="mb-1">
-                            <a href="#" class="text-base dark:text-gray-300 hover:text-gray-500">Work With
+                            <a href="{{ 'contact-us' | relative_url }}" class="text-base dark:text-gray-300 hover:text-gray-500">Work With
                                 Us</a>
                         </li>
                         <!-- <li class="mb-1">
@@ -47,11 +47,11 @@
                 <nav class="mt-4">
                     <ul class="space-y-2">
                         <li class="mb-1">
-                            <a href="#" class="text-base hover:text-gray-500 dark:text-gray-300">Help Center</a>
+                            <a href="{{ 'contact-us' | relative_url }}" class="text-base hover:text-gray-500 dark:text-gray-300">Help Center</a>
                         </li>
                         <li class="mb-1">
                         <li>
-                            <a href="#" class="text-base hover:text-gray-500 dark:text-gray-300">Developer
+                            <a class="text-base hover:text-gray-500 dark:text-gray-300">Developer
                                 API</a>
                         </li>
                         <!--<li class="">
@@ -70,17 +70,17 @@
                 <p class="my-4 text-xs leading-normal text-gray-500 dark:text-gray-300" data-c2c-process="1">
                     Creating beautiful websites since 2020.</p>
             </div>
-            <a href="https://app.hermesprotocol.io"
+            <!--<a href="https://app.hermesprotocol.io"
                 class="inline-block px-5 py-4 font-semibold text-white rounded-lg bg-gradient-to-br from-muddywaters-500 to-muddywaters-600 hover:from-muddywaters-400 hover:to-muddywaters-600 lg:px-8 cursor-not-allowed">Get
-                Started Today</a>
+                Started Today</a>-->
         </div>
         <div
             class="flex flex-col items-center justify-between mx-auto mt-8 space-y-4 md:space-y-0 md:flex-row lg:mt-16">
             <nav class="flex flex-wrap justify-center space-x-6">
-                <a href="privacy_policy.html" class="mb-2 text-sm hover:text-gray-700 dark:text-gray-300">Privacy
+                <a href="{{'privacy_policy' | relative_url }}" class="mb-2 text-sm hover:text-gray-700 dark:text-gray-300">Privacy
                     Policy</a>
-                <a href="terms.html" class="mb-2 text-sm hover:text-gray-700 dark:text-gray-300">Terms of Use</a>
-                <a href="gdpr.html" class="mb-2 text-sm hover:text-gray-700 dark:text-gray-300">GDPR</a>
+                <a href="{{'terms' | relative_url }}" class="mb-2 text-sm hover:text-gray-700 dark:text-gray-300">Terms of Use</a>
+                <a href="{{'gdpr' | relative_url }}" class="mb-2 text-sm hover:text-gray-700 dark:text-gray-300">GDPR</a>
             </nav>
             <nav class="flex items-center space-x-2">
                 <a href="https://twitter.com/hermesprotocol" target="_blank"
