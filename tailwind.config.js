@@ -18,7 +18,25 @@ module.exports = {
           800: "#775e41", 
           900: "#614c35"
         },
-        darkgold:"#b18d65"
+        gray: {
+          medium: "#030229b3",
+          dark: "#030229",
+          lightmedium: "#A6A2A2",
+          light40: "#03022966",
+          light50: "#03022980",
+          extralight10: "#FAFAFB",
+          extralight15: "#f7f7f7",
+          extralight20: "#f3f3f3",
+          extralight50: "#E5E5E5",
+          extralight60: "#dddddd",
+          extralight80: "#cdc9c9",
+          extralight90: "#9A9AA9"
+        },
+        darkgold:"#b18d65",
+        red: {
+          dark: "#FF5762",
+          light: "#3C2B2D"
+        }
       },
       animation: {
         'fade': 'fadeIn 2s ease-in forwards'
