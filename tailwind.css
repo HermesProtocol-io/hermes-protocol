@@ -702,6 +702,11 @@ video {
   margin-right: -0.75rem;
 }
 
+.mx-10 {
+  margin-left: 2.5rem;
+  margin-right: 2.5rem;
+}
+
 .mx-0 {
   margin-left: 0px;
   margin-right: 0px;
@@ -827,10 +832,6 @@ video {
   margin-bottom: 2rem;
 }
 
-.mb-20 {
-  margin-bottom: 5rem;
-}
-
 .mb-12 {
   margin-bottom: 3rem;
 }
@@ -853,6 +854,10 @@ video {
 
 .mb-0 {
   margin-bottom: 0px;
+}
+
+.mb-20 {
+  margin-bottom: 5rem;
 }
 
 .box-border {
@@ -1462,6 +1467,10 @@ video {
   padding: 0.75rem;
 }
 
+.p-2 {
+  padding: 0.5rem;
+}
+
 .py-0 {
   padding-top: 0px;
   padding-bottom: 0px;
@@ -1600,10 +1609,6 @@ video {
   padding-bottom: 8rem;
 }
 
-.pt-20 {
-  padding-top: 5rem;
-}
-
 .pt-0 {
   padding-top: 0px;
 }
@@ -1700,10 +1705,6 @@ video {
 
 .font-normal {
   font-weight: 400;
-}
-
-.font-thin {
-  font-weight: 100;
 }
 
 .uppercase {
@@ -1915,6 +1916,11 @@ video {
   --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
   --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.blur-sm {
+  --tw-blur: blur(4px);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
 .filter {
@@ -2146,12 +2152,12 @@ form .input-wrapper.error .error {
     padding-left: 4rem;
   }
 
-  .sm\:text-left {
-    text-align: left;
+  .sm\:pr-8 {
+    padding-right: 2rem;
   }
 
-  .sm\:text-center {
-    text-align: center;
+  .sm\:text-left {
+    text-align: left;
   }
 
   .sm\:text-4xl {
@@ -2409,12 +2415,12 @@ form .input-wrapper.error .error {
     width: 33.333333%;
   }
 
-  .lg\:w-1\/2 {
-    width: 50%;
-  }
-
   .lg\:w-auto {
     width: auto;
+  }
+
+  .lg\:w-1\/2 {
+    width: 50%;
   }
 
   .lg\:w-2\/5 {
@@ -2423,6 +2429,10 @@ form .input-wrapper.error .error {
 
   .lg\:w-1\/5 {
     width: 20%;
+  }
+
+  .lg\:w-2\/3 {
+    width: 66.666667%;
   }
 
   .lg\:max-w-2xl {
@@ -2527,9 +2537,9 @@ form .input-wrapper.error .error {
     padding-right: 2rem;
   }
 
-  .lg\:py-32 {
-    padding-top: 8rem;
-    padding-bottom: 8rem;
+  .lg\:py-10 {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
   }
 
   .lg\:px-5 {
@@ -2577,11 +2587,6 @@ form .input-wrapper.error .error {
     line-height: 1;
   }
 
-  .lg\:text-6xl {
-    font-size: 3.75rem;
-    line-height: 1;
-  }
-
   .lg\:text-xs {
     font-size: 0.75rem;
     line-height: 1rem;
@@ -2617,14 +2622,14 @@ form .input-wrapper.error .error {
     padding-right: 3rem;
   }
 
-  .xl\:py-3 {
-    padding-top: 0.75rem;
-    padding-bottom: 0.75rem;
-  }
-
   .xl\:px-10 {
     padding-left: 2.5rem;
     padding-right: 2.5rem;
+  }
+
+  .xl\:py-3 {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
   }
 
   .xl\:pb-24 {
