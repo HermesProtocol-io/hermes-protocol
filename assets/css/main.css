@@ -1,0 +1,25 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+.hightlight-section {
+    min-height: 450px;
+}
+
+.hl-img-section img {
+    min-height: 300px;
+}
+
+
+     form .input-wrapper .error {
+        display: none;
+   }
+    form .input-wrapper.error svg {
+        top: 16px;
+   }
+    form .input-wrapper.error .error {
+        display: block;
+   }
+    
