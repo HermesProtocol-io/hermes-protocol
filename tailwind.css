@@ -1817,6 +1817,11 @@ video {
   color: rgb(177 141 101 / var(--tw-text-opacity));
 }
 
+.text-muddywaters-300 {
+  --tw-text-opacity: 1;
+  color: rgb(232 215 197 / var(--tw-text-opacity));
+}
+
 .text-muddywaters-50 {
   --tw-text-opacity: 1;
   color: rgb(252 250 248 / var(--tw-text-opacity));
@@ -2596,6 +2601,10 @@ form .input-wrapper.error .error {
 @media (min-width: 1280px) {
   .xl\:mb-0 {
     margin-bottom: 0px;
+  }
+
+  .xl\:inline {
+    display: inline;
   }
 
   .xl\:max-w-md {
