@@ -6,7 +6,8 @@
                 "Astroport":{
                     "img":"https://astroport.fi/astro_logo.png",
                     "support":{
-                        "priceAlert":["app","discord","telegram"]
+                        "priceAlert":["app","discord","telegram"],
+                        "Governance Poll":["app","discord","telegram"]
                     }
                 },
                 "Loop Finance": {

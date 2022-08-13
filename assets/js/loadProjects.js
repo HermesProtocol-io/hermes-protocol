@@ -2,14 +2,20 @@ $(document).ready(function () {
     writeHTML("All")
 });
 
+function loadTranslations(ready) {
+    let data = JSON.parse(sessionStorage.getItem("translations"));
+    if (data) { 
+        ready(data);
+    } else {
+        getJSON("/assets/js/translate.json").done( translations => {
+            sessionStorage.setItem("translations", JSON.stringify(translations));
+            ready(translations);
+        }).fail ( function( jqxhr, textStatus, error ) {
+            console.log( "Error: " + textStatus +", "+ error );
+        });
+    };
+};
 
-
- async function translate(word){
-    getJSON("/assets/js/translate.json").done( translations =>{
-     return    translations[word];
-    })
- }
- 
 
 
 function loadProjects(ready) {
@@ -28,108 +34,104 @@ function loadProjects(ready) {
 
 
 
-async function writeHTML(selectedChain) {
-    loadProjects(projects => {
+function writeHTML(selectedChain) {
+    loadTranslations(translations => { 
+        loadProjects(projects => {
+            var modal = document.getElementById("myModal");
+            modal.style.display = "none";
 
-        var modal = document.getElementById("myModal");
-        modal.style.display = "none";
 
 
+            document.getElementById("chain").innerHTML = ``;
 
-        document.getElementById("chain").innerHTML = ``;
+            for (const [chain, active] of Object.entries(projects)) {
 
-        for (const [chain, active] of Object.entries(projects)) {
+                console.log(`chain - ${chain}`);
+                let trChain = translations[chain];
 
-            /*console.log(`chain - ${chain}`);
-            let trChain = await translate(chain);
-            console.log(` translation - ${trChain}`);*/
 
-            if (selectedChain != chain && selectedChain != "All"){
-                continue;
-            }
-          
-            document.getElementById("chain").innerHTML +=  ` 
-            <h2 class="my-4 text-2xl font-bold tracking-tight text-muddywaters-500 sm:text-2xl  pb-2 pt-6 xl:text-3xl sm:leading-tight ">
-            ${chain} 
-                <span class="text-gray-500 font-medium text-lg" id="count-${chain}">
-                </span>
-            </h2>
-                <div class="pb-10 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4" id=${chain} >`
+                if (selectedChain != chain && selectedChain != "All"){
+                    continue;
+                }
             
-            let countprojects = 0;
-            
-            for (const [activeState , projectType] of Object.entries(active)) {
+                document.getElementById("chain").innerHTML +=  ` 
+                <h2 class="my-4 text-2xl font-bold tracking-tight text-muddywaters-500 sm:text-2xl  pb-2 pt-6 xl:text-3xl sm:leading-tight ">
+                ${translations[chain]} 
+                    <span class="text-gray-500 font-medium text-lg" id="count-${chain}">
+                    </span>
+                </h2>
+                    <div class="pb-10 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4" id=${chain} >`
+                
+                let countprojects = 0;
+                
+                for (const [activeState , projectType] of Object.entries(active)) {
 
-                if (activeState == "active"){
-                    
-                    for (const [projectTypeName, protocol ] of Object.entries(projectType)) {
-                        console.log(`projectTypeName - ${projectTypeName}`);
-
-                        for (const [ projectName, characteristics ] of Object.entries(protocol)) {  
-                            console.log(`alertType - ${projectName}`);
-            
-                            document.getElementById(chain).innerHTML += `
-                                <div class="relative bg-white shadow-xl rounded-xl px-6 py-7" onClick='popUp("${chain}","${projectTypeName}","${projectName}")'; > 
-                                    <div class=" flex flex-row content-center">
-                                        <img class="w-6 h-auto" src = "${characteristics.img}">
-                                        <h2 class="ml-3 font-bold"> ${projectName} </h2>
-                                    </div>
-                                    <div class="absolute right-4 top-4 ">
-                                        <span class="flex h-3 w-3">
-                                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-                                            <span class="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
-                                        </span>
-                                    </div>
+                    if (activeState == "active"){
                         
-                                </div>
-                            `
+                        for (const [projectTypeName, protocol ] of Object.entries(projectType)) {
 
-                            countprojects++;
-                        } 
-
-
-                    } 
-                } else{
-
-                    for (const [projectTypeName, protocol ] of Object.entries(projectType)) {
-                        console.log(`projectTypeName - ${projectTypeName}`);
-
-                        for (const [ projectName, characteristics ] of Object.entries(protocol)) {  
-                            console.log(`alertType - ${characteristics.img}`);
-
-
-            
-                            document.getElementById(chain).innerHTML += `
-                                <div class="relative bg-white shadow-xl rounded-xl px-6 py-7" > 
-                                    <div class=" flex flex-row content-center">
-                                        <img class="w-6 h-auto" src = "${characteristics.img}">
-                                        <h2 class="ml-3 font-bold"> ${projectName} </h2>
+                            for (const [ projectName, characteristics ] of Object.entries(protocol)) {  
+                
+                                document.getElementById(chain).innerHTML += `
+                                    <div class="relative bg-white shadow-xl rounded-xl px-6 py-7" onClick='popUp("${chain}","${projectTypeName}","${projectName}")'; > 
+                                        <div class=" flex flex-row content-center">
+                                            <img class="w-6 h-auto" src = "${characteristics.img}">
+                                            <p class="ml-3 font-bold"> ${projectName} </p>
+                                        </div>
+                                        <div class="absolute right-4 top-4 ">
+                                            <span class="flex h-3 w-3">
+                                                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                                                <span class="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
+                                            </span>
+                                        </div>
+                            
                                     </div>
-                                    <div class="absolute right-4 top-4 ">
-                                        <span class="flex h-3 w-3">
-                                            <span class="relative inline-flex rounded-full h-3 w-3 bg-gray-500"></span>
-                                        </span>
-                                    </div>
-                        
-                                </div>
-                            `
+                                `
 
-                            countprojects++;
+                                countprojects++;
+                            } 
+
+
                         } 
+                    } else{
+
+                        for (const [projectTypeName, protocol ] of Object.entries(projectType)) {
+
+                            for (const [ projectName, characteristics ] of Object.entries(protocol)) {  
+
+                
+                                document.getElementById(chain).innerHTML += `
+                                    <div class="relative bg-white shadow-xl rounded-xl px-6 py-7" > 
+                                        <div class=" flex flex-row content-center">
+                                            <img class="w-6 h-auto" src = "${characteristics.img}">
+                                            <p class="ml-3 font-bold"> ${projectName} </p>
+                                        </div>
+                                        <div class="absolute right-4 top-4 ">
+                                            <span class="flex h-3 w-3">
+                                                <span class="relative inline-flex rounded-full h-3 w-3 bg-gray-500"></span>
+                                            </span>
+                                        </div>
+                            
+                                    </div>
+                                `
+
+                                countprojects++;
+                            } 
 
 
+                        }
                     }
                 }
+
+                document.getElementById(`count-${chain}`).innerHTML +=`(${countprojects})`;
+                document.getElementById("chain").innerHTML +=`</div>`;
+
             }
 
-            document.getElementById(`count-${chain}`).innerHTML +=`(${countprojects})`;
-            document.getElementById("chain").innerHTML +=`</div>`;
-
-        }
-
-        
+            
+        });
     });
-}
+};
 
 
 function popUp(chain , type , project ){
@@ -137,10 +139,56 @@ function popUp(chain , type , project ){
         
         let projectInfo = projects[chain]["active"][type][project]; 
         let modal = document.getElementById("projectModel");
+    
+
        
+        let newtext=``
 
+        for (const [support, AlertType] of Object.entries(projectInfo["support"])){
+            
 
-        modal.innerHTML =``;
+            console.log(`support - ${support}`);
+            console.log(`AlertType - ${AlertType}`);
+            
+            let app= "times",
+                disc="times",
+                tele="times",
+                twit="times"
+            
+
+            if(AlertType.includes("app")){
+                app="check"
+            };
+            if(AlertType.includes("discord")){
+                disc="check"
+            };
+            if(AlertType.includes("telegram")){
+                tele="check"
+            };
+            if(AlertType.includes("twitter")){
+                twit="check"
+            };
+
+            console.log("acrescentei")
+
+            newtext +=`<div class="rounded-lg bg-muddywaters-400 p-2"><a class="font-bold text-white">${support}</a></div>                        
+
+                                <div class="flex rounded-lg items-center  bg-muddywaters-400 p-2">
+                                    <i class="fa fa-${app} text-white m-auto" aria-hidden="true"></i>
+                                </div>
+                                <div class="flex rounded-lg items-center  bg-muddywaters-400 p-2">
+                                    <i class="fa fa-${disc} text-white m-auto" aria-hidden="true"></i>
+                                </div>
+                                <div class="flex rounded-lg items-center  bg-muddywaters-400 p-2">
+                                    <i class="fa fa-${tele} text-white m-auto" aria-hidden="true"></i>
+                                </div>
+                                <div class="flex rounded-lg items-center bg-muddywaters-400 p-2">
+                                    <i class="fa fa-${twit} text-white m-auto" aria-hidden="true"></i>
+                                </div>`
+
+         } 
+        
+        
 
         modal.innerHTML =`
         
@@ -166,11 +214,11 @@ function popUp(chain , type , project ){
                         Hermes Protocol already supports some features from ${project}:
                     </p>
                     <div class="grid grid-cols-5 gap-1">
-                        <div class="rounded-lg bg-muddywaters-500 p-2"><a class="font-bold text-white">Alert Type</a></div>                        
-                        <div class="rounded-lg bg-muddywaters-500 p-2">
-                            <img class="object-contain w-6 h-6" src="assets/images/hermes-logo.svg">
+                        <div class="rounded-lg bg-muddywaters-600 p-2"><a class="font-bold text-white">Alert Type</a></div>                        
+                        <div class="rounded-lg bg-muddywaters-600 p-1">
+                            <img class="text-white object-contain m-auto  w-8 h-8" src="assets/images/icon_blank.svg">
                         </div>
-                        <div class="rounded-lg bg-muddywaters-500 p-2 items-center">                
+                        <div class="rounded-lg bg-muddywaters-600 p-2 items-center">                
                             <a 
                             class="text-white ">
                             <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 m-auto" fill="currentColor" viewBox="0 0 18 18">
@@ -179,18 +227,8 @@ function popUp(chain , type , project ){
                                 </path>
                             </svg>
                             </a>
-                        </div>
-                        <div class="rounded-lg bg-muddywaters-500 p-2">
-                            <a 
-                                class="text-white">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 m-auto" fill="currentColor" viewBox="0 0 18 18">
-                                    <path
-                                        d="M5.9 15.7c5.3 0 9.6-4.2 9.7-9.5v-.1-.4c.7-.5 1.2-1.1 1.7-1.8-.6.3-1.3.5-2 .5.7-.4 1.2-1.1 1.5-1.8-.7.4-1.4.7-2.2.8C13.3 2 11.1 2 9.8 3.3c-.6.6-1 1.5-1 2.3 0 .3 0 .5.1.8-2.7-.1-5.3-1.4-7-3.5-.9 1.6-.5 3.5 1 4.5-.5 0-1-.1-1.5-.4 0 1.6 1.1 3 2.7 3.3-.3.1-.6.1-.9.1-.2 0-.4 0-.6-.1.4 1.4 1.7 2.3 3.2 2.3-1.2.9-2.7 1.4-4.2 1.4H.8c1.5 1.2 3.3 1.7 5.1 1.7">
-                                    </path>
-                                </svg>
-                            </a>
-                        </div>
-                        <div class="rounded-lg bg-muddywaters-500 p-2">
+                        </div>                        
+                        <div class="rounded-lg bg-muddywaters-600 p-2">
                             <a 
                                 class="text-white">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 m-auto" fill="currentColor" viewBox="0 0 24 24">
@@ -201,24 +239,29 @@ function popUp(chain , type , project ){
                                 </svg>
                             </a>
                         </div>
+                        <div class="rounded-lg bg-muddywaters-600 p-2">
+                            <a 
+                                class="text-white">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 m-auto" fill="currentColor" viewBox="0 0 18 18">
+                                    <path
+                                        d="M5.9 15.7c5.3 0 9.6-4.2 9.7-9.5v-.1-.4c.7-.5 1.2-1.1 1.7-1.8-.6.3-1.3.5-2 .5.7-.4 1.2-1.1 1.5-1.8-.7.4-1.4.7-2.2.8C13.3 2 11.1 2 9.8 3.3c-.6.6-1 1.5-1 2.3 0 .3 0 .5.1.8-2.7-.1-5.3-1.4-7-3.5-.9 1.6-.5 3.5 1 4.5-.5 0-1-.1-1.5-.4 0 1.6 1.1 3 2.7 3.3-.3.1-.6.1-.9.1-.2 0-.4 0-.6-.1.4 1.4 1.7 2.3 3.2 2.3-1.2.9-2.7 1.4-4.2 1.4H.8c1.5 1.2 3.3 1.7 5.1 1.7">
+                                    </path>
+                                </svg>
+                            </a>
+                        </div>
 
-                    </div>
+                            ${newtext}
+                     </div>
                 </div>
             </div>
         </div>
- 
+        `;       
 
-        `;
-
-        
         modal.style.display = "block"; 
 
-        console.log (projectInfo );
+    });
 
-
-    })
-
-}
+};
 
 function popUpClose(){
 
@@ -226,4 +269,4 @@ function popUpClose(){
                
         modal.style.display = "none"; 
 
-}
+};
