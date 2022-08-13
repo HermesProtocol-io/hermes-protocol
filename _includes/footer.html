@@ -1,24 +1,55 @@
 <footer>
 <script type="text/javascript">
+
+
+
     const callback = function (entries) {
-    entries.forEach((entry) => {
-        console.log(entry);
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        if (entry.target.classList.contains("js-show-on-scroll")) {
+                            entry.target.classList.add("animate-fade");
+                        } else if (entry.target.classList.contains("js-show-now")){
+                            entry.target.classList.add("animate-show-on");
+                        }
+                    } else {
+                        entry.target.classList.remove("animate-fade");
+                        entry.target.classList.remove("animate-fade-left");
+                    }
+                });
+            };
+        
+            const observer = new IntersectionObserver(callback);
+        
+            const targets = document.querySelectorAll(".js-show-on-scroll");
+            const targets2 = document.querySelectorAll(".js-show-now");
 
-        if (entry.isIntersecting) {
-        entry.target.classList.add("animate-fade");
-        } else {
-        entry.target.classList.remove("animate-fade");
-        }
-    });
-    };
+            targets.forEach(function (target) {
+                observer.observe(target);
+            });
 
-    const observer = new IntersectionObserver(callback);
+            targets2.forEach(function (target) {
+                observer.observe(target);
+     });
 
-    const targets = document.querySelectorAll(".js-show-on-scroll");
-    targets.forEach(function (target) {
-    observer.observe(target);
-    });
+
+
 </script>
+
+
+<script >
+
+    $(document).ready(function(){
+        var $moveable = $('.move-rect');
+        var rectPosY = parseInt($('.move-rect').css('top'), 10);
+        var rectPosX = parseInt($('.move-rect').css('left'), 10);
+        $(".area").mousemove(function(e){
+            $moveable.css({'top': rectPosY-e.pageY/40,'left': rectPosX-e.pageX/40});
+        });
+      });
+      
+    
+</script>
+
 
 
     <!-- AlpineJS Library -->
