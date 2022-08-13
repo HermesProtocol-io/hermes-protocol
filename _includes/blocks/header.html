@@ -1,4 +1,4 @@
-<section class="antialiased bg-white dark:bg-gray-800 ">
+
     <div class="px-8 mx-auto max-w-7xl">
         <!-- Header Bar -->
         <div class="flex items-center justify-between w-full h-24 text-black"
@@ -6,8 +6,8 @@
             <div
                 class="relative z-10 flex items-center w-auto px-0 leading-10 md:px-2 lg:flex-grow-0 lg:flex-shrink-0 lg:text-left">
                 <a href="/"
-                    class="inline-block font-sans text-2xl font-extrabold text-left text-black no-underline bg-transparent cursor-pointer focus:no-underline">
-                    <img class="object-contain w-20 h-20 " src="assets/images/hermes-logo.svg">
+                    class="inline-block text-2xl font-extrabold text-left text-black no-underline bg-transparent cursor-pointer focus:no-underline">
+                    <img class="object-contain w-20 h-20 " src="assets/images/icon.svg">
                     <!--  <svg class="w-10 h-10 text-black fill-current" viewBox="0 0 39 15" xmlns="http://www.w3.org/2000/svg">
                <path d="M11.252 1.152C4.184 2.526.454 6.918.061 14.329c1.963-4.049 4.798-5.975 8.503-5.778 2.115.112 3.84 1.295 5.75 2.603 3.11 2.133 6.712 4.601 13.281 3.324 7.068-1.374 10.798-5.766 11.191-13.177-1.963 4.049-4.798 5.975-8.503 5.779-2.115-.113-3.84-1.296-5.75-2.604-3.11-2.133-6.712-4.601-13.281-3.324z" fill-rule="evenodd" class=""></path>
            </svg>-->
@@ -18,11 +18,8 @@
                 <a href="/" class="box-border inline-block text-center text-gray-900 no-underline bg-transparent cursor-pointer md:mr-4 hover:text-muddywaters-500 focus:no-underline dark:text-gray-300">
                     Home
                 </a>
-                <a href="{{ '#Features' | relative_url }}" class="box-border inline-block text-center text-gray-900 no-underline bg-transparent cursor-pointer md:mx-4 hover:text-muddywaters-500 focus:no-underline dark:text-gray-300">
-                    Features
-                </a>
-                <a href="{{ '#OurTeam' | relative_url }}" class="box-border inline-block text-center text-gray-900 no-underline bg-transparent cursor-pointer md:mx-4 hover:text-muddywaters-500 focus:no-underline dark:text-gray-300">
-                    Team
+                <a href="{{ 'integrations' | relative_url }}" class="box-border inline-block text-center text-gray-900 no-underline bg-transparent cursor-pointer md:mx-4 hover:text-muddywaters-500 focus:no-underline dark:text-gray-300">
+                    Integrations
                 </a>
                 <a href="{{ 'roadmap' | relative_url }}" class="box-border inline-block text-center text-gray-900 no-underline bg-transparent cursor-pointer md:mx-4 hover:text-muddywaters-500 focus:no-underline dark:text-gray-300">
                     Roadmap
@@ -34,13 +31,19 @@
                     class="box-border inline-block text-center text-gray-900 no-underline bg-transparent cursor-pointer md:mx-4 hover:text-muddywaters-500 focus:no-underline dark:text-gray-300">
                     FAQs
                 </a>
+                <a href="{{ 'contact-us' | relative_url }}"
+                    class="box-border inline-block text-center text-gray-900 no-underline bg-transparent cursor-pointer md:mx-4 hover:text-muddywaters-500 focus:no-underline dark:text-gray-300">
+                    Contact Us
+                </a>
                 
 
             </div>
             <div
                 class="relative mt-2 font-medium leading-10 md:inline-block lg:flex-grow-0 lg:flex-shrink-0 lg:mt-0 lg:text-right">
-                <a href="{{ 'contact-us' | relative_url }}"
-                    class="px-3 md:px-5 py-2 md:py-4 text-lg font-medium text-white bg-muddywaters-500 shadow-xl hover:bg-muddywaters-600 rounded-2xl">Contact Us</a>
+                <a href="https://app.hermesprotocol.io"
+                    class="px-5 py-4 text-lg font-medium text-white bg-muddywaters-500 shadow-xl hover:bg-muddywaters-600 rounded-2xl">
+                    <img class="absolute -right-0.5 -top-2 w-1/3" src="assets/images//beta ribbon.png">
+                    Enter App</a>
             </div>
 
             <div @click="showMenu = !showMenu"
@@ -58,5 +61,3 @@
 
         </div>
     </div>
-</section>
-   
