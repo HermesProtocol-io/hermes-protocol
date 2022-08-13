@@ -4,6 +4,43 @@
 
 @tailwind utilities;
 
+
+
+
+body {
+    overflow-x: hidden;
+    font-family: "Rany";
+  }
+
+h3 {
+    font-family: "Rany Medium";
+
+}
+
+h2 {
+    font-family: "Rany Medium";
+}
+
+h1 {
+    font-family: "Rany Medium";
+}
+
+
+  
+  @font-face {
+    font-family: "Rany";
+    src: url('/assets/fonts/Rany.otf');
+  }
+
+  @font-face {
+    font-family: "Rany Medium";
+    src: url('/assets/fonts/Rany-Medium.otf');
+  }
+  
+  
+
+
+
 .hightlight-section {
     min-height: 450px;
 }
@@ -23,3 +60,36 @@
         display: block;
    }
     
+
+.modal {
+    display: none; /* Hidden by default */
+    position: relative; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+}
+  
+
+  
+  /* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+  
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+.modal2 {
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4);
+}
