@@ -73,10 +73,10 @@ function writeHTML(selectedChain) {
                             for (const [ projectName, characteristics ] of Object.entries(protocol)) {  
                 
                                 document.getElementById(chain).innerHTML += `
-                                    <div class="relative bg-white shadow-xl rounded-xl px-6 py-7" onClick='popUp("${chain}","${projectTypeName}","${projectName}")'; > 
+                                    <div class="relative bg-white dark:bg-gray-700  shadow-xl rounded-xl px-6 py-7" onClick='popUp("${chain}","${projectTypeName}","${projectName}")'; > 
                                         <div class=" flex flex-row content-center">
                                             <img class="w-6 h-auto" src = "${characteristics.img}">
-                                            <p class="ml-3 font-bold"> ${projectName} </p>
+                                            <p class="ml-3 dark:text-white font-bold"> ${projectName} </p>
                                         </div>
                                         <div class="absolute right-4 top-4 ">
                                             <span class="flex h-3 w-3">
@@ -101,10 +101,10 @@ function writeHTML(selectedChain) {
 
                 
                                 document.getElementById(chain).innerHTML += `
-                                    <div class="relative bg-white shadow-xl rounded-xl px-6 py-7" > 
+                                    <div class="relative bg-white dark:bg-gray-700 shadow-xl rounded-xl px-6 py-7" > 
                                         <div class=" flex flex-row content-center">
                                             <img class="w-6 h-auto" src = "${characteristics.img}">
-                                            <p class="ml-3 font-bold"> ${projectName} </p>
+                                            <p class="ml-3 dark:text-white font-bold"> ${projectName} </p>
                                         </div>
                                         <div class="absolute right-4 top-4 ">
                                             <span class="flex h-3 w-3">
@@ -146,9 +146,6 @@ function popUp(chain , type , project ){
 
         for (const [support, AlertType] of Object.entries(projectInfo["support"])){
             
-
-            console.log(`support - ${support}`);
-            console.log(`AlertType - ${AlertType}`);
             
             let app= "times",
                 disc="times",
@@ -169,7 +166,7 @@ function popUp(chain , type , project ){
                 twit="check"
             };
 
-            console.log("acrescentei")
+    
 
             newtext +=`<div class="rounded-lg bg-muddywaters-400 p-2"><a class="font-bold text-white">${support}</a></div>                        
 
@@ -211,7 +208,7 @@ function popUp(chain , type , project ){
                 <!-- Modal body -->
                 <div class="p-6 space-y-6">
                     <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
-                        Hermes Protocol already supports some features from ${project}:
+                        Our platform currently supports these features from ${project}:
                     </p>
                     <div class="grid grid-cols-5 gap-1">
                         <div class="rounded-lg bg-muddywaters-600 p-2"><a class="font-bold text-white">Alert Type</a></div>                        

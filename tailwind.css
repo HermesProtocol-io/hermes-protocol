@@ -2444,6 +2444,16 @@ form .input-wrapper.error .error {
     background-color: rgb(55 65 81 / var(--tw-bg-opacity));
   }
 
+  .dark\:from-gray-800 {
+    --tw-gradient-from: #1f2937;
+    --tw-gradient-to: rgb(31 41 55 / 0);
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+  }
+
+  .dark\:to-gray-800 {
+    --tw-gradient-to: #1f2937;
+  }
+
   .dark\:text-gray-300 {
     --tw-text-opacity: 1;
     color: rgb(209 213 219 / var(--tw-text-opacity));
@@ -3074,3 +3084,4 @@ form .input-wrapper.error .error {
     letter-spacing: 0.05em;
   }
 }
+
