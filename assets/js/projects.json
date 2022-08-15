@@ -7,13 +7,7 @@
                     "img":"https://astroport.fi/astro_logo.png",
                     "support":{
                         "priceAlert":["app","discord","telegram"],
-                        "Governance Poll":["app","discord","telegram"]
-                    }
-                },
-                "Loop Finance": {
-                    "img":"https://defi.loop.markets/static/media/LOOP.cbc5a48f.png",
-                    "support":{
-                        "priceAlert":["app","discord","telegram"]
+                        "governancePoll":["app","discord","telegram"]
                     }
                 },
                 "Terraswap": {
@@ -39,16 +33,6 @@
                     }
                 }
             },
-            "blockchain": {
-                "General":{
-                    "img": "https://app.pulsar.finance/chains/Terraclassic-logo.svg",
-                    "support":{
-                        "Governance Poll":["app","discord","telegram"],
-                        "walletWatcher":["discord","telegram","telegram"],
-                        "validatorsprofileChanges":["app","discord","telegram"]
-                    }  
-                }
-            },
             "derivatives": {
                 "Mirror Protocol": {
                     "img":"https://whitelist.mirror.finance/icon/MIR.png",
@@ -56,13 +40,29 @@
                         "governancePoll":["app","discord","telegram"]
                     } 
                 }
+            },
+            "Yield Strategies":{
+                "Apollo DAO":{
+                    "img":"https://d14knz87alb4l4.cloudfront.net/icons/APOLLO.png",
+                    "support":{
+                        "governancePoll":["app","discord","telegram"]
+                    }
+                }
+            },
+            "blockchain": {
+                "General":{
+                    "img": "https://app.pulsar.finance/chains/Terraclassic-logo.svg",
+                    "support":{
+                        "governancePoll":["app","discord","telegram"],
+                        "walletWatcher":["discord","telegram","telegram"],
+                        "validatorsprofileChanges":["app","discord","telegram"]
+                    }  
+                }
             }
+            
         },
         "inactive":{
             "Yield Strategies":{
-                "Apollo DAO":{
-                    "img":"https://d14knz87alb4l4.cloudfront.net/icons/APOLLO.png"
-                },
                 "Spectrum":{
                     "img":"https://terra.spec.finance/assets/SPEC.png"
                 }

@@ -1,4 +1,10 @@
 {
     "terraClassic":"Terra Classic",
-    "terra": "Terra"
+    "terra": "Terra",
+    "priceAlert": "Price Alert",
+    "NFTMonitor":"NFT Monitor",
+    "NewSale": "New Sale",
+    "governancePoll": "Governance Poll",
+    "walletWatcher": "Wallet Watcher",
+    "validatorsprofileChanges": "Validator Profile Changes"
 }
