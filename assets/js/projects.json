@@ -143,7 +143,7 @@
                 "General":{
                     "img": "https://app.pulsar.finance/chains/Luna2-logo.png",
                     "support":{
-                        "Governance Poll":["app","discord","telegram"],
+                        "governancePoll":["app","discord","telegram"],
                         "walletWatcher":["discord","telegram","telegram"],
                         "validatorsprofileChanges":["app","discord","telegram"]
                     }  
