@@ -1,11 +1,11 @@
-<section class="relative w-full h-auto bg-no-repeat bg-cover min-h-screen bg-center" x-data="{ showMenu: false }" style="background-image: url('assets/images/Hermes-Protocol_Main-Block_BG.jpg')" data-tails-scripts="//unpkg.com/alpinejs">
+<section class="relative w-full h-auto bg-no-repeat bg-cover min-h-screen bg-center bg-light-image dark:bg-dark-image area" x-data="{ showMenu: false }"  data-tails-scripts="//unpkg.com/alpinejs">
     {% include blocks/header.html %}
 
    
-    <div class="container flex items-center justify-center h-auto py-32 mx-auto area">
-
-            <img class="absolute visible right-1/3 bottom-2/3 w-1/12  move-rect" src="assets/images/Hermes-Protocol_Main-Block_BELL.png ">
-
+    <div class="container flex items-center justify-center h-auto py-32 mx-auto ">
+        <div class="absolute w-1/12 right-1/3 bottom-2/3 move-rect">
+            <img class="w-4/5" src="assets/images/Hermes-Protocol_Main-Block_BELL.png ">
+        </div> 
         <div class="z-10 flex flex-col justify-center max-w-1/3 items-center px-8 xl:px-0">
             <img class="w-2/3 h-auto opacity-0 js-show-now" src="assets/images/hermes-full-logo.svg">
             <h1 class="mx-6 mt-1 text-xl text-xl text-center text-gray-500 lg:text-5xl sm:text-center sm:mx-0">A new era of communication in blockchain starts here</h1>

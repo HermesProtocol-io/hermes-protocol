@@ -2,6 +2,7 @@ module.exports = {
   content: [
     './**/*.html',
     './_pages/**/*.{html,js,jsx,ts,tsx,vue}',
+    './_includes/blocks/**/*.{html,js,jsx,ts,tsx,vue}',
     './**/*.{js,jsx,ts,tsx,vue}',
     './assets/js/*.{js,jsx,ts,tsx,vue}'
   ],
@@ -56,6 +57,11 @@ module.exports = {
           '100%': { opacity: 1,   transform: 'scale(1)' }
           },
       }),
+      backgroundImage: theme => ({
+        'light-image': "url('/assets/images/BG.jpg')",
+        'dark-image': "url('/assets/images/BG_DARK.jpg')",
+      }),
+    
     },
   },
   variants: {

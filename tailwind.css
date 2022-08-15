@@ -608,10 +608,6 @@ video {
   pointer-events: none;
 }
 
-.visible {
-  visibility: visible;
-}
-
 .fixed {
   position: fixed;
 }
@@ -1062,6 +1058,10 @@ video {
   width: 8.333333%;
 }
 
+.w-4\/5 {
+  width: 80%;
+}
+
 .w-2\/3 {
   width: 66.666667%;
 }
@@ -1100,10 +1100,6 @@ video {
 
 .max-w-4xl {
   max-width: 56rem;
-}
-
-.max-w-lg {
-  max-width: 32rem;
 }
 
 .max-w-3xl {
@@ -1602,6 +1598,10 @@ video {
   background-image: linear-gradient(to bottom right, var(--tw-gradient-stops));
 }
 
+.bg-light-image {
+  background-image: url('/assets/images/BG.jpg');
+}
+
 .bg-gradient-to-r {
   background-image: linear-gradient(to right, var(--tw-gradient-stops));
 }
@@ -2046,11 +2046,6 @@ video {
   color: rgb(156 163 175 / var(--tw-text-opacity));
 }
 
-.text-darkgold {
-  --tw-text-opacity: 1;
-  color: rgb(177 141 101 / var(--tw-text-opacity));
-}
-
 .text-indigo-200 {
   --tw-text-opacity: 1;
   color: rgb(199 210 254 / var(--tw-text-opacity));
@@ -2319,6 +2314,10 @@ form .input-wrapper.error .error {
   background-color: rgba(0,0,0,0.4);
 }
 
+.move-rect{
+  max-width:600px;
+}
+
 .hover\:bg-muddywaters-600:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(178 140 98 / var(--tw-bg-opacity));
@@ -2442,6 +2441,10 @@ form .input-wrapper.error .error {
   .dark\:bg-gray-700 {
     --tw-bg-opacity: 1;
     background-color: rgb(55 65 81 / var(--tw-bg-opacity));
+  }
+
+  .dark\:bg-dark-image {
+    background-image: url('/assets/images/BG_DARK.jpg');
   }
 
   .dark\:from-gray-800 {
@@ -2823,14 +2826,6 @@ form .input-wrapper.error .error {
     width: 50%;
   }
 
-  .lg\:w-3\/5 {
-    width: 60%;
-  }
-
-  .lg\:w-2\/5 {
-    width: 40%;
-  }
-
   .lg\:w-1\/5 {
     width: 20%;
   }
@@ -3084,4 +3079,3 @@ form .input-wrapper.error .error {
     letter-spacing: 0.05em;
   }
 }
-

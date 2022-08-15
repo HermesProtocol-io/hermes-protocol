@@ -37,7 +37,9 @@ function loadProjects(ready) {
 function writeHTML(selectedChain) {
     loadTranslations(translations => { 
         loadProjects(projects => {
+            
             var modal = document.getElementById("myModal");
+            if (!modal) return;
             modal.style.display = "none";
 
 
