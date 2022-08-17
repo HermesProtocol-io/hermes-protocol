@@ -6,8 +6,7 @@
                 "Astroport":{
                     "img":"https://astroport.fi/astro_logo.png",
                     "support":{
-                        "priceAlert":["app","discord","telegram"],
-                        "governancePoll":["app","discord","telegram"]
+                        "priceAlert":["app","discord","telegram"]
                     }
                 },
                 "Terraswap": {
@@ -21,15 +20,15 @@
                 "Random Earth":{
                     "img":"https://randomearth.io/static/compiled/865883277bf6d24d865f09ec1e8b8b6f.png",
                     "support":{
-                        "NFTMonitor":["app","discord","telegram"],
+                        "NFTMonitor":["app"],
                         "NewSale":["discord","telegram"]
                     }
                 },
                 "Talis Protocol":{
                     "img":"https://talis.art/icons/talis/logo.svg",
                     "support":{
-                        "NFTMonitor":["app","discord","telegram"],
-                        "NewSale":["discord"]
+                        "NFTMonitor":["app"],
+                        "NewSale":["discord","telegram"]
                     }
                 }
             },
