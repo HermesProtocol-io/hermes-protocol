@@ -77,7 +77,7 @@ function writeHTML(selectedChain) {
                                 document.getElementById(chain).innerHTML += `
                                     <div class="relative bg-white dark:bg-gray-700  shadow-xl rounded-xl px-6 py-7" onClick='popUp("${chain}","${projectTypeName}","${projectName}")'; > 
                                         <div class=" flex flex-row content-center">
-                                            <img class="w-6 h-auto" src = "${characteristics.img}">
+                                            <img class="items-center w-auto h-6" src = "${characteristics.img}">
                                             <p class="ml-3 dark:text-white font-bold"> ${projectName} </p>
                                         </div>
                                         <div class="absolute right-4 top-4 ">
@@ -105,7 +105,7 @@ function writeHTML(selectedChain) {
                                 document.getElementById(chain).innerHTML += `
                                     <div class="relative bg-white dark:bg-gray-700 shadow-xl rounded-xl px-6 py-7" > 
                                         <div class=" flex flex-row content-center">
-                                            <img class="w-6 h-auto" src = "${characteristics.img}">
+                                            <img class="w-auto h-6" src = "${characteristics.img}">
                                             <p class="ml-3 dark:text-white font-bold"> ${projectName} </p>
                                         </div>
                                         <div class="absolute right-4 top-4 ">

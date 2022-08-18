@@ -661,6 +661,14 @@ video {
   bottom: 66.666667%;
 }
 
+.-right-1\.5 {
+  right: -0.375rem;
+}
+
+.-right-1 {
+  right: -0.25rem;
+}
+
 .-left-10 {
   left: -2.5rem;
 }
@@ -1064,6 +1072,10 @@ video {
 
 .w-2\/3 {
   width: 66.666667%;
+}
+
+.w-1\/4 {
+  width: 25%;
 }
 
 .w-1\/2 {
@@ -1689,10 +1701,6 @@ video {
 
 .p-5 {
   padding: 1.25rem;
-}
-
-.p-8 {
-  padding: 2rem;
 }
 
 .p-1\.5 {
@@ -2711,6 +2719,10 @@ form .input-wrapper.error .error {
   .md\:px-0 {
     padding-left: 0px;
     padding-right: 0px;
+  }
+
+  .md\:pt-0 {
+    padding-top: 0px;
   }
 
   .md\:pb-0 {
