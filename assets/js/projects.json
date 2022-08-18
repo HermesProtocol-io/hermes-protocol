@@ -1,0 +1,172 @@
+{
+	
+    "terraClassic": {
+        "active":{
+            "DEX": {
+                "Astroport":{
+                    "img":"https://astroport.fi/astro_logo.png",
+                    "support":{
+                        "priceAlert":["app","discord","telegram"]
+                    }
+                },
+                "Terraswap": {
+                    "img":"https://assets.coingecko.com/markets/images/835/small/Terraswap.png?1647410415",
+                    "support":{
+                        "priceAlert":["app","discord","telegram"]
+                    }
+                }      
+            },
+            "nft": {
+                "Random Earth":{
+                    "img":"https://randomearth.io/static/compiled/865883277bf6d24d865f09ec1e8b8b6f.png",
+                    "support":{
+                        "NFTMonitor":["app"],
+                        "NewSale":["discord","telegram"]
+                    }
+                },
+                "Talis Protocol":{
+                    "img":"https://talis.art/icons/talis/logo.svg",
+                    "support":{
+                        "NFTMonitor":["app"],
+                        "NewSale":["discord","telegram"]
+                    }
+                }
+            },
+            "derivatives": {
+                "Mirror Protocol": {
+                    "img":"https://whitelist.mirror.finance/icon/MIR.png",
+                    "support":{
+                        "governancePoll":["app","discord","telegram"]
+                    } 
+                }
+            },
+            "Yield Strategies":{
+                "Apollo DAO":{
+                    "img":"https://d14knz87alb4l4.cloudfront.net/icons/APOLLO.png",
+                    "support":{
+                        "governancePoll":["app","discord","telegram"]
+                    }
+                }
+            },
+            "blockchain": {
+                "General":{
+                    "img": "https://app.pulsar.finance/chains/Terraclassic-logo.svg",
+                    "support":{
+                        "governancePoll":["app","discord","telegram"],
+                        "walletWatcher":["discord","telegram","telegram"],
+                        "validatorsprofileChanges":["app","discord","telegram"]
+                    }  
+                }
+            }
+            
+        },
+        "inactive":{
+            "Yield Strategies":{
+                "Spectrum":{
+                    "img":"https://terra.spec.finance/assets/SPEC.png"
+                }
+            },
+            "Staking Pool":{
+                "Prism":{
+                    "img":"https://prismprotocol.app/xprism.svg"
+                },
+                "Stader Labs":{
+                    "img":"https://raw.githubusercontent.com/stader-labs/assets/main/terra/whSD.png"
+                }
+            },
+            "Lending":{
+                "Edge Protocol":{
+                    "img":"https://app.edgeprotocol.io/static/media/edge-logo.a741b1df.svg"
+                },
+                "Anchor Protocol":{
+                    "img":"https://whitelist.anchorprotocol.com/logo/ANC.png"
+                },
+                "Mars Protocol":{
+                    "img":"https://marsprotocol.io/MARSTokenMini.svg"
+                }  
+            },
+            "Launchpad":{
+                "StarTerra":{
+                    "img":"https://starterra.io/assets/100x100_starterra.png"
+                },
+                "Pylon Protocol":{
+                    "img":"https://assets.pylon.rocks/logo/MINE.png"
+                } 
+            },
+            "Charity":{
+                "Angel Protocol":{
+                    "img":"https://www.angelprotocol.io/favicon.png"
+                }
+            }
+        }
+    },
+    "terra": {
+        "active": {
+            "DEX": {
+                "Terraswap": {
+                    "img":"https://assets.coingecko.com/markets/images/835/small/Terraswap.png?1647410415",
+                    "support":{
+                        "priceAlert":["app","discord","telegram"]
+                    } 
+                }, 
+                "Astroport":{
+                    "img":"https://astroport.fi/astro_logo.png",
+                    "support":{
+                        "priceAlert":["app","discord","telegram"]
+                    } 
+                }, 
+                "Phoenix Finance":{
+                    "img":"https://app.phoenixfi.so/favicon.ico",
+                    "support":{
+                        "priceAlert":["app","discord","telegram"]
+                    } 
+                }
+            },
+            "nft": {
+                "Knowhere Art":{
+                    "img":"https://randomearth.io/static/compiled/865883277bf6d24d865f09ec1e8b8b6f.png",
+                    "support":{
+                        "NFTMonitor":["app","discord","telegram"],
+                        "NewSale":["discord","telegram"]
+                    }
+                },
+                "Talis Protocol":{
+                    "img":"https://talis.art/icons/talis/logo.svg",
+                    "support":{
+                        "NFTMonitor":["app","discord","telegram"],
+                        "NewSale":["discord","telegram"]
+                    }
+                }
+            },
+            "blockchain": {
+                "General":{
+                    "img": "https://app.pulsar.finance/chains/Luna2-logo.png",
+                    "support":{
+                        "governancePoll":["app","discord","telegram"],
+                        "walletWatcher":["discord","telegram","telegram"],
+                        "validatorsprofileChanges":["app","discord","telegram"]
+                    }  
+                }
+
+            }
+        },
+        "inactive":{
+            "Staking Pool":{
+                "Eris Protocol":{
+                    "img":"https://www.erisprotocol.com/en-US/favicon.ico"
+                },
+                "Stader Labs":{
+                    "img":"https://raw.githubusercontent.com/stader-labs/assets/main/terra/whSD.png"
+                },
+                "Steak":{
+                    "img":"https://app.astroport.fi/tokens/steak.png"
+                } 
+            },
+            "Charity":{
+                "Angel Protocol":{
+                    "img":"https://www.angelprotocol.io/favicon.png"
+                }
+            }
+        }
+    }
+}

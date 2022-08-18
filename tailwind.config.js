@@ -1,7 +1,10 @@
 module.exports = {
   content: [
     './**/*.html',
+    './_pages/**/*.{html,js,jsx,ts,tsx,vue}',
+    './_includes/blocks/**/*.{html,js,jsx,ts,tsx,vue}',
     './**/*.{js,jsx,ts,tsx,vue}',
+    './assets/js/*.{js,jsx,ts,tsx,vue}'
   ],
   theme: {
     extend: {
@@ -39,16 +42,26 @@ module.exports = {
         }
       },
       animation: {
-        'fade': 'fadeIn 2s ease-in forwards'
+        'fade': 'fadeIn 2s ease-in forwards',
+        'show-on': 'showOn 2s ease-in forwards'
        },
       
       keyframes: theme => ({
        fadeIn: {
         '0%': { opacity: 0 },
         '50%': { opacity: 0.6 },
-        '100%': { opacity: 1 },
+        '100%': { opacity: 1 }
         },
+        showOn: {
+          '0%': { opacity: 0,  transform: 'scale(0.9)' },
+          '100%': { opacity: 1,   transform: 'scale(1)' }
+          },
       }),
+      backgroundImage: theme => ({
+        'light-image': "url('/assets/images/BG.jpg')",
+        'dark-image': "url('/assets/images/BG_DARK.jpg')",
+      }),
+    
     },
   },
   variants: {

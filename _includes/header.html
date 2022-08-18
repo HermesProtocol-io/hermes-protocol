@@ -6,5 +6,23 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <link rel="stylesheet" href="{{ 'assets/css/main.css' | relative_url }}">
     <link href="tailwind.css" rel="stylesheet">
-    <link rel="shortcut icon" href="{{ 'assets/images/hermes-logo.svg' | relative_url }}" />
+    <link rel="shortcut icon" href="{{ 'assets/images/icon.svg' | relative_url }}" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+    <script rel="preload" as="script" src="{{ '/assets/js/utils.js'| prepend: site.baseurl_root  }}"></script>   
+    <script rel="preload" as="script" src="{{ '/assets/js/loadProjects.js'| prepend: site.baseurl_root  }}"></script>
+
+    <script >
+
+        $(document).ready(function(){
+            var $moveable = $('.move-rect');
+            var rectPosY = parseInt($('.move-rect').css('top'), 10);
+            var rectPosX = parseInt($('.move-rect').css('left'), 10);
+            $(".area").mousemove(function(e){
+                $moveable.css({'top': rectPosY-e.pageY/40,'left': rectPosX-e.pageX/40});
+            });
+          });
+        
+      </script>
+
+    
 </head>
