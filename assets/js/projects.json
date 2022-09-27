@@ -6,13 +6,13 @@
                 "Astroport":{
                     "img":"https://astroport.fi/astro_logo.png",
                     "support":{
-                        "priceAlert":["app","discord","telegram"]
+                        "priceAlert":["app","discord"]
                     }
                 },
                 "Terraswap": {
                     "img":"https://assets.coingecko.com/markets/images/835/small/Terraswap.png?1647410415",
                     "support":{
-                        "priceAlert":["app","discord","telegram"]
+                        "priceAlert":["app","discord"]
                     }
                 }      
             },
@@ -21,14 +21,14 @@
                     "img":"https://randomearth.io/static/compiled/865883277bf6d24d865f09ec1e8b8b6f.png",
                     "support":{
                         "NFTMonitor":["app"],
-                        "NewSale":["discord","telegram"]
+                        "NewSale":["discord"]
                     }
                 },
                 "Talis Protocol":{
                     "img":"https://talis.art/icons/talis/logo.svg",
                     "support":{
                         "NFTMonitor":["app"],
-                        "NewSale":["discord","telegram"]
+                        "NewSale":["discord"]
                     }
                 }
             },
@@ -36,25 +36,17 @@
                 "Mirror Protocol": {
                     "img":"https://whitelist.mirror.finance/icon/MIR.png",
                     "support":{
-                        "governancePoll":["app","discord","telegram"]
+                        "governancePoll":["app","discord"]
                     } 
-                }
-            },
-            "Yield Strategies":{
-                "Apollo DAO":{
-                    "img":"https://d14knz87alb4l4.cloudfront.net/icons/APOLLO.png",
-                    "support":{
-                        "governancePoll":["app","discord","telegram"]
-                    }
                 }
             },
             "blockchain": {
                 "General":{
                     "img": "https://app.pulsar.finance/chains/Terraclassic-logo.svg",
                     "support":{
-                        "governancePoll":["app","discord","telegram"],
-                        "walletWatcher":["discord","telegram","telegram"],
-                        "validatorsprofileChanges":["app","discord","telegram"]
+                        "governancePoll":["app","discord"],
+                        "walletWatcher":["discord"],
+                        "validatorsprofileChanges":["app","discord"]
                     }  
                 }
             }
@@ -64,6 +56,9 @@
             "Yield Strategies":{
                 "Spectrum":{
                     "img":"https://terra.spec.finance/assets/SPEC.png"
+                }, 
+                "Apollo DAO":{
+                    "img":"https://d14knz87alb4l4.cloudfront.net/icons/APOLLO.png"
                 }
             },
             "Staking Pool":{
@@ -87,7 +82,7 @@
             },
             "Launchpad":{
                 "StarTerra":{
-                    "img":"https://starterra.io/assets/100x100_starterra.png"
+                    "img":"https://app.pulsar.finance/pulsar-token.svg"
                 },
                 "Pylon Protocol":{
                     "img":"https://assets.pylon.rocks/logo/MINE.png"
@@ -95,7 +90,7 @@
             },
             "Charity":{
                 "Angel Protocol":{
-                    "img":"https://www.angelprotocol.io/favicon.png"
+                    "img":"https://miro.medium.com/max/2400/1*EDnOn77npNc0Wgum6NDnaA.png"
                 }
             }
         }
@@ -106,19 +101,19 @@
                 "Terraswap": {
                     "img":"https://assets.coingecko.com/markets/images/835/small/Terraswap.png?1647410415",
                     "support":{
-                        "priceAlert":["app","discord","telegram"]
+                        "priceAlert":["app","discord"]
                     } 
                 }, 
                 "Astroport":{
                     "img":"https://astroport.fi/astro_logo.png",
                     "support":{
-                        "priceAlert":["app","discord","telegram"]
+                        "priceAlert":["app","discord"]
                     } 
                 }, 
                 "Phoenix Finance":{
                     "img":"https://app.phoenixfi.so/favicon.ico",
                     "support":{
-                        "priceAlert":["app","discord","telegram"]
+                        "priceAlert":["app","discord"]
                     } 
                 }
             },
@@ -126,15 +121,22 @@
                 "Knowhere Art":{
                     "img":"https://randomearth.io/static/compiled/865883277bf6d24d865f09ec1e8b8b6f.png",
                     "support":{
-                        "NFTMonitor":["app","discord","telegram"],
-                        "NewSale":["discord","telegram"]
+                        "NFTMonitor":["app","discord"],
+                        "NewSale":["discord"]
                     }
                 },
                 "Talis Protocol":{
                     "img":"https://talis.art/icons/talis/logo.svg",
                     "support":{
-                        "NFTMonitor":["app","discord","telegram"],
-                        "NewSale":["discord","telegram"]
+                        "NFTMonitor":["app","discord"],
+                        "NewSale":["discord"]
+                    }
+                },
+                "Random Earth":{
+                    "img":"https://randomearth.io/static/compiled/865883277bf6d24d865f09ec1e8b8b6f.png",
+                    "support":{
+                        "NFTMonitor":["app","discord"],
+                        "NewSale":["discord"]
                     }
                 }
             },
@@ -142,9 +144,9 @@
                 "General":{
                     "img": "https://app.pulsar.finance/chains/Luna2-logo.png",
                     "support":{
-                        "governancePoll":["app","discord","telegram"],
-                        "walletWatcher":["discord","telegram","telegram"],
-                        "validatorsprofileChanges":["app","discord","telegram"]
+                        "governancePoll":["app","discord"],
+                        "walletWatcher":["discord"],
+                        "validatorsprofileChanges":["app","discord"]
                     }  
                 }
 
@@ -164,7 +166,7 @@
             },
             "Charity":{
                 "Angel Protocol":{
-                    "img":"https://www.angelprotocol.io/favicon.png"
+                    "img":"https://miro.medium.com/max/2400/1*EDnOn77npNc0Wgum6NDnaA.png"
                 }
             }
         }
