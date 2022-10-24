@@ -24,7 +24,7 @@
             <div class="flex text-gray-500 dark:text-gray-300">
                 <i class="fa-solid fa-wallet text-muddywaters-500 text-7xl w-20 h-20 mr-8 opacity-100"></i>
                 <div class="relative space-y-2">
-                    <h4 class="text-xl font-bold leading-relaxed">5%</h4>
+                    <h4 class="text-xl font-bold leading-relaxed" id="commission-rate">5%</h4>
                     <p class="text-lg dark:text-gray-300">Commission
                 </p></div>
             </div>
@@ -32,9 +32,9 @@
             <div class="flex text-gray-500 dark:text-gray-300">
                 <img class="flex-shrink-0 w-20 h-20 mr-8" src="assets/images/luna.svg" />
                 <div class="relative space-y-2">
-                    <h4 class="text-2xl font-bold leading-relaxed">1M</h4>
-                    <p class="text-lg text-gray-500 dark:text-gray-300">Luna Staked
-                </p></div>
+                    <h4 class="text-2xl font-bold leading-relaxed" id="total-delegations">Loading...</h4>
+                    <p class="text-lg text-gray-500 dark:text-gray-300" id="luna-staked">Luna Staked</p>
+                </div>
             </div>
 
             <div class="flex text-gray-500 dark:text-gray-300">
@@ -48,6 +48,24 @@
     </div>
 </section>
 
+<script>
+  $(document).ready(function () {
+      reloadChainValues();
+  });
+
+  async function reloadChainValues() {
+    const short = await getValidatorInfo("terravaloper1g6pwngzfj73wnxm7y5gae0thylphugumc96gh3", true);
+
+    const [ shortTokens, commissionRate ] = [ short.shortTokens, short.commissionRate, short.numDelegators ];
+
+    document.getElementById("total-delegations").innerHTML = shortTokens;
+    document.getElementById("commission-rate").innerHTML = commissionRate;
+
+    const long = await getValidatorInfo("terravaloper1g6pwngzfj73wnxm7y5gae0thylphugumc96gh3", false);
+    const numDelegators = long.numDelegators;
+    document.getElementById("luna-staked").innerHTML += ` from ${numDelegators} delegators`;
+  }
+</script>
 
 <!-- <script>
   function delegateSubmit() {
