@@ -42,7 +42,7 @@
             },
             "blockchain": {
                 "General":{
-                    "img": "https://app.pulsar.finance/chains/Terraclassic-logo.svg",
+                    "img": "https://s2.coinmarketcap.com/static/img/coins/64x64/4172.png",
                     "support":{
                         "governancePoll":["app","discord"],
                         "walletWatcher":["discord"],
@@ -63,7 +63,7 @@
             },
             "Staking Pool":{
                 "Prism":{
-                    "img":"https://prismprotocol.app/xprism.svg"
+                    "img":"https://s2.coinmarketcap.com/static/img/coins/200x200/18015.png"
                 },
                 "Stader Labs":{
                     "img":"https://raw.githubusercontent.com/stader-labs/assets/main/terra/whSD.png"

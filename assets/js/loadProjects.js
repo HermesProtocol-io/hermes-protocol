@@ -19,12 +19,12 @@ function loadTranslations(ready) {
 
 
 function loadProjects(ready) {
-    let data = JSON.parse(sessionStorage.getItem("projectsData"));
+    let data = JSON.parse(sessionStorage.getItem("projects"));
     if (data) { 
         ready(data);
     } else {
         getJSON("/assets/js/projects.json").done( projects => {
-            sessionStorage.setItem("projectsData", JSON.stringify(projects));
+            sessionStorage.setItem("projects", JSON.stringify(projects));
             ready(projects);
         }).fail ( function( jqxhr, textStatus, error ) {
             console.log( "Error: " + textStatus +", "+ error );
@@ -75,7 +75,7 @@ function writeHTML(selectedChain) {
                             for (const [ projectName, characteristics ] of Object.entries(protocol)) {  
                 
                                 document.getElementById(chain).innerHTML += `
-                                    <div class="relative bg-white dark:bg-gray-700  shadow-xl rounded-xl px-6 py-7" onClick='popUp("${chain}","${projectTypeName}","${projectName}")'; > 
+                                    <div class="relative bg-white hover:bg-gray-100 transition dark:bg-gray-700 dark:hover:bg-gray-600  shadow-xl rounded-xl px-6 py-7 cursor-pointer" onClick='popUp("${chain}","${projectTypeName}","${projectName}")'; > 
                                         <div class=" flex flex-row content-center">
                                             <img class="items-center w-auto h-6" src = "${characteristics.img}">
                                             <p class="ml-3 dark:text-white font-bold"> ${projectName} </p>
