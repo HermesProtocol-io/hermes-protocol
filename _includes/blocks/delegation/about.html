@@ -54,15 +54,19 @@
   });
 
   async function reloadChainValues() {
+    const defaultTokens     = "1.2M",
+          defaultCommission = "5%",
+          defaultDelegators = "3700";
+
     const short = await getValidatorInfo("terravaloper1g6pwngzfj73wnxm7y5gae0thylphugumc96gh3", true);
 
-    const [ shortTokens, commissionRate ] = [ short.shortTokens, short.commissionRate, short.numDelegators ];
+    const [ shortTokens, commissionRate ] = [ short.shortTokens?? defaultTokens, short.commissionRate?? defaultCommission ];
 
     document.getElementById("total-delegations").innerHTML = shortTokens;
     document.getElementById("commission-rate").innerHTML = commissionRate;
 
     const long = await getValidatorInfo("terravaloper1g6pwngzfj73wnxm7y5gae0thylphugumc96gh3", false);
-    const numDelegators = long.numDelegators;
+    const numDelegators = long?.numDelegators?? defaultDelegators;
     document.getElementById("luna-staked").innerHTML += ` from ${numDelegators} delegators`;
   }
 </script>
