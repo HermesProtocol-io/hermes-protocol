@@ -119,7 +119,7 @@
             },
             "nft": {
                 "Knowhere Art":{
-                    "img":"https://randomearth.io/static/compiled/865883277bf6d24d865f09ec1e8b8b6f.png",
+                    "img":"",
                     "support":{
                         "NFTMonitor":["app","discord"],
                         "NewSale":["discord"]
