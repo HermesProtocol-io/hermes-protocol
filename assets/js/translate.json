@@ -6,5 +6,12 @@
     "NewSale": "New Sale",
     "governancePoll": "Governance Polls",
     "walletWatcher": "Wallet Watcher",
-    "validatorsprofileChanges": "Validator Profile Changes"
+    "validatorsprofileChanges": "Validator Profile Changes",
+    "liquidityPool": "Liquidity Pool",
+    "liquidStaking": "Liquid Staking",
+    "domainRegistration":"Domain Registration",
+    "domainChanges":"Domain Changes",
+    "newDomain":"New Domain"
+
+
 }

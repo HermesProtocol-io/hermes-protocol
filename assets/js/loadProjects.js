@@ -62,7 +62,7 @@ function writeHTML(selectedChain) {
                     <span class="text-gray-500 font-medium text-lg" id="count-${chain}">
                     </span>
                 </h2>
-                    <div class="pb-10 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4" id=${chain} >`
+                    <div class="pb-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4" id=${chain} >`
                 
                 let countprojects = 0;
                 
@@ -75,7 +75,7 @@ function writeHTML(selectedChain) {
                             for (const [ projectName, characteristics ] of Object.entries(protocol)) {  
                 
                                 document.getElementById(chain).innerHTML += `
-                                    <div class="relative bg-white hover:bg-gray-100 transition dark:bg-gray-700 dark:hover:bg-gray-600  shadow-xl rounded-xl px-6 py-7 cursor-pointer" onClick='popUp("${chain}","${projectTypeName}","${projectName}")'; > 
+                                    <div class="relative bg-white hover:bg-gray-100 transition dark:bg-gray-700 dark:hover:bg-gray-600 hover:scale-105 shadow-xl rounded-xl px-6 py-7 cursor-pointer" onClick='popUp("${chain}","${projectTypeName}","${projectName}")'; > 
                                         <div class=" flex flex-row content-center">
                                             <img class="items-center w-auto h-6" src = "${characteristics.img}">
                                             <p class="ml-3 dark:text-white font-bold"> ${projectName} </p>
