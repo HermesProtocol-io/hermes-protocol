@@ -1,52 +1,71 @@
 
-<!-- Section 1 -->
-<section class="relative py-0 bg-white dark:bg-gray-800 lg:py-20">
-    <div class="relative px-16 mx-auto max-w-7xl xl:px-10">
-
-        <div class="relative z-20">
-            <h3 class="text-5xl font-bold leading-tight text-left text-black dark:text-gray-300 md:text-6xl lg:text-7xl xl:text-7xl xl:leading-tight">
-              Support Hermes Protocol
-            </h3>
-            <div class="flex flex-col mt-14 sm:flex-row sm:items-center">
-                <p class="text-xl font-normal text-left text-muddywaters-500">
-                  The platform that helps you stay informed at the right time!</p>
-                <div class="flex mt-5 space-x-1 sm:mt-1 sm:ml-3">
-                    <div class="w-10 h-2 bg-muddywaters-500 rounded-full opacity-100"></div>
-                    <div class="w-8 h-2 bg-muddywaters-500  rounded-full opacity-75"></div>
-                    <div class="w-4 h-2 bg-muddywaters-500  rounded-full opacity-50"></div>
-                    <div class="w-3 h-2 bg-muddywaters-500  rounded-full opacity-25"></div>
-                    <div class="w-2 h-2 bg-muddywaters-500  rounded-full opacity-10"></div>
-                    <div class="w-2 h-2 bg-muddywaters-500  rounded-full opacity-5"></div>
-                </div>
+<section class="relative w-full bg-white dark:bg-gray-800 pb-10 mt-36 mb-24">
+  <div class="px-12 mx-auto text-sm max-w-6xl md:text-base">
+      <div class="flex flex-col justify-center mt-0 mb-10 text-transparent bg-hermes-hgradient bg-clip-text">
+          <h2 class="mt-0 mb-6 text-4xl text-center tracking-normal">Delegate to Hermes Protocol validator</h2>
+      </div>
+      <div class="grid gap-5 lg:grid-cols-3 xl:gap-8">
+          <div class="relative flex flex-col h-full p-1 bg-hermes-gradient rounded-3xl  js-show-from-right">
+            <div class=" px-8 bg-white rounded-3xl">
+              <div class="mb-4 pt-8">
+                  <img class="w-auto h-16 mx-auto" src ="{{'assets/images/delegation/Terra.png'| relative_url }}">
+              </div>
+              <div class=" pb-8">
+                  <div class="flex justify-center">
+                      <h3 class="mt-3 pb-3 text-2xl text-center  border-b-2 border-cyellow-500"> Terra </h3>
+                  </div>
+                  <div class="grid grid-cols-6 gap-4 w-full mt-3 text-md text-center ">                
+                      <div class="flex w-6 h-6 items-center justify-center text-sm text-center "><img src="{{'assets/images/delegation/wallet.png'| relative_url }}"></div> 
+                      <div class="col-start-2 col-span-5  flex  text-left" ><h4><a id="commission-rate">5%</a> Comission</h4> </div>
+                      <div class="flex w-6 h-6 items-center justify-center text-sm text-center  "><img src="{{'assets/images/delegation/luna.png'| relative_url }}"></div>
+                                <div class="col-start-2 col-span-5  text-left flex"> <h4><a id="total-delegations">1.2 M </a> Luna</h4> <br> <h5>Staked from <a id="total-delegations"></a> delegators</h5> </div>
+                      <div class="flex w-6 h-6 items-center justify-center text-sm text-center  "><img src="{{'assets/images/delegation/watch.png'| relative_url }}"></div> 
+                      <div class="col-start-2 col-span-5 text-left">100% Uptime</div>
+                  </div>
+                  <div class="mt-4">
+                    <a class="mx-auto inline-flex items-center justify-center w-full h-12 px-8 text-white bg-hermes-gradient rounded-2xl shadow-2xl" href="https://station.terra.money/stake/terravaloper1g6pwngzfj73wnxm7y5gae0thylphugumc96gh3#delegate"> Stake Now </a>
+                 </div>
+              </div>
             </div>
-        </div>
-        <div class="grid grid-cols-1 mt-24 gap-14 lg:grid-cols-3">
-            <div class="flex text-gray-500 dark:text-gray-300">
-                <i class="fa-solid fa-wallet text-muddywaters-500 text-7xl w-20 h-20 mr-8 opacity-100"></i>
-                <div class="relative space-y-2">
-                    <h4 class="text-xl font-bold leading-relaxed" id="commission-rate">5%</h4>
-                    <p class="text-lg dark:text-gray-300">Commission
-                </p></div>
-            </div>
-
-            <div class="flex text-gray-500 dark:text-gray-300">
-                <img class="flex-shrink-0 w-20 h-20 mr-8" src="assets/images/luna.svg" />
-                <div class="relative space-y-2">
-                    <h4 class="text-2xl font-bold leading-relaxed" id="total-delegations">Loading...</h4>
-                    <p class="text-lg text-gray-500 dark:text-gray-300" id="luna-staked">Luna Staked</p>
-                </div>
-            </div>
-
-            <div class="flex text-gray-500 dark:text-gray-300">
-                <i class="fa-solid fa-stopwatch text-muddywaters-500 text-7xl w-20 h-20 mr-8 opacity-100"></i>
-                <div class="relative space-y-2">
-                    <h4 class="text-xl font-bold leading-relaxed">100%</h4>
-                    <p class="text-lg text-gray-500 dark:text-gray-300">Uptime
-                </p></div>
-            </div>
-        </div>
-    </div>
+          </div>
+          <div class="relative flex flex-col h-full p-1 bg-hermes-gradient rounded-3xl  js-show-from-right">
+            <div class=" px-8 bg-white rounded-3xl">
+              <div class="mb-4 pt-8">
+                  <img class="w-auto h-16 mx-auto" src ="{{'assets/images/delegation/Q chain.png'| relative_url }}">
+              </div>
+              <div class=" mt-auto pb-8">
+                  <div class="flex justify-center">
+                      <h3 class="mt-3 pb-3 text-2xl text-center border-b-2 border-cyellow-500"> Q Blockchain </h3>
+                  </div>
+                  <div class="grid grid-cols-6 gap-4 w-full mt-3 text-md text-center ">                
+                      <div class="flex w-6 h-6 items-center justify-center text-sm text-center"><img src="{{'assets/images/delegation/wallet.png'| relative_url }}"></div> 
+                      <div class="col-start-2 col-span-5  text-left">5% Comission </div>
+                      <div class="flex w-6 h-6 items-center justify-center text-sm text-center"><img src="{{'assets/images/delegation/luna.png'| relative_url }}"></div>
+                      <div class="col-start-2 col-span-5  text-left"> 1.2M Q <br> Staked from 100 delegators </div>
+                      <div class="flex w-6 h-6 items-center justify-center text-sm text-center"><img src="{{'assets/images/delegation/watch.png'| relative_url }}"></div> 
+                      <div class="col-start-2 col-span-5 text-left">100% Uptime</div>
+                  </div> 
+                  <div class="mt-4">
+                    <a class="mx-auto inline-flex items-center justify-center w-full h-12 px-8 text-white bg-hermes-gradient rounded-2xl shadow-2xl"> Stake Now </a>
+                 </div>              
+               </div>
+              </div>
+          </div>
+          <div class="relative flex items-stretch h-full p-1 bg-hermes-gradient rounded-3xl  js-show-from-right">
+            <div class="grow px-8 bg-white rounded-3xl flex flex-col justify-between py-8">
+                  <div class="flex justify-center text-transparent bg-hermes-hgradient bg-clip-text">
+                      <h3 class=" mt-3 pb-3 text-9xl text-center"> ? </h3>
+                  </div>
+                  <h3 class="w-full mt-3 text-2xl text-center ">TBA</h3>
+                  <div class="mt-4">
+                    <a href="{{'contact'| relative_url }}" class="mx-auto inline-flex items-center justify-center w-full h-12 px-8 text-white bg-hermes-gradient rounded-2xl shadow-2xl"> Contact Us </a>
+                  </div> 
+            </div> 
+          </div>
+      </div>
+  </div>
 </section>
+
 
 <script>
   $(document).ready(function () {
