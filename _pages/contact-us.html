@@ -164,15 +164,15 @@ function contactFormSubmit(token) {
             body: urlencoded,
             redirect: 'follow'
         };
-        fetch("https://hook.eu1.make.com/k6g2hdj4ql9gsmu2yep9p9cjw2413qql", requestOptions)
+        fetch("/api/contact-form", requestOptions)
             .then(response => response.text())
             .then(result => {
                 console.log(result)
-                alert("Sucessfull submit");
+                alert("Sucessfully submited");
             })
             .catch(error => {
                 console.log('error', error)
-                alert("Error submit form");
+                alert("Error submiting form");
             });
 
     } else {
