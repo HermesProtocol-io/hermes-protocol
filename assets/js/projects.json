@@ -121,13 +121,15 @@
 
             },
             "nft": {
-<<<<<<< Updated upstream
                 "Knowhere Art":{
                     "img":"",
-=======
+                    "support":{
+                        "NFTMonitor":["app"],
+                        "NewSale":["discord"]
+                    }
+                },
                 "Random Earth":{
                     "img":"https://randomearth.io/static/compiled/865883277bf6d24d865f09ec1e8b8b6f.png",
->>>>>>> Stashed changes
                     "support":{
                         "NFTMonitor":["app"],
                         "NewSale":["discord"]
