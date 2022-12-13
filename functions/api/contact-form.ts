@@ -2,30 +2,21 @@
  * POST /api/contact-form
  */
 
-
 export interface FormObj {
     email: string,
     contact_reason: string,
     message: string
 }
 
-export function handleJsonRequest(r: Response) {
+export function handleJsonRequest(r: Response, num?: number) {
     if (r.ok) return r.json();
     throw new Error(
-      `Error with fetch! #${r.status} - ${r.statusText} from URL: ${r.url}`
+      `Error (${r.status}) with fetch! #${num??0} - '${r.statusText}' from URL: ${r.url}`
     );
 }
 
-const jsonHeader = {
-    headers: {
-        Accept: "application/json",
-        "api-key": SENDINBLUE_API_KEY,
-        "content-type": "application/json"
-    }
-};
-
 export function createDataBodyForUser(templateId: number, toAddress: string) {
-    return {
+    return JSON.stringify({
         "to":[  
             {  
                "email": toAddress
@@ -38,40 +29,36 @@ export function createDataBodyForUser(templateId: number, toAddress: string) {
         "headers":{  
             "charset":"iso-8859-1"
         }
-    }
+    });
 }
 
-export function createDataBodyForStaff(senderName: string, senderEmail: string, toAddress: string, replyToAddress: string, subject: string, body: string) {
-    return {
-        "sender": {
-            "name": senderName,
-            "email": senderEmail
-        },
-        "to":[  
-            {  
-               "email": toAddress
-            }
-        ],
-        "replyTo": replyToAddress,
-        "subject": subject, //"Hermes Protocol - Contact Form",
-        "textContent": body,
-        /*  From: {{1.email}}
-            Subject: {{1.company}} {{1.name}}
-        
-            Message: {{1.message}}*/
-        "headers":{  
-            "charset":"iso-8859-1"
+export function createDataBodyForStaff(senderName: string, senderEmail: string, staffAddress: string, userAddress: string, replyToAddress: string, subject: string, userMessage: string, contact_reason?: string) {
+    return JSON.stringify({
+        sender: { name: senderName, email: senderEmail },
+        to:[  {  email: staffAddress } ],
+        replyTo: replyToAddress,
+        subject: subject,
+        textContent:
+            `From: ${userAddress}\n`+
+            `${ contact_reason? 'Subject: ' + contact_reason : ''}\n`+
+            `Message: ${userMessage}`,
+        headers:{  
+            charset: 'iso-8859-1'
         }
-    }
+    });
 }
 
-export async function onRequestPost(context) {
-    try {
-        let input = await context.request.formData();
+export function simpleDataForStaff(headers: Object, staffAddress: string, subject: string, userAddress: string, userMessage: string, contact_reason?: string) {
+    return Object.assign(structuredClone(headers), {body: createDataBodyForStaff(staffAddress, staffAddress, staffAddress, userAddress, staffAddress, subject, userMessage, contact_reason)} )
+}
 
+export async function onRequestPost({request, env}) {
+    let output: any = {};
+
+    try {
+        let input = await request.formData();
         // Convert FormData to JSON
         // NOTE: Allows multiple values per key
-        let output = {};
         for (let [key, value] of input) {
             let tmp = output[key];
             if (tmp === undefined) {
@@ -81,17 +68,38 @@ export async function onRequestPost(context) {
             }
         }
 
+        // Make sure all parameters are received.
+        console.assert('email' in output && 'contact_reason' in output && 'message' in output,
+            "Does not contain mandatory parameters.");
+
+    } catch (err) {
+        return new Response(`Error parsing JSON content.\n${err}`, { status: 400 });
+    }
+
+    try {
+        const headerData = {
+            method: 'POST',
+            headers: {
+                "Accept": "application/json",
+                "api-key": env.SENDINBLUE_API_KEY,
+                "content-type": "application/json"
+            }
+        };
+
         const pretty = JSON.stringify(output, null, 2);
 
-        const formObj: FormObj = output;
+        const formObj: FormObj = structuredClone(output);
+        let userData = { ...structuredClone(headerData), body: createDataBodyForUser(8, output.email) },
+            staffData = simpleDataForStaff(headerData, "support@hermesprotocol.io", "Hermes Protocol - Contact Form", output.email, output.message, output.contact_reason);
 
-        // Send email to submitter
-        // Template: "Hermes Protocol - Contacto"
-        // To: Submitter email
-        // Reply To: "Hermes Protocol" <support@hermesprotocol.io>
-        // Sender: "Hermes Protocol" <support@hermesprotocol.io>
+        console.log(staffData);
 
-        const result = await fetch("https://api.sendinblue.com/v3/smtp/email", jsonHeader).then((r) => handleJsonRequest(r));
+        const [ userResult, staffResult,  ] = await Promise.all( 
+            [
+                fetch("https://api.sendinblue.com/v3/smtp/email", userData).then((r) => handleJsonRequest(r,1)),
+                fetch("https://api.sendinblue.com/v3/smtp/email", staffData).then((r) => handleJsonRequest(r,2)) 
+            ]
+        );
 
 
         return new Response(pretty, {
@@ -100,6 +108,6 @@ export async function onRequestPost(context) {
             },
         });
     } catch (err) {
-        return new Response('Error parsing JSON content', { status: 400 });
+        return new Response(`Problem contacting SendInBlue...\n${err}`, { status: 400 });
     }
 }
