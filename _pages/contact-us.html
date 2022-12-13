@@ -168,11 +168,11 @@ function contactFormSubmit(token) {
             .then(response => response.text())
             .then(result => {
                 console.log(result)
-                alert("Sucessfully submited");
+                alert("Successfully submitted.");
             })
             .catch(error => {
                 console.log('error', error)
-                alert("Error submiting form");
+                alert("Error submitting form!");
             });
 
     } else {
