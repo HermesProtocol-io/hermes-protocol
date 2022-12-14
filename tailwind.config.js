@@ -95,7 +95,7 @@ module.exports = {
       animation: {
         'fade-right': 'fadeRight 1.5s ease-in forwards',
         'fade-left': 'fadeLeft 1.5s ease-in forwards',
-        'fade-in': 'fadeIn 1.5s ease-in forwards',
+        'fade': 'fadeIn 1.5s ease-in forwards',
         'zoom-in': 'zoomIn 2s ease-in forwards',
         'show-on': 'showOn 2s ease-in forwards'
        },
