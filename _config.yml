@@ -21,6 +21,7 @@ footer:
 
 include:
   - _pages
+  - _redirects
 
 exclude:
   - "README.md"
