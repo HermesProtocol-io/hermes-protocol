@@ -32,24 +32,40 @@ export function createDataBodyForUser(templateId: number, toAddress: string) {
     });
 }
 
-export function createDataBodyForStaff(senderName: string, senderEmail: string, staffAddress: string, userAddress: string, replyToAddress: string, subject: string, userMessage: string, contact_reason?: string) {
-    return JSON.stringify({
-        sender: { name: senderName, email: senderEmail },
-        to:[  {  email: staffAddress } ],
-        replyTo: replyToAddress,
-        subject: subject,
-        textContent:
-            `From: ${userAddress}\n`+
-            `${ contact_reason? 'Subject: ' + contact_reason : ''}\n`+
-            `Message: ${userMessage}`,
-        headers:{  
-            charset: 'iso-8859-1'
-        }
-    });
+export function createDataBodyForStaff(
+    senderName: string,
+    senderEmail: string,
+    staffAddress: string,
+    userAddress: string,
+    replyToAddress: string,
+    subject: string,
+    userMessage: string,
+    contact_reason?: string) {
+
+        return JSON.stringify({
+            sender: { name: senderName, email: senderEmail },
+            to:[  {  email: staffAddress } ],
+            replyTo: { name: "Staff", email: replyToAddress },
+            subject: subject,
+            textContent:
+                `From: ${userAddress}\n`+
+                `${ contact_reason? 'Subject: ' + contact_reason : ''}\n`+
+                `Message: ${userMessage}`,
+            headers:{  
+                charset: 'iso-8859-1'
+            }
+        });
 }
 
-export function simpleDataForStaff(headers: Object, staffAddress: string, subject: string, userAddress: string, userMessage: string, contact_reason?: string) {
-    return Object.assign(structuredClone(headers), {body: createDataBodyForStaff(staffAddress, staffAddress, staffAddress, userAddress, staffAddress, subject, userMessage, contact_reason)} )
+export function simpleDataForStaff(
+    headers: Object,
+    staffAddress: string,
+    subject: string,
+    userAddress: string,
+    userMessage: string,
+    contact_reason?: string) {
+
+        return Object.assign(structuredClone(headers), {body: createDataBodyForStaff(staffAddress, staffAddress, staffAddress, userAddress, staffAddress, subject, userMessage, contact_reason)} )
 }
 
 export async function onRequestPost({request, env}) {
@@ -61,7 +77,7 @@ export async function onRequestPost({request, env}) {
         // NOTE: Allows multiple values per key
         for (let [key, value] of input) {
             let tmp = output[key];
-            if (tmp === undefined) {
+            if (tmp === undefined || tmp === "") {
                 output[key] = value;
             } else {
                 output[key] = [].concat(tmp, value);
@@ -88,7 +104,6 @@ export async function onRequestPost({request, env}) {
 
         const pretty = JSON.stringify(output, null, 2);
 
-        const formObj: FormObj = structuredClone(output);
         let userData = { ...structuredClone(headerData), body: createDataBodyForUser(8, output.email) },
             staffData = simpleDataForStaff(headerData, "support@hermesprotocol.io", "Hermes Protocol - Contact Form", output.email, output.message, output.contact_reason);
 
@@ -96,17 +111,26 @@ export async function onRequestPost({request, env}) {
 
         const [ userResult, staffResult,  ] = await Promise.all( 
             [
-                fetch("https://api.sendinblue.com/v3/smtp/email", userData).then((r) => handleJsonRequest(r,1)),
-                fetch("https://api.sendinblue.com/v3/smtp/email", staffData).then((r) => handleJsonRequest(r,2)) 
+                fetch("https://api.sendinblue.com/v3/smtp/email", userData).then((r) => handleJsonRequest(r,1)) as any,
+                fetch("https://api.sendinblue.com/v3/smtp/email", staffData).then((r) => handleJsonRequest(r,2)) as any, 
             ]
         );
 
-
-        return new Response(pretty, {
-            headers: {
-                'Content-Type': 'application/json;charset=utf-8',
-            },
-        });
+        if ("messageId" in userResult && "messageId" in staffResult) {
+            return new Response(
+                `Emails sent.`,
+                {
+                    status: 200,
+                }
+            );
+        } else {
+            return new Response(
+                `Something unexpected happened, please try again later.`,
+                {
+                    status: 500,
+                }
+            );
+          }
     } catch (err) {
         return new Response(`Problem contacting SendInBlue...\n${err}`, { status: 400 });
     }
