@@ -2,12 +2,6 @@
  * POST /api/contact-form
  */
 
-export interface FormObj {
-    email: string,
-    contact_reason: string,
-    message: string
-}
-
 export function handleJsonRequest(r: Response, num?: number) {
     if (r.ok) return r.json();
     throw new Error(
@@ -101,8 +95,6 @@ export async function onRequestPost({request, env}) {
                 "content-type": "application/json"
             }
         };
-
-        const pretty = JSON.stringify(output, null, 2);
 
         let userData = { ...structuredClone(headerData), body: createDataBodyForUser(8, output.email) },
             staffData = simpleDataForStaff(headerData, "support@hermesprotocol.io", "Hermes Protocol - Contact Form", output.email, output.message, output.contact_reason);
