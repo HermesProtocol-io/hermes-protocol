@@ -121,20 +121,24 @@ export async function onRequestPost({request, env}) {
 
         if ("messageId" in userResult && "messageId" in staffResult) {
             return new Response(
-                `Emails sent.`,
+                JSON.stringify({ "success": true }),
                 {
                     status: 200,
+                    statusText: "Emails sent."
                 }
             );
         } else {
             return new Response(
-                `Something unexpected happened, please try again later.`,
+                JSON.stringify({ "success": false }),
                 {
                     status: 500,
+                    statusText: `Something unexpected happened, please try again later.`
                 }
             );
           }
     } catch (err) {
-        return new Response(`Problem contacting SendInBlue...\n${err}`, { status: 400 });
+        return new Response(
+            JSON.stringify({ "success": false }),
+            { status: 400, statusText: `Problem contacting SendInBlue...\n${err}` });
     }
 }
