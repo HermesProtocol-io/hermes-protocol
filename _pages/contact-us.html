@@ -17,30 +17,35 @@ layout: default
                 <div class="relative z-10 flex flex-col items-start justify-start p-4 lg:p-10 bg-white shadow-2xl rounded-xl">
                     <h4 class="w-full font-serif text-4xl font-medium leading-snug">Contact Us</h4>
                     <div class="relative w-full mt-6 space-y-8">
+                        <!--
                         <form onsubmit="event.preventDefault();">
+                        -->
+                        <form id="contact-form" enctype="multipart/form-data" onsubmit="contactFormSubmit(event)"></form>
                             <div class="relative input-wrapper mb-4">
                                 <label class="absolute px-2 ml-2 -mt-3 font-medium text-gray-600 bg-white">
                                     Name
                                 </label>
-                                <input type="text" id="name" class="block w-full px-4 py-4 mt-2 text-base placeholder-gray-400 bg-white border border-gray-300 rounded-md focus:outline-none focus:border-black" placeholder="John">
+                                <input type="text" id="name" name="name" class="block w-full px-4 py-4 mt-2 text-base placeholder-gray-400 bg-white border border-gray-300 rounded-md focus:outline-none focus:border-black" placeholder="John">
                                 <span class="pt-3 mb-4 block text-left text-gray-extralight50 text-xs error">
                                     <img class="inline-block mr-1" src="/assets/images/alert.png"> 
                                     This field is required
                                 </span>
                             </div>
+                            
                             <div class="relative input-wrapper mb-4">
                                 <label class="absolute px-2 ml-2 -mt-3 font-medium text-gray-600 bg-white">
                                     Email
                                 </label>
-                                <input id="email" type="email" class="block w-full px-4 py-4 mt-2 text-base placeholder-gray-400 bg-white border border-gray-300 rounded-md focus:outline-none focus:border-black" placeholder="Doe">
+                                <input id="email" name="email" type="email" class="block w-full px-4 py-4 mt-2 text-base placeholder-gray-400 bg-white border border-gray-300 rounded-md focus:outline-none focus:border-black" placeholder="Doe">
                                 <span class="pt-3 mb-4 block text-left text-gray-extralight50 text-xs error">
                                     <img class="inline-block mr-1" src="/assets/images/alert.png"> 
                                     This field is required
                                 </span>
                             </div>
+
                             <div class="input-wrapper relative mb-4">
                                 <label class="absolute px-2 ml-2 -mt-3 font-medium text-gray-600 bg-white">Subject</label>
-                                <select id="subject"
+                                <select id="contact_reason" name="contact_reason"
                                     class="block appearance-none w-full px-4 py-4 mt-2 text-base placeholder-gray-400 bg-white border border-gray-300 rounded-md focus:outline-none focus:border-black">
                                     <option>Partnership</option>
                                     <option>Investment</option>
@@ -53,11 +58,12 @@ layout: default
                                     <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" /></svg>
                                 </div>
                             </div>
+
                             <div class="input-wrapper relative  mb-4">
                                 <label class="absolute px-2 ml-2 -mt-3 font-medium text-gray-600 bg-white">
                                     Message
                                 </label>
-                                <textarea id="about" name="about" rows="3"
+                                <textarea id="message" name="message" rows="3"
                                     class="block w-full px-4 py-4 mt-2 text-base placeholder-gray-400 bg-white border border-gray-300 rounded-md focus:outline-none focus:border-black"
                                     placeholder="GM ser!"></textarea>
                                     <span class="pt-3 mb-4 block text-left text-gray-extralight50 text-xs error">
@@ -65,8 +71,9 @@ layout: default
                                             This field is required
                                     </span>
                             </div>
+
                             <label class="input-wrapper flex items-center mt-1" for="terms">
-                                <input id="terms" class="mr-2" type="checkbox">
+                                <input id="agree_with_TOS" name="agree_with_TOS" class="mr-2" type="checkbox">
                                 <span class="text-xs text-gray-500">
                                     By checking the box, you are agreeing to our Terms of Service.
                                 </span>
@@ -75,111 +82,147 @@ layout: default
                                         You need to accept our terms to continue!
                                 </span>
                             </label>
+
+                            <input name="language" id="language" type="text" class="hidden" value={{ site.lang }}>
+                            <!--
                             <button type="submit"
                                 class="w-full px-8 py-3 mt-8 font-bold text-white uppercase bg-muddywaters-500 rounded-md md:mt-5 hover:bg-muddywaters-600 font-heading g-recaptcha"
                                 id="submit-btn" data-sitekey="6Le24oIgAAAAAHiah-3lOfEH8WkRqDUP2LP9wu3N"
-                                data-callback='contactFormSubmit' lang={{ site.lang }} data-action='submit'>Send</button>
+                                data-callback='contactFormSubmit' lang={{ site.lang }} data-action='submit'>
+                                Send
+                            </button>
+                            -->
+                            <button type="submit"
+                                class="w-full px-8 py-3 mt-8 font-bold text-white uppercase bg-muddywaters-500 rounded-md md:mt-5 hover:bg-muddywaters-600 font-heading g-recaptcha"
+                                id="submit-btn">
+
+                                Send
+                            </button>
                         </form>
                     </div>
-
                 </div>
                 <svg class="hidden lg:block absolute top-0 left-0 z-0 w-32 h-32 -mt-12 -ml-12 text-gray-200 fill-current" viewBox="0 0 91 91" xmlns="http://www.w3.org/2000/svg"><g stroke="none" stroke-width="1" fill-rule="evenodd"><g fill-rule="nonzero"><g><g><circle cx="3.261" cy="3.445" r="2.72"></circle><circle cx="15.296" cy="3.445" r="2.719"></circle><circle cx="27.333" cy="3.445" r="2.72"></circle><circle cx="39.369" cy="3.445" r="2.72"></circle><circle cx="51.405" cy="3.445" r="2.72"></circle><circle cx="63.441" cy="3.445" r="2.72"></circle><circle cx="75.479" cy="3.445" r="2.72"></circle><circle cx="87.514" cy="3.445" r="2.719"></circle></g><g transform="translate(0 12)"><circle cx="3.261" cy="3.525" r="2.72"></circle><circle cx="15.296" cy="3.525" r="2.719"></circle><circle cx="27.333" cy="3.525" r="2.72"></circle><circle cx="39.369" cy="3.525" r="2.72"></circle><circle cx="51.405" cy="3.525" r="2.72"></circle><circle cx="63.441" cy="3.525" r="2.72"></circle><circle cx="75.479" cy="3.525" r="2.72"></circle><circle cx="87.514" cy="3.525" r="2.719"></circle></g><g transform="translate(0 24)"><circle cx="3.261" cy="3.605" r="2.72"></circle><circle cx="15.296" cy="3.605" r="2.719"></circle><circle cx="27.333" cy="3.605" r="2.72"></circle><circle cx="39.369" cy="3.605" r="2.72"></circle><circle cx="51.405" cy="3.605" r="2.72"></circle><circle cx="63.441" cy="3.605" r="2.72"></circle><circle cx="75.479" cy="3.605" r="2.72"></circle><circle cx="87.514" cy="3.605" r="2.719"></circle></g><g transform="translate(0 36)"><circle cx="3.261" cy="3.686" r="2.72"></circle><circle cx="15.296" cy="3.686" r="2.719"></circle><circle cx="27.333" cy="3.686" r="2.72"></circle><circle cx="39.369" cy="3.686" r="2.72"></circle><circle cx="51.405" cy="3.686" r="2.72"></circle><circle cx="63.441" cy="3.686" r="2.72"></circle><circle cx="75.479" cy="3.686" r="2.72"></circle><circle cx="87.514" cy="3.686" r="2.719"></circle></g><g transform="translate(0 49)"><circle cx="3.261" cy="2.767" r="2.72"></circle><circle cx="15.296" cy="2.767" r="2.719"></circle><circle cx="27.333" cy="2.767" r="2.72"></circle><circle cx="39.369" cy="2.767" r="2.72"></circle><circle cx="51.405" cy="2.767" r="2.72"></circle><circle cx="63.441" cy="2.767" r="2.72"></circle><circle cx="75.479" cy="2.767" r="2.72"></circle><circle cx="87.514" cy="2.767" r="2.719"></circle></g><g transform="translate(0 61)"><circle cx="3.261" cy="2.846" r="2.72"></circle><circle cx="15.296" cy="2.846" r="2.719"></circle><circle cx="27.333" cy="2.846" r="2.72"></circle><circle cx="39.369" cy="2.846" r="2.72"></circle><circle cx="51.405" cy="2.846" r="2.72"></circle><circle cx="63.441" cy="2.846" r="2.72"></circle><circle cx="75.479" cy="2.846" r="2.72"></circle><circle cx="87.514" cy="2.846" r="2.719"></circle></g><g transform="translate(0 73)"><circle cx="3.261" cy="2.926" r="2.72"></circle><circle cx="15.296" cy="2.926" r="2.719"></circle><circle cx="27.333" cy="2.926" r="2.72"></circle><circle cx="39.369" cy="2.926" r="2.72"></circle><circle cx="51.405" cy="2.926" r="2.72"></circle><circle cx="63.441" cy="2.926" r="2.72"></circle><circle cx="75.479" cy="2.926" r="2.72"></circle><circle cx="87.514" cy="2.926" r="2.719"></circle></g><g transform="translate(0 85)"><circle cx="3.261" cy="3.006" r="2.72"></circle><circle cx="15.296" cy="3.006" r="2.719"></circle><circle cx="27.333" cy="3.006" r="2.72"></circle><circle cx="39.369" cy="3.006" r="2.72"></circle><circle cx="51.405" cy="3.006" r="2.72"></circle><circle cx="63.441" cy="3.006" r="2.72"></circle><circle cx="75.479" cy="3.006" r="2.72"></circle><circle cx="87.514" cy="3.006" r="2.719"></circle></g></g></g></g></svg>
                 <svg class="hidden lg:block absolute bottom-0 right-0 z-0 w-32 h-32 -mb-12 -mr-12 text-muddywaters-500 fill-current" viewBox="0 0 91 91" xmlns="http://www.w3.org/2000/svg"><g stroke="none" stroke-width="1" fill-rule="evenodd"><g fill-rule="nonzero"><g><g><circle cx="3.261" cy="3.445" r="2.72"></circle><circle cx="15.296" cy="3.445" r="2.719"></circle><circle cx="27.333" cy="3.445" r="2.72"></circle><circle cx="39.369" cy="3.445" r="2.72"></circle><circle cx="51.405" cy="3.445" r="2.72"></circle><circle cx="63.441" cy="3.445" r="2.72"></circle><circle cx="75.479" cy="3.445" r="2.72"></circle><circle cx="87.514" cy="3.445" r="2.719"></circle></g><g transform="translate(0 12)"><circle cx="3.261" cy="3.525" r="2.72"></circle><circle cx="15.296" cy="3.525" r="2.719"></circle><circle cx="27.333" cy="3.525" r="2.72"></circle><circle cx="39.369" cy="3.525" r="2.72"></circle><circle cx="51.405" cy="3.525" r="2.72"></circle><circle cx="63.441" cy="3.525" r="2.72"></circle><circle cx="75.479" cy="3.525" r="2.72"></circle><circle cx="87.514" cy="3.525" r="2.719"></circle></g><g transform="translate(0 24)"><circle cx="3.261" cy="3.605" r="2.72"></circle><circle cx="15.296" cy="3.605" r="2.719"></circle><circle cx="27.333" cy="3.605" r="2.72"></circle><circle cx="39.369" cy="3.605" r="2.72"></circle><circle cx="51.405" cy="3.605" r="2.72"></circle><circle cx="63.441" cy="3.605" r="2.72"></circle><circle cx="75.479" cy="3.605" r="2.72"></circle><circle cx="87.514" cy="3.605" r="2.719"></circle></g><g transform="translate(0 36)"><circle cx="3.261" cy="3.686" r="2.72"></circle><circle cx="15.296" cy="3.686" r="2.719"></circle><circle cx="27.333" cy="3.686" r="2.72"></circle><circle cx="39.369" cy="3.686" r="2.72"></circle><circle cx="51.405" cy="3.686" r="2.72"></circle><circle cx="63.441" cy="3.686" r="2.72"></circle><circle cx="75.479" cy="3.686" r="2.72"></circle><circle cx="87.514" cy="3.686" r="2.719"></circle></g><g transform="translate(0 49)"><circle cx="3.261" cy="2.767" r="2.72"></circle><circle cx="15.296" cy="2.767" r="2.719"></circle><circle cx="27.333" cy="2.767" r="2.72"></circle><circle cx="39.369" cy="2.767" r="2.72"></circle><circle cx="51.405" cy="2.767" r="2.72"></circle><circle cx="63.441" cy="2.767" r="2.72"></circle><circle cx="75.479" cy="2.767" r="2.72"></circle><circle cx="87.514" cy="2.767" r="2.719"></circle></g><g transform="translate(0 61)"><circle cx="3.261" cy="2.846" r="2.72"></circle><circle cx="15.296" cy="2.846" r="2.719"></circle><circle cx="27.333" cy="2.846" r="2.72"></circle><circle cx="39.369" cy="2.846" r="2.72"></circle><circle cx="51.405" cy="2.846" r="2.72"></circle><circle cx="63.441" cy="2.846" r="2.72"></circle><circle cx="75.479" cy="2.846" r="2.72"></circle><circle cx="87.514" cy="2.846" r="2.719"></circle></g><g transform="translate(0 73)"><circle cx="3.261" cy="2.926" r="2.72"></circle><circle cx="15.296" cy="2.926" r="2.719"></circle><circle cx="27.333" cy="2.926" r="2.72"></circle><circle cx="39.369" cy="2.926" r="2.72"></circle><circle cx="51.405" cy="2.926" r="2.72"></circle><circle cx="63.441" cy="2.926" r="2.72"></circle><circle cx="75.479" cy="2.926" r="2.72"></circle><circle cx="87.514" cy="2.926" r="2.719"></circle></g><g transform="translate(0 85)"><circle cx="3.261" cy="3.006" r="2.72"></circle><circle cx="15.296" cy="3.006" r="2.719"></circle><circle cx="27.333" cy="3.006" r="2.72"></circle><circle cx="39.369" cy="3.006" r="2.72"></circle><circle cx="51.405" cy="3.006" r="2.72"></circle><circle cx="63.441" cy="3.006" r="2.72"></circle><circle cx="75.479" cy="3.006" r="2.72"></circle><circle cx="87.514" cy="3.006" r="2.719"></circle></g></g></g></g></svg>
-            </div>
-
-
-                                
+            </div>            
         </div>
-
     </div>
-
 </section>
 
 
 
 <script>
-
-
-function isEmail(email) {
-    const re =
-        /(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])/;
-    return re.test(email);
-}
-
-function contactFormSubmit(token) {
-
-    //base variables & constants
-    const myHeaders = new Headers();
-    myHeaders.append("Content-Type", "application/x-www-form-urlencoded");
-
-    const urlencoded = new URLSearchParams();
-    let errorField = [];
-    let formValues = {
-        name: {
-            value: document.getElementById("name").value,
-            label: document.getElementById("name").id
-        },
-        email: {
-            value: document.getElementById("email").value,
-            label: document.getElementById("email").id
-        },
-        subject: {
-            value: document.getElementById("subject").value,
-            label: document.getElementById("subject").id
-        },
-        about: {
-            value: document.getElementById("about").value,
-            label: document.getElementById("about").id
-        },
-        terms: {
-            value: document.getElementById("terms").checked,
-            label: document.getElementById("terms").id
-        }
-    };
-    //validate if some of required field is empty, if empty add to errorField array field name to show the error message
-    for (const inputName in formValues) {
-        if (formValues[inputName].value == "" || formValues[inputName].value == null) {
-            errorField.push(formValues[inputName].label);
-        }
+    function isEmail(email) {
+        const re =
+            /(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])/;
+        return re.test(email);
     }
-    //validate if some email field in form and validate if a valid email
-    if (!isEmail(document.getElementById("email").value)) {
-        errorField.push(formValues.email.label);
-    }
-    
-    //remove all errors
-    document.querySelectorAll('.input-wrapper').forEach(function (element) {
-        element.classList.remove('error');
-    });
 
-    //if array errorField is empty=no errors found, proceed, call integromat to send emails
-    if (errorField.length === 0) {
-        urlencoded.append("email", formValues.email.value);
-        urlencoded.append("contact_reason", formValues.subject.value);
-        urlencoded.append("message", formValues.about.value);
+    /*
+    function contactFormSubmit(token) {
 
-        var requestOptions = {
-            method: 'POST',
-            headers: myHeaders,
-            body: urlencoded,
-            redirect: 'follow'
+        //base variables & constants
+        const myHeaders = new Headers();
+        myHeaders.append("Content-Type", "application/x-www-form-urlencoded");
+
+        const urlencoded = new URLSearchParams();
+        let errorField = [];
+        let formValues = {
+            name: {
+                value: document.getElementById("name").value,
+                label: document.getElementById("name").id
+            },
+            email: {
+                value: document.getElementById("email").value,
+                label: document.getElementById("email").id
+            },
+            subject: {
+                value: document.getElementById("subject").value,
+                label: document.getElementById("subject").id
+            },
+            about: {
+                value: document.getElementById("about").value,
+                label: document.getElementById("about").id
+            },
+            terms: {
+                value: document.getElementById("terms").checked,
+                label: document.getElementById("terms").id
+            }
         };
-        fetch("/api/contact-form", requestOptions)
-            .then(response => response.text())
-            .then(result => {
-                console.log(result)
-                alert("Successfully submitted.");
-            })
-            .catch(error => {
-                console.log('error', error)
-                alert("Error submitting form!");
-            });
+        //validate if some of required field is empty, if empty add to errorField array field name to show the error message
+        for (const inputName in formValues) {
+            if (formValues[inputName].value == "" || formValues[inputName].value == null) {
+                errorField.push(formValues[inputName].label);
+            }
+        }
+        //validate if some email field in form and validate if a valid email
+        if (!isEmail(document.getElementById("email").value)) {
+            errorField.push(formValues.email.label);
+        }
+        
+        //remove all errors
+        document.querySelectorAll('.input-wrapper').forEach(function (element) {
+            element.classList.remove('error');
+        });
 
-    } else {
-        //if errors found, show errors in form inputs span
-        errorField.forEach(
-            element => document.getElementById(element).parentElement.classList.add("error"))
+        //if array errorField is empty=no errors found, proceed, call integromat to send emails
+        if (errorField.length === 0) {
+            urlencoded.append("email", formValues.email.value);
+            urlencoded.append("contact_reason", formValues.subject.value);
+            urlencoded.append("message", formValues.about.value);
 
+            var requestOptions = {
+                method: 'POST',
+                headers: myHeaders,
+                body: urlencoded,
+                redirect: 'follow'
+            };
+            fetch("/api/contact-form", requestOptions)
+                .then(response => response.text())
+                .then(result => {
+                    console.log(result)
+                    alert("Successfully submitted.");
+                })
+                .catch(error => {
+                    console.log('error', error)
+                    alert("Error submitting form!");
+                });
+
+        } else {
+            //if errors found, show errors in form inputs span
+            errorField.forEach(
+                element => document.getElementById(element).parentElement.classList.add("error"))
+
+        }
+    } */
+
+    async function contactFormSubmit(e) {
+        const url = "/api/contact-form";
+        const request = {
+            method: 'POST',
+            headers: {
+                "Accept": "application/json",
+                "content-type": "application/json"
+            },
+            body: new FormData(e.target)    // create FormData from form that triggered event
+        }
+        
+        const handleJsonRequest = (r, num) => {
+            if (r.ok) return r.json();
+                throw new Error(
+                `Error (${r.status}) with fetch! #${num??0} - '${r.statusText}' from URL: ${r.url}`
+            );
+        }
+
+        try {
+            const r = await fetch(url, request).then((r) => handleJsonRequest(r,1));
+
+            alert("Thank you for your contact! The message has been sent successfully!")
+            console.log(r.responseText);
+        } catch (err) {
+            alert("Unfortunately, the message was not sent! Please try again later!")
+            console.log(err)
+        }
+
+        e.preventDefault();
     }
-}
 </script>
