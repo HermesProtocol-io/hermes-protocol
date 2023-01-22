@@ -195,34 +195,54 @@ layout: default
         }
     } */
 
-    async function contactFormSubmit(e) {
+    document.getElementById("contact-form").addEventListener("submit", () => {
+        console.log("form submitted!")
+    });
+
+    function contactFormSubmit(e) {
+        console.log("Submitting form...")
         const url = "/api/contact-form";
+        const formData = new FormData(e.target);    // create FormData from form that triggered event
+        console.log(formData);
+        console.log(JSON.stringify(formData));
+        
         const request = {
             method: 'POST',
             headers: {
-                "Accept": "application/json",
-                "content-type": "application/json"
+                "Accept": "application/json"
             },
-            body: new FormData(e.target)    // create FormData from form that triggered event
+            body: formData
         }
         
         const handleJsonRequest = (r, num) => {
             if (r.ok) return r.json();
-                throw new Error(
+
+            throw new Error(
                 `Error (${r.status}) with fetch! #${num??0} - '${r.statusText}' from URL: ${r.url}`
             );
         }
 
-        try {
-            const r = await fetch(url, request).then((r) => handleJsonRequest(r,1));
-
+        const handleSuccess = (r) => {
             alert("Thank you for your contact! The message has been sent successfully!")
             console.log(r.responseText);
-        } catch (err) {
+        }
+
+        const handleFailure = (err) => {
             alert("Unfortunately, the message was not sent! Please try again later!")
             console.log(err)
         }
 
+        try {
+            console.log(`Sending data...: \n${ JSON.stringify(request) }`)
+            fetch(url, request)
+                .then((r) => handleJsonRequest(r,1))
+                .then((response) => handleSuccess(response))
+                .catch((error) => handleFailure(error));
+        } catch (err) {
+            console.error("There was a problem with the network connection: " + err);
+        }
+
         e.preventDefault();
+        e.stopPropagation();
     }
 </script>
