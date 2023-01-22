@@ -20,23 +20,23 @@ layout: default
                         <!--
                         <form onsubmit="event.preventDefault();">
                         -->
-                        <form id="contact-form" enctype="multipart/form-data" onsubmit="contactFormSubmit(event)"></form>
+                        <form id="contact-form" class="contact-form" enctype="multipart/form-data" onsubmit="contactFormSubmit(event)"></form>
                             <div class="relative input-wrapper mb-4">
                                 <label class="absolute px-2 ml-2 -mt-3 font-medium text-gray-600 bg-white">
                                     Name
                                 </label>
-                                <input type="text" id="name" name="name" class="block w-full px-4 py-4 mt-2 text-base placeholder-gray-400 bg-white border border-gray-300 rounded-md focus:outline-none focus:border-black" placeholder="John">
+                                <input type="text" id="name" name="name" class="block w-full px-4 py-4 mt-2 text-base placeholder-gray-400 bg-white border border-gray-300 rounded-md focus:outline-none focus:border-black" placeholder="John" required>
                                 <span class="pt-3 mb-4 block text-left text-gray-extralight50 text-xs error">
                                     <img class="inline-block mr-1" src="/assets/images/alert.png"> 
                                     This field is required
                                 </span>
                             </div>
-                            
+
                             <div class="relative input-wrapper mb-4">
                                 <label class="absolute px-2 ml-2 -mt-3 font-medium text-gray-600 bg-white">
                                     Email
                                 </label>
-                                <input id="email" name="email" type="email" class="block w-full px-4 py-4 mt-2 text-base placeholder-gray-400 bg-white border border-gray-300 rounded-md focus:outline-none focus:border-black" placeholder="Doe">
+                                <input id="email" name="email" type="email" class="block w-full px-4 py-4 mt-2 text-base placeholder-gray-400 bg-white border border-gray-300 rounded-md focus:outline-none focus:border-black" placeholder="Doe" required>
                                 <span class="pt-3 mb-4 block text-left text-gray-extralight50 text-xs error">
                                     <img class="inline-block mr-1" src="/assets/images/alert.png"> 
                                     This field is required
@@ -65,7 +65,7 @@ layout: default
                                 </label>
                                 <textarea id="message" name="message" rows="3"
                                     class="block w-full px-4 py-4 mt-2 text-base placeholder-gray-400 bg-white border border-gray-300 rounded-md focus:outline-none focus:border-black"
-                                    placeholder="GM ser!"></textarea>
+                                    placeholder="GM ser!" required></textarea>
                                     <span class="pt-3 mb-4 block text-left text-gray-extralight50 text-xs error">
                                         <img class="inline-block mr-1" src="/assets/images/alert.png"> 
                                             This field is required
@@ -73,7 +73,7 @@ layout: default
                             </div>
 
                             <label class="input-wrapper flex items-center mt-1" for="terms">
-                                <input id="agree_with_TOS" name="agree_with_TOS" class="mr-2" type="checkbox">
+                                <input id="agree_with_TOS" name="agree_with_TOS" class="mr-2" type="checkbox" required>
                                 <span class="text-xs text-gray-500">
                                     By checking the box, you are agreeing to our Terms of Service.
                                 </span>
@@ -93,7 +93,7 @@ layout: default
                             </button>
                             -->
                             <button type="submit"
-                                class="w-full px-8 py-3 mt-8 font-bold text-white uppercase bg-muddywaters-500 rounded-md md:mt-5 hover:bg-muddywaters-600 font-heading g-recaptcha"
+                                class="w-full px-8 py-3 mt-8 font-bold text-white uppercase bg-muddywaters-500 rounded-md md:mt-5 hover:bg-muddywaters-600 font-heading"
                                 id="submit-btn">
 
                                 Send
