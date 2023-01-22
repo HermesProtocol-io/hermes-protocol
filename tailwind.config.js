@@ -1,4 +1,5 @@
 module.exports = {
+  darkMode: 'class',
   content: [
     './**/*.html',
     './_pages/**/*.{html,js,jsx,ts,tsx,vue}',
@@ -12,10 +13,10 @@ module.exports = {
         muddywaters: {
           50: "#fcfaf8", 
           100: "#f9f5f0", 
-          200: "#f1e6db", 
+          200: "#E9BF90",//nova cor dark mode
           300: "#e8d7c5", 
           400: "#d7ba99", 
-          500: "#C1976D", 
+          500: "#C49A6D", //nova cor light mode
           600: "#b28c62", 
           700: "#957552", 
           800: "#775e41", 
