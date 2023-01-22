@@ -17,15 +17,14 @@ layout: default
                 <div class="relative z-10 flex flex-col items-start justify-start p-4 lg:p-10 bg-white shadow-2xl rounded-xl">
                     <h4 class="w-full font-serif text-4xl font-medium leading-snug">Contact Us</h4>
                     <div class="relative w-full mt-6 space-y-8">
-                        <!--
-                        <form onsubmit="event.preventDefault();">
-                        -->
-                        <form id="contact-form" class="contact-form" enctype="multipart/form-data" onsubmit="contactFormSubmit(event)"></form>
+                        <form id="contact-form" class="contact-form" enctype="multipart/form-data" onsubmit="contactFormSubmit(event)">
                             <div class="relative input-wrapper mb-4">
                                 <label class="absolute px-2 ml-2 -mt-3 font-medium text-gray-600 bg-white">
                                     Name
                                 </label>
-                                <input type="text" id="name" name="name" class="block w-full px-4 py-4 mt-2 text-base placeholder-gray-400 bg-white border border-gray-300 rounded-md focus:outline-none focus:border-black" placeholder="John" required>
+                                <input type="text" id="name" name="name"
+                                    class="block w-full px-4 py-4 mt-2 text-base placeholder-gray-400 bg-white border border-gray-300 rounded-md focus:outline-none focus:border-black"
+                                    placeholder="John" required />
                                 <span class="pt-3 mb-4 block text-left text-gray-extralight50 text-xs error">
                                     <img class="inline-block mr-1" src="/assets/images/alert.png"> 
                                     This field is required
@@ -36,7 +35,9 @@ layout: default
                                 <label class="absolute px-2 ml-2 -mt-3 font-medium text-gray-600 bg-white">
                                     Email
                                 </label>
-                                <input id="email" name="email" type="email" class="block w-full px-4 py-4 mt-2 text-base placeholder-gray-400 bg-white border border-gray-300 rounded-md focus:outline-none focus:border-black" placeholder="Doe" required>
+                                <input id="email" name="email" type="email"
+                                    class="block w-full px-4 py-4 mt-2 text-base placeholder-gray-400 bg-white border border-gray-300 rounded-md focus:outline-none focus:border-black"
+                                    placeholder="Doe" required />
                                 <span class="pt-3 mb-4 block text-left text-gray-extralight50 text-xs error">
                                     <img class="inline-block mr-1" src="/assets/images/alert.png"> 
                                     This field is required
@@ -59,21 +60,23 @@ layout: default
                                 </div>
                             </div>
 
-                            <div class="input-wrapper relative  mb-4">
+                            <div class="input-wrapper relative mb-4">
                                 <label class="absolute px-2 ml-2 -mt-3 font-medium text-gray-600 bg-white">
                                     Message
                                 </label>
                                 <textarea id="message" name="message" rows="3"
                                     class="block w-full px-4 py-4 mt-2 text-base placeholder-gray-400 bg-white border border-gray-300 rounded-md focus:outline-none focus:border-black"
                                     placeholder="GM ser!" required></textarea>
-                                    <span class="pt-3 mb-4 block text-left text-gray-extralight50 text-xs error">
-                                        <img class="inline-block mr-1" src="/assets/images/alert.png"> 
-                                            This field is required
-                                    </span>
+                                
+                                <span class="pt-3 mb-4 block text-left text-gray-extralight50 text-xs error">
+                                    <img class="inline-block mr-1" src="/assets/images/alert.png"> 
+                                        This field is required
+                                </span>
                             </div>
 
                             <label class="input-wrapper flex items-center mt-1" for="terms">
-                                <input id="agree_with_TOS" name="agree_with_TOS" class="mr-2" type="checkbox" required>
+                                <input id="agree_with_TOS" name="agree_with_TOS" type="checkbox" 
+                                    class="mr-2" required />
                                 <span class="text-xs text-gray-500">
                                     By checking the box, you are agreeing to our Terms of Service.
                                 </span>
@@ -84,17 +87,9 @@ layout: default
                             </label>
 
                             <input name="language" id="language" type="text" class="hidden" value={{ site.lang }}>
-                            <!--
-                            <button type="submit"
-                                class="w-full px-8 py-3 mt-8 font-bold text-white uppercase bg-muddywaters-500 rounded-md md:mt-5 hover:bg-muddywaters-600 font-heading g-recaptcha"
-                                id="submit-btn" data-sitekey="6Le24oIgAAAAAHiah-3lOfEH8WkRqDUP2LP9wu3N"
-                                data-callback='contactFormSubmit' lang={{ site.lang }} data-action='submit'>
-                                Send
-                            </button>
-                            -->
-                            <button type="submit"
-                                class="w-full px-8 py-3 mt-8 font-bold text-white uppercase bg-muddywaters-500 rounded-md md:mt-5 hover:bg-muddywaters-600 font-heading"
-                                id="submit-btn">
+
+                            <button type="submit" id="submit-btn"
+                                class="w-full px-8 py-3 mt-8 font-bold text-white uppercase bg-muddywaters-500 rounded-md md:mt-5 hover:bg-muddywaters-600 font-heading">
 
                                 Send
                             </button>
@@ -111,100 +106,16 @@ layout: default
 
 
 <script>
-    function isEmail(email) {
+    /*function isEmail(email) {
         const re =
             /(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])/;
         return re.test(email);
-    }
-
-    /*
-    function contactFormSubmit(token) {
-
-        //base variables & constants
-        const myHeaders = new Headers();
-        myHeaders.append("Content-Type", "application/x-www-form-urlencoded");
-
-        const urlencoded = new URLSearchParams();
-        let errorField = [];
-        let formValues = {
-            name: {
-                value: document.getElementById("name").value,
-                label: document.getElementById("name").id
-            },
-            email: {
-                value: document.getElementById("email").value,
-                label: document.getElementById("email").id
-            },
-            subject: {
-                value: document.getElementById("subject").value,
-                label: document.getElementById("subject").id
-            },
-            about: {
-                value: document.getElementById("about").value,
-                label: document.getElementById("about").id
-            },
-            terms: {
-                value: document.getElementById("terms").checked,
-                label: document.getElementById("terms").id
-            }
-        };
-        //validate if some of required field is empty, if empty add to errorField array field name to show the error message
-        for (const inputName in formValues) {
-            if (formValues[inputName].value == "" || formValues[inputName].value == null) {
-                errorField.push(formValues[inputName].label);
-            }
-        }
-        //validate if some email field in form and validate if a valid email
-        if (!isEmail(document.getElementById("email").value)) {
-            errorField.push(formValues.email.label);
-        }
-        
-        //remove all errors
-        document.querySelectorAll('.input-wrapper').forEach(function (element) {
-            element.classList.remove('error');
-        });
-
-        //if array errorField is empty=no errors found, proceed, call integromat to send emails
-        if (errorField.length === 0) {
-            urlencoded.append("email", formValues.email.value);
-            urlencoded.append("contact_reason", formValues.subject.value);
-            urlencoded.append("message", formValues.about.value);
-
-            var requestOptions = {
-                method: 'POST',
-                headers: myHeaders,
-                body: urlencoded,
-                redirect: 'follow'
-            };
-            fetch("/api/contact-form", requestOptions)
-                .then(response => response.text())
-                .then(result => {
-                    console.log(result)
-                    alert("Successfully submitted.");
-                })
-                .catch(error => {
-                    console.log('error', error)
-                    alert("Error submitting form!");
-                });
-
-        } else {
-            //if errors found, show errors in form inputs span
-            errorField.forEach(
-                element => document.getElementById(element).parentElement.classList.add("error"))
-
-        }
-    } */
-
-    document.getElementById("contact-form").addEventListener("submit", () => {
-        console.log("form submitted!")
-    });
+    }*/
 
     function contactFormSubmit(e) {
-        console.log("Submitting form...")
+        //console.log("Submitting form...")
         const url = "/api/contact-form";
         const formData = new FormData(e.target);    // create FormData from form that triggered event
-        console.log(formData);
-        console.log(JSON.stringify(formData));
         
         const request = {
             method: 'POST',
@@ -214,7 +125,7 @@ layout: default
             body: formData
         }
         
-        const handleJsonRequest = (r, num) => {
+        const handleRequest = (r, num) => {
             if (r.ok) return r.json();
 
             throw new Error(
@@ -223,17 +134,17 @@ layout: default
         }
 
         const handleSuccess = (r) => {
+            console.log(r);
             alert("Thank you for your contact! The message has been sent successfully!")
-            console.log(r.responseText);
         }
 
         const handleFailure = (err) => {
+            console.log(err);
             alert("Unfortunately, the message was not sent! Please try again later!")
-            console.log(err)
         }
 
         try {
-            console.log(`Sending data...: \n${ JSON.stringify(request) }`)
+            //console.log(`Sending data...: \n${ JSON.stringify(request) }`)
             fetch(url, request)
                 .then((r) => handleJsonRequest(r,1))
                 .then((response) => handleSuccess(response))
