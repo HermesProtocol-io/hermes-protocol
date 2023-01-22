@@ -10,6 +10,7 @@
 body {
     overflow-x: hidden;
     font-family: "Rany";
+    letter-spacing: 0.1rem;
   }
 
 h3 {
@@ -63,8 +64,6 @@ h1 {
 
 .modal {
     display: none; /* Hidden by default */
-    position: relative; /* Stay in place */
-    z-index: 1; /* Sit on top */
     width: 100%; /* Full width */
     height: 100%; /* Full height */
     overflow: auto; /* Enable scroll if needed */
