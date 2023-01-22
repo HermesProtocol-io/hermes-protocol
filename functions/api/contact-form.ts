@@ -10,20 +10,20 @@ export function handleJsonRequest(r: Response, num?: number) {
 }
 
 export function createDataBodyForUser(templateId: number, toAddress: string) {
-    return JSON.stringify({
+    return {
         "to":[  
             {  
                "email": toAddress
             }
         ],
-        "templateId":templateId,
+        "templateId": templateId,
         "params":{  
             "email": toAddress
         },
-        "headers":{  
+        "headers":{
             "charset":"iso-8859-1"
         }
-    });
+    };
 }
 
 export function createDataBodyForStaff(
@@ -36,7 +36,7 @@ export function createDataBodyForStaff(
     userMessage: string,
     contact_reason?: string) {
 
-        return JSON.stringify({
+        return {
             sender: { name: senderName, email: senderEmail },
             to:[  {  email: staffAddress } ],
             replyTo: { name: "Staff", email: replyToAddress },
@@ -48,18 +48,17 @@ export function createDataBodyForStaff(
             headers:{  
                 charset: 'iso-8859-1'
             }
-        });
+        };
 }
 
 export function simpleDataForStaff(
-    headers: Object,
     staffAddress: string,
     subject: string,
     userAddress: string,
     userMessage: string,
     contact_reason?: string) {
 
-        return Object.assign(structuredClone(headers), {body: createDataBodyForStaff(staffAddress, staffAddress, staffAddress, userAddress, staffAddress, subject, userMessage, contact_reason)} )
+        return createDataBodyForStaff(staffAddress, staffAddress, staffAddress, userAddress, staffAddress, subject, userMessage, contact_reason);
 }
 
 export async function onRequestPost({request, env}) {
@@ -79,9 +78,11 @@ export async function onRequestPost({request, env}) {
         }
 
         // Make sure all parameters are received.
-        console.assert('email' in output && 'contact_reason' in output && 'message' in output,
-            "Does not contain mandatory parameters.");
+        if(!('email' in output && 'contact_reason' in output && 'message' in output))
+            throw new Error("Does not contain mandatory parameters.");
 
+        console.log("Valid form data received:")
+        console.log(output)
     } catch (err) {
         return new Response(`Error parsing JSON content.\n${err}`, { status: 400 });
     }
@@ -94,12 +95,22 @@ export async function onRequestPost({request, env}) {
                 "api-key": env.SENDINBLUE_API_KEY,
                 "content-type": "application/json"
             }
-        };
+        },
+            HERMES_CONTACT_FORM_TEMPLATE = 9;
 
-        let userData = { ...structuredClone(headerData), body: createDataBodyForUser(8, output.email) },
-            staffData = simpleDataForStaff(headerData, "support@hermesprotocol.io", "Hermes Protocol - Contact Form", output.email, output.message, output.contact_reason);
+        const userData = { 
+            ...structuredClone(headerData),
+            body: JSON.stringify(createDataBodyForUser(HERMES_CONTACT_FORM_TEMPLATE, output.email))
+            },
+            staffData = {
+                ...structuredClone(headerData),
+                body: JSON.stringify(simpleDataForStaff("sergio@hermesprotocol.io", "Hermes Protocol - Contact Form", output.email, output.message, output.contact_reason))
+            };
 
-        console.log(staffData);
+        /*console.log(`Sending User data:`);
+        console.log(userData);
+        console.log(`Sending Staff data:`);
+        console.log(staffData);*/
 
         const [ userResult, staffResult,  ] = await Promise.all( 
             [
