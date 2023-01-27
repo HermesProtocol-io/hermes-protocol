@@ -104,7 +104,7 @@ export async function onRequestPost({request, env}) {
             },
             staffData = {
                 ...structuredClone(headerData),
-                body: JSON.stringify(simpleDataForStaff("sergio@hermesprotocol.io", "Hermes Protocol - Contact Form", output.email, output.message, output.contact_reason))
+                body: JSON.stringify(simpleDataForStaff("support@hermesprotocol.io", "Hermes Protocol - Contact Form", output.email, output.message, output.contact_reason))
             };
 
         /*console.log(`Sending User data:`);

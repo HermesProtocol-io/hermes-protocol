@@ -596,12 +596,12 @@ video {
   bottom: 0px;
 }
 
-.top-28 {
-  top: 7rem;
+.top-24 {
+  top: 6rem;
 }
 
-.left-28 {
-  left: 7rem;
+.left-24 {
+  left: 6rem;
 }
 
 .right-4 {
@@ -640,8 +640,8 @@ video {
   order: 1;
 }
 
-.col-span-3 {
-  grid-column: span 3 / span 3;
+.col-span-2 {
+  grid-column: span 2 / span 2;
 }
 
 .col-span-4 {
@@ -650,10 +650,6 @@ video {
 
 .col-span-5 {
   grid-column: span 5 / span 5;
-}
-
-.col-span-2 {
-  grid-column: span 2 / span 2;
 }
 
 .col-start-2 {
@@ -697,9 +693,9 @@ video {
   margin-bottom: 2.5rem;
 }
 
-.mx-0 {
-  margin-left: 0px;
-  margin-right: 0px;
+.mx-4 {
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
 .my-12 {
@@ -839,8 +835,12 @@ video {
   margin-top: -0.5rem;
 }
 
-.mb-20 {
-  margin-bottom: 5rem;
+.ml-4 {
+  margin-left: 1rem;
+}
+
+.mb-40 {
+  margin-bottom: 10rem;
 }
 
 .mb-8 {
@@ -967,8 +967,8 @@ video {
   height: 0px;
 }
 
-.min-h-screen {
-  min-height: 100vh;
+.max-h-96 {
+  max-height: 24rem;
 }
 
 .w-full {
@@ -1015,12 +1015,12 @@ video {
   width: 50%;
 }
 
-.w-16 {
-  width: 4rem;
-}
-
 .w-2\/3 {
   width: 66.666667%;
+}
+
+.w-16 {
+  width: 4rem;
 }
 
 .w-3 {
@@ -1350,24 +1350,20 @@ video {
           appearance: none;
 }
 
-.grid-cols-6 {
-  grid-template-columns: repeat(6, minmax(0, 1fr));
-}
-
-.grid-cols-3 {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-}
-
 .grid-cols-2 {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
-.grid-cols-4 {
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+.grid-cols-6 {
+  grid-template-columns: repeat(6, minmax(0, 1fr));
 }
 
 .grid-cols-1 {
   grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+.grid-cols-4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
 .grid-cols-5 {
@@ -1380,6 +1376,10 @@ video {
 
 .flex-col {
   flex-direction: column;
+}
+
+.flex-col-reverse {
+  flex-direction: column-reverse;
 }
 
 .flex-wrap {
@@ -1452,6 +1452,10 @@ video {
 
 .gap-y-4 {
   row-gap: 1rem;
+}
+
+.gap-y-6 {
+  row-gap: 1.5rem;
 }
 
 .space-y-8 > :not([hidden]) ~ :not([hidden]) {
@@ -1740,6 +1744,16 @@ video {
      object-fit: contain;
 }
 
+.object-cover {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.object-left-top {
+  -o-object-position: left top;
+     object-position: left top;
+}
+
 .p-4 {
   padding: 1rem;
 }
@@ -1931,6 +1945,14 @@ video {
 
 .pt-0 {
   padding-top: 0px;
+}
+
+.pb-4 {
+  padding-bottom: 1rem;
+}
+
+.pt-10 {
+  padding-top: 2.5rem;
 }
 
 .pb-14 {
@@ -2209,12 +2231,20 @@ video {
   transition-duration: 300ms;
 }
 
+.duration-700 {
+  transition-duration: 700ms;
+}
+
 .ease-in {
   transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
 }
 
 .ease-out {
   transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+}
+
+.ease-in-out {
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 body {
@@ -2566,6 +2596,14 @@ form .input-wrapper.error .error {
     left: 0px;
   }
 
+  .md\:top-28 {
+    top: 7rem;
+  }
+
+  .md\:left-28 {
+    left: 7rem;
+  }
+
   .md\:col-start-3 {
     grid-column-start: 3;
   }
@@ -2573,6 +2611,11 @@ form .input-wrapper.error .error {
   .md\:mx-4 {
     margin-left: 1rem;
     margin-right: 1rem;
+  }
+
+  .md\:mx-0 {
+    margin-left: 0px;
+    margin-right: 0px;
   }
 
   .md\:my-40 {
@@ -2588,12 +2631,36 @@ form .input-wrapper.error .error {
     margin-right: 1rem;
   }
 
+  .md\:mb-20 {
+    margin-bottom: 5rem;
+  }
+
+  .md\:mb-0 {
+    margin-bottom: 0px;
+  }
+
+  .md\:mb-24 {
+    margin-bottom: 6rem;
+  }
+
   .md\:ml-16 {
     margin-left: 4rem;
   }
 
+  .md\:mt-36 {
+    margin-top: 9rem;
+  }
+
+  .md\:mb-4 {
+    margin-bottom: 1rem;
+  }
+
   .md\:mt-0 {
     margin-top: 0px;
+  }
+
+  .md\:mb-8 {
+    margin-bottom: 2rem;
   }
 
   .md\:inline-block {
@@ -2612,6 +2679,10 @@ form .input-wrapper.error .error {
     height: 100%;
   }
 
+  .md\:w-16 {
+    width: 4rem;
+  }
+
   .md\:w-7\/12 {
     width: 58.333333%;
   }
@@ -2624,12 +2695,16 @@ form .input-wrapper.error .error {
     width: 25%;
   }
 
-  .md\:grid-cols-2 {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
   .md\:grid-cols-4 {
     grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .md\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .md\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .md\:flex-row {
@@ -2666,6 +2741,18 @@ form .input-wrapper.error .error {
   .md\:py-20 {
     padding-top: 5rem;
     padding-bottom: 5rem;
+  }
+
+  .md\:pb-12 {
+    padding-bottom: 3rem;
+  }
+
+  .md\:pt-0 {
+    padding-top: 0px;
+  }
+
+  .md\:pb-10 {
+    padding-bottom: 2.5rem;
   }
 
   .md\:text-left {
@@ -2705,6 +2792,10 @@ form .input-wrapper.error .error {
 @media (min-width: 1024px) {
   .lg\:order-1 {
     order: 1;
+  }
+
+  .lg\:col-span-3 {
+    grid-column: span 3 / span 3;
   }
 
   .lg\:my-8 {
@@ -2790,6 +2881,10 @@ form .input-wrapper.error .error {
 
   .lg\:gap-6 {
     gap: 1.5rem;
+  }
+
+  .lg\:gap-10 {
+    gap: 2.5rem;
   }
 
   .lg\:gap-x-8 {
@@ -2887,6 +2982,10 @@ form .input-wrapper.error .error {
 @media (min-width: 1280px) {
   .xl\:gap-8 {
     gap: 2rem;
+  }
+
+  .xl\:gap-12 {
+    gap: 3rem;
   }
 
   .xl\:px-5 {

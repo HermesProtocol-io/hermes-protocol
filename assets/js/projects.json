@@ -13,7 +13,8 @@
                     "img":"https://astroport.fi/astro_logo.png",
                     "support":{
                         "priceAlert":["app","discord"],
-                        "liquidityPool":["app","discord"]
+                        "liquidityPool":["app","discord"],
+                        "governancePoll":["app","discord"]
                     } 
                 }, 
                 "Phoenix Finance": {
@@ -53,7 +54,15 @@
                     "support":{
                         "liquidStaking":["app","discord"]
                     }
+                },
+                "Valkyrie Protocol":{
+                    "img":"https://app.valkyrieprotocol.com/icon_vkr.png",
+                    "support":{
+                        "staking":["app","discord"],
+                        "governancePoll":["app","discord"]
+                    }
                 }
+
             },
             "Domain System":{
                 "LNS":{
@@ -69,8 +78,9 @@
                 "General Terra":{
                     "img": "https://app.pulsar.finance/chains/Luna2-logo.png",
                     "support":{
-                        "governancePoll":["app","discord"],
+                        "governancePoll":["app","discord", "twitter"],
                         "walletWatcher":["app","discord"],
+                        "staking":["app","discord"],
                         "validatorsprofileChanges":["app","discord"]
                     }  
                 }
@@ -93,10 +103,10 @@
                 "Steak":{
                     "img":"https://app.astroport.fi/tokens/steak.png"
                 } 
-            },
-            "Charity":{
-                "Angel Protocol":{
-                    "img":"https://miro.medium.com/max/2400/1*EDnOn77npNc0Wgum6NDnaA.png"
+            }, 
+            "Automation":{
+                "Warp Protocol":{
+                    "img":"https://docs.warp.money/img/logo/wdotsquare.svg"
                 }
             }
         }
@@ -122,7 +132,7 @@
             },
             "nft": {
                 "Knowhere Art":{
-                    "img":"",
+                    "img":"https://knowhere.art/knowhere-icon.svg",
                     "support":{
                         "NFTMonitor":["app"],
                         "NewSale":["discord"]
@@ -178,9 +188,6 @@
                 }
             },
             "Lending":{
-                "Edge Protocol":{
-                    "img":"https://app.edgeprotocol.io/static/media/edge-logo.a741b1df.svg"
-                },
                 "Anchor Protocol":{
                     "img":"https://whitelist.anchorprotocol.com/logo/ANC.png"
                 },
@@ -195,11 +202,6 @@
                 "Pylon Protocol":{
                     "img":"https://assets.pylon.rocks/logo/MINE.png"
                 } 
-            },
-            "Charity":{
-                "Angel Protocol":{
-                    "img":"https://miro.medium.com/max/2400/1*EDnOn77npNc0Wgum6NDnaA.png"
-                }
             }
         }
     }
