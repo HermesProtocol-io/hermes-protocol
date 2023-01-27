@@ -124,8 +124,8 @@ module.exports = {
         }
       },
       backgroundImage: theme => ({
-        'hermes-gradient': "linear-gradient(90deg, #FFE490, #C1976D)",
-        'hermes-hgradient': "linear-gradient(135deg,  #FFE490, #C1976D)",
+        'hermes-gradient': "linear-gradient(90deg, #C49A6D, #E9BF90)",
+        'hermes-hgradient': "linear-gradient(135deg, #C49A6D, #E9BF90)",
         'light-image': "url('/assets/images/BG.jpg')",
         'dark-image': "url('/assets/images/BG_DARK.jpg')",
         'light-image-del': "url('/assets/images/delegation/main_hero.png')",
@@ -138,5 +138,5 @@ module.exports = {
   variants: {
     extend: {},
   },
-  plugins: [],
+  plugins: [require("daisyui")],
 }

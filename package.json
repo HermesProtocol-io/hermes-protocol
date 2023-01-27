@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "daisyui": "^2.49.0",
+    "tailgrids": "^2.0.1"
+  }
+}
