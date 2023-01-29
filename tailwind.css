@@ -8748,6 +8748,11 @@ html {
   margin-right: 1rem;
 }
 
+.my-auto {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
 .-mx-4 {
   margin-left: -1rem;
   margin-right: -1rem;
@@ -8925,12 +8930,8 @@ html {
   margin-top: 5rem;
 }
 
-.mt-5 {
-  margin-top: 1.25rem;
-}
-
-.mb-7 {
-  margin-bottom: 1.75rem;
+.-ml-10 {
+  margin-left: -2.5rem;
 }
 
 .ml-3 {
@@ -8965,6 +8966,10 @@ html {
   margin-bottom: 1.25rem;
 }
 
+.mb-7 {
+  margin-bottom: 1.75rem;
+}
+
 .mb-9 {
   margin-bottom: 2.25rem;
 }
@@ -8987,6 +8992,10 @@ html {
 
 .mb-14 {
   margin-bottom: 3.5rem;
+}
+
+.mt-5 {
+  margin-top: 1.25rem;
 }
 
 .box-border {
@@ -10079,6 +10088,10 @@ html {
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
+.grid-cols-7 {
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+}
+
 .grid-cols-5 {
   grid-template-columns: repeat(5, minmax(0, 1fr));
 }
@@ -11133,6 +11146,10 @@ html {
   background-color: rgb(255 0 0 / var(--tw-bg-opacity));
 }
 
+.bg-opacity-90 {
+  --tw-bg-opacity: 0.9;
+}
+
 .bg-opacity-30 {
   --tw-bg-opacity: 0.3;
 }
@@ -11147,10 +11164,6 @@ html {
 
 .bg-opacity-25 {
   --tw-bg-opacity: 0.25;
-}
-
-.bg-opacity-90 {
-  --tw-bg-opacity: 0.9;
 }
 
 .bg-opacity-20 {
@@ -12388,11 +12401,6 @@ html {
   --tw-ring-color: hsl(var(--p) / var(--tw-ring-opacity));
 }
 
-.blur-sm {
-  --tw-blur: blur(4px);
-  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
-}
-
 .blur {
   --tw-blur: blur(8px);
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
@@ -12914,9 +12922,18 @@ form .input-wrapper.error .error {
   background-color: rgb(31 41 55 / var(--tw-bg-opacity));
 }
 
+.dark .dark\:bg-muddywaters-200 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(233 191 144 / var(--tw-bg-opacity));
+}
+
 .dark .dark\:bg-gray-700 {
   --tw-bg-opacity: 1;
   background-color: rgb(55 65 81 / var(--tw-bg-opacity));
+}
+
+.dark .dark\:bg-opacity-90 {
+  --tw-bg-opacity: 0.9;
 }
 
 .dark .dark\:from-gray-600 {
@@ -13086,8 +13103,8 @@ form .input-wrapper.error .error {
     min-width: 508px;
   }
 
-  .sm\:max-w-3xl {
-    max-width: 48rem;
+  .sm\:max-w-4xl {
+    max-width: 56rem;
   }
 
   .sm\:max-w-\[70px\] {
@@ -13159,10 +13176,6 @@ form .input-wrapper.error .error {
 
   .sm\:pr-16 {
     padding-right: 4rem;
-  }
-
-  .sm\:pr-8 {
-    padding-right: 2rem;
   }
 
   .sm\:pl-16 {
@@ -13338,16 +13351,16 @@ form .input-wrapper.error .error {
     width: 4rem;
   }
 
+  .md\:w-1\/2 {
+    width: 50%;
+  }
+
   .md\:w-7\/12 {
     width: 58.333333%;
   }
 
   .md\:w-5\/12 {
     width: 41.666667%;
-  }
-
-  .md\:w-1\/2 {
-    width: 50%;
   }
 
   .md\:w-11\/12 {
@@ -13410,6 +13423,10 @@ form .input-wrapper.error .error {
     --tw-divide-x-reverse: 0;
     border-right-width: calc(1px * var(--tw-divide-x-reverse));
     border-left-width: calc(1px * calc(1 - var(--tw-divide-x-reverse)));
+  }
+
+  .md\:bg-transparent {
+    background-color: transparent;
   }
 
   .md\:p-9 {
@@ -13524,11 +13541,6 @@ form .input-wrapper.error .error {
     line-height: 2.25rem;
   }
 
-  .md\:text-4xl {
-    font-size: 2.25rem;
-    line-height: 2.5rem;
-  }
-
   .md\:text-\[100px\] {
     font-size: 100px;
   }
@@ -13540,6 +13552,15 @@ form .input-wrapper.error .error {
   .md\:text-xl {
     font-size: 1.25rem;
     line-height: 1.75rem;
+  }
+
+  .md\:text-4xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+
+  .dark .dark\:md\:bg-transparent {
+    background-color: transparent;
   }
 }
 
@@ -13697,16 +13718,12 @@ form .input-wrapper.error .error {
     flex-grow: 0;
   }
 
-  .lg\:grid-cols-5 {
-    grid-template-columns: repeat(5, minmax(0, 1fr));
+  .lg\:grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
   .lg\:grid-cols-12 {
     grid-template-columns: repeat(12, minmax(0, 1fr));
-  }
-
-  .lg\:grid-cols-4 {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
   .lg\:flex-row {
