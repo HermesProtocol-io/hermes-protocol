@@ -8930,14 +8930,6 @@ html {
   margin-bottom: 10rem;
 }
 
-.mt-20 {
-  margin-top: 5rem;
-}
-
-.-ml-10 {
-  margin-left: -2.5rem;
-}
-
 .ml-3 {
   margin-left: 0.75rem;
 }
@@ -11997,6 +11989,11 @@ html {
   color: transparent;
 }
 
+.text-gray-300 {
+  --tw-text-opacity: 1;
+  color: rgb(209 213 219 / var(--tw-text-opacity));
+}
+
 .text-primary {
   --tw-text-opacity: 1;
   color: hsl(var(--p) / var(--tw-text-opacity));
@@ -12075,11 +12072,6 @@ html {
 .text-gray-200 {
   --tw-text-opacity: 1;
   color: rgb(229 231 235 / var(--tw-text-opacity));
-}
-
-.text-gray-300 {
-  --tw-text-opacity: 1;
-  color: rgb(209 213 219 / var(--tw-text-opacity));
 }
 
 .text-gray-800 {
@@ -12579,7 +12571,7 @@ form .input-wrapper.error .error {
   display: block;
 }
 
-.modal {
+.modal1 {
   display: none;
   /* Hidden by default */
   width: 100%;
@@ -12771,6 +12763,11 @@ form .input-wrapper.error .error {
 .hover\:text-gray-800:hover {
   --tw-text-opacity: 1;
   color: rgb(31 41 55 / var(--tw-text-opacity));
+}
+
+.hover\:text-muddywaters-600:hover {
+  --tw-text-opacity: 1;
+  color: rgb(178 140 98 / var(--tw-text-opacity));
 }
 
 .hover\:text-primary:hover {
@@ -12991,6 +12988,11 @@ form .input-wrapper.error .error {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+.dark .dark\:text-gray-600 {
+  --tw-text-opacity: 1;
+  color: rgb(75 85 99 / var(--tw-text-opacity));
+}
+
 .dark .dark\:accent-muddywaters-200 {
   accent-color: #E9BF90;
 }
@@ -13018,6 +13020,11 @@ form .input-wrapper.error .error {
 .dark .dark\:hover\:text-white:hover {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.dark .dark\:hover\:text-muddywaters-400:hover {
+  --tw-text-opacity: 1;
+  color: rgb(215 186 153 / var(--tw-text-opacity));
 }
 
 .dark .dark\:focus\:border-muddywaters-200:focus {
@@ -13325,6 +13332,10 @@ form .input-wrapper.error .error {
 
   .md\:mb-8 {
     margin-bottom: 2rem;
+  }
+
+  .md\:-ml-10 {
+    margin-left: -2.5rem;
   }
 
   .md\:mb-16 {

@@ -38,7 +38,7 @@ function writeHTML(selectedChain) {
     loadTranslations(translations => { 
         loadProjects(projects => {
             
-            var modal = document.getElementById("myModal");
+            var modal = document.getElementById("chainOptions");
             if (!modal) return;
             modal.style.display = "none";
 
