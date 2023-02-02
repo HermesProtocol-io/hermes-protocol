@@ -6,7 +6,7 @@ function handleJsonRequest(r) {
 
 // address -> terravaloper address
 // shortInfo -> boolean to get full Validator info or not
-async function getValidatorInfo( address, shortInfo ) {
+async function getTerraValidatorInfo( address, shortInfo ) {
     const	classicLcd = "columbus-lcd.terra.dev",
             phoenixLcd = "phoenix-lcd.terra.dev",
             reqUrl = (isClassic, validatorAddress, getDelegations = false) => {
@@ -53,7 +53,7 @@ async function getValidatorInfo( address, shortInfo ) {
             selfDelegation		= validator.min_self_delegation,
             yearlyStakingReturn = yearlyStakingReturns[ yearlyStakingReturns.length -1 ].value;
 
-        console.log(`Returns: Staking APR: ${yearlyStakingReturn*100}%.`);
+        //console.log(`Returns: Staking APR: ${yearlyStakingReturn*100}%.`);
 
         if (shortInfo)
             return {
@@ -66,7 +66,7 @@ async function getValidatorInfo( address, shortInfo ) {
                 fetchUrl: 			`${reqUrl(network === "terraClassic", address, true)}`
             };
 
-        console.log(`Fetching delegations for ${validator.description.moniker} (${address}) on ${network}...`);
+        //console.log(`Fetching delegations for ${validator.description.moniker} (${address}) on ${network}...`);
         const [ r, rVals ] = await Promise.all(
             [
                 fetch(reqUrl(network === "terraClassic", address, true), jsonHeader).then(r => handleJsonRequest(r)),
