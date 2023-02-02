@@ -1,65 +1,62 @@
 <footer>
-  <script type="text/javascript">
-     const callback = function (entries) {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    if (entry.target.classList.contains("js-show-from-right")) {
-                        entry.target.classList.add("animate-fade-right");
-                    } else if (entry.target.classList.contains("js-show-from-left")){
-                        entry.target.classList.add("animate-fade-left");
-                    } else if (entry.target.classList.contains("js-show-on-scroll")){
-                        entry.target.classList.add("animate-fade");
-                    }
-                    else if (entry.target.classList.contains("js-show-now")){
-                            entry.target.classList.add("animate-show-on");
-                    }
-                } else {
-                    entry.target.classList.remove("animate-fade-right");
-                    entry.target.classList.remove("animate-fade-left");
-                    entry.target.classList.remove("animate-fade");
-                    entry.target.classList.remove("animate-show-on");
+    <script type="text/javascript">
+    const callback = function (entries) {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                if (entry.target.classList.contains("js-show-from-right")) {
+                    entry.target.classList.add("animate-fade-right");
+                } else if (entry.target.classList.contains("js-show-from-left")){
+                    entry.target.classList.add("animate-fade-left");
+                } else if (entry.target.classList.contains("js-show-on-scroll")){
+                    entry.target.classList.add("animate-fade");
                 }
-            });
-        };
-
-        const observer = new IntersectionObserver(callback);
-
-        const targets = document.querySelectorAll(".js-show-from-right");
-        const targets2 = document.querySelectorAll(".js-show-from-left");
-        const targets3 = document.querySelectorAll(".js-show-on-scroll");
-        const targets4 = document.querySelectorAll(".js-show-now");
-
-        targets.forEach(function (target) {
-            observer.observe(target);
+                else if (entry.target.classList.contains("js-show-now")){
+                        entry.target.classList.add("animate-show-on");
+                }
+            } else {
+                entry.target.classList.remove("animate-fade-right");
+                entry.target.classList.remove("animate-fade-left");
+                entry.target.classList.remove("animate-fade");
+                entry.target.classList.remove("animate-show-on");
+            }
         });
+    };
 
-        targets2.forEach(function (target) {
-            observer.observe(target);
-        });
+    const observer = new IntersectionObserver(callback);
 
-        targets3.forEach(function (target) {
-            observer.observe(target);
-        });
-        targets4.forEach(function (target) {
-            observer.observe(target);
-        });
-  </script>
+    const targets = document.querySelectorAll(".js-show-from-right");
+    const targets2 = document.querySelectorAll(".js-show-from-left");
+    const targets3 = document.querySelectorAll(".js-show-on-scroll");
+    const targets4 = document.querySelectorAll(".js-show-now");
 
-  <script>
-      // On page load or when changing themes, best to add inline in `head` to avoid FOUC
-      if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-          document.documentElement.classList.add('dark');
-      } else {
-          document.documentElement.classList.remove('dark')
-      }
-  </script>
+    targets.forEach(function (target) {
+        observer.observe(target);
+    });
 
-  <script>
-    // Using CommonJS modules
-    var lozad = require('lozad');
-    const observers = lozad(); 
-    observers.observe();
-  </script>
+    targets2.forEach(function (target) {
+        observer.observe(target);
+    });
+
+    targets3.forEach(function (target) {
+        observer.observe(target);
+    });
+    targets4.forEach(function (target) {
+        observer.observe(target);
+    });
+    </script>
+
+    <script>
+        if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark')
+        }
+    </script>
+
+    <script>
+        const observers = window.lozad(); 
+        observers.observe();
+    </script>
 
     <!-- AlpineJS Library -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/2.8.0/alpine.js"></script>
