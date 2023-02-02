@@ -11,12 +11,12 @@ function loadTranslations(ready) {
     if (data) { 
         ready(data);
     } else {
-        getJSON("/assets/js/translate.json").done( translations => {
-            sessionStorage.setItem("translations", JSON.stringify(translations));
-            ready(translations);
-        }).fail ( function( jqxhr, textStatus, error ) {
-            console.log( "Error: " + textStatus +", "+ error );
-        });
+        fetch("/assets/js/translate.json")
+            .then(r => r.json())
+            .then(translations => {
+                sessionStorage.setItem("translations", JSON.stringify(translations));
+                ready(translations);
+            });
     };
 };
 
@@ -25,15 +25,14 @@ function loadProjects(ready) {
     if (data) { 
         ready(data);
     } else {
-        getJSON("/assets/js/projects.json").done( projects => {
-            sessionStorage.setItem("projects", JSON.stringify(projects));
-            ready(projects);
-        }).fail ( function( jqxhr, textStatus, error ) {
-            console.log( "Error: " + textStatus +", "+ error );
-        });
+        fetch("/assets/js/projects.json")
+            .then(r => r.json())
+            .then(projects => {
+                sessionStorage.setItem("projects", JSON.stringify(projects));
+                ready(projects);
+            });
     }
 };
-
 
 
 function writeHTML(selectedChain) {
