@@ -1,109 +1,231 @@
 
-<!-- Section 1 -->
-<section class="relative py-0 bg-white dark:bg-gray-800 lg:py-20">
-    <div class="relative px-16 mx-auto max-w-7xl xl:px-10">
-
-        <div class="relative z-20">
-            <h3 class="text-5xl font-bold leading-tight text-left text-black dark:text-gray-300 md:text-6xl lg:text-7xl xl:text-7xl xl:leading-tight">
-              Support Hermes Protocol
-            </h3>
-            <div class="flex flex-col mt-14 sm:flex-row sm:items-center">
-                <p class="text-xl font-normal text-left text-muddywaters-500">
-                  The platform that helps you stay informed at the right time!</p>
-                <div class="flex mt-5 space-x-1 sm:mt-1 sm:ml-3">
-                    <div class="w-10 h-2 bg-muddywaters-500 rounded-full opacity-100"></div>
-                    <div class="w-8 h-2 bg-muddywaters-500  rounded-full opacity-75"></div>
-                    <div class="w-4 h-2 bg-muddywaters-500  rounded-full opacity-50"></div>
-                    <div class="w-3 h-2 bg-muddywaters-500  rounded-full opacity-25"></div>
-                    <div class="w-2 h-2 bg-muddywaters-500  rounded-full opacity-10"></div>
-                    <div class="w-2 h-2 bg-muddywaters-500  rounded-full opacity-5"></div>
+<section class="relative w-full pb-10 mt-36 mb-24">
+  <div class="px-12 mx-auto text-sm max-w-6xl md:text-base">
+      <div class="flex flex-col justify-center mt-0 mb-10 text-transparent bg-hermes-hgradient bg-clip-text">
+          <h2 class="mt-0 mb-6 text-4xl text-center">Delegate to the Hermes Protocol validator</h2>
+      </div>
+      <div class="grid gap-5 md:grid-cols-4 sm:grid-cols-8 lg:grid-cols-12 lg:gap-6 xl:gap-8">
+          <div class="relative col-span-4  flex flex-col h-full p-1 bg-hermes-gradient rounded-3xl  opacity-0  js-show-from-right">
+            <div class=" px-8 bg-white dark:bg-gray-800 grow flex flex-col justify-between  rounded-3xl">
+              <div class="mb-4 pt-8">
+                  <img class="w-auto h-16 mx-auto" src ="{{'assets/images/delegation/Terra.png'| relative_url }}">
+              </div>
+              <div class="flex justify-center">
+                      <h3 class="mt-3 pb-3 text-2xl text-center text-gray-500 dark:text-gray-300 border-b-2 border-muddywaters-500 dark:border-muddywaters-200"> Terra </h3>
+              </div>
+              <div class="mt-auto pb-8">
+                  
+                  <div class="grid grid-cols-6 gap-4 w-full mt-3 text-md text-center ">                
+                      <div class="flex w-6 h-6 items-center justify-center text-sm text-center "><img src="{{'assets/images/delegation/wallet.png'| relative_url }}"></div> 
+                      <div class="col-start-2 col-span-5  text-gray-500 dark:text-gray-300 flex  text-left" ><h4><a id="terra-commission-rate">5%</a> Commission</h4> </div>
+                      <div class="flex w-6 h-6 items-center justify-center text-sm text-center  "><img src="{{'assets/images/delegation/luna.png'| relative_url }}"></div>
+                                <div class="col-start-2 col-span-5  flex flex-col text-gray-500 dark:text-gray-300 text-left"> <h4><a id="terra-total-delegations">1.2 M </a> Luna Staked</h4><h5 class="text-xs"><a id="terra-delegators"></a></h5></div>
+                      <div class="flex w-6 h-6 items-center justify-center text-sm text-center  "><img src="{{'assets/images/delegation/watch.png'| relative_url }}"></div> 
+                      <div class="col-start-2 col-span-5 text-gray-500 dark:text-gray-300 text-left"><a id="terra-uptime">100%</a> Uptime</div>
+                  </div>
+                  <div class="mt-4">
+                    <a class="mx-auto inline-flex items-center justify-center w-full h-12 px-8 text-white bg-hermes-gradient rounded-2xl shadow-2xl" href="https://station.terra.money/stake/terravaloper1g6pwngzfj73wnxm7y5gae0thylphugumc96gh3#delegate">Stake Now</a>
+                 </div>
+              </div>
+            </div>
+          </div>
+          <div class="relative col-span-4  flex flex-col h-full p-1 bg-hermes-gradient rounded-3xl  opacity-0  js-show-on-scroll">
+            <div class=" px-8 bg-white dark:bg-gray-800 grow flex flex-col justify-between rounded-3xl">
+            <div class="mb-4 pt-8">
+                <img class="w-auto h-16 mx-auto" src ="{{'assets/images/delegation/andromeda.svg'| relative_url }}">
+            </div>
+            <div class="flex justify-center">
+              <h3 class="mt-3 pb-3 text-2xl text-center text-gray-500 dark:text-gray-300 border-b-2 border-muddywaters-500 dark:border-muddywaters-200">Andromeda</h3>
+            </div>
+            <div class=" mt-auto pb-8">
+                <div class="grid grid-cols-6 gap-4 w-full mt-3 text-md text-center ">                
+                    <div class="flex w-6 h-6 items-center justify-center text-sm text-center"><img src="{{'assets/images/delegation/wallet.png'| relative_url }}"></div> 
+                    <div class="col-start-2 col-span-5  text-gray-500 dark:text-gray-300 text-left"><a id="andromeda-commission-rate">5%</a> Commission</div>
+                    <div class="flex w-6 h-6 items-center justify-center text-sm text-center"><img src="{{'assets/images/delegation/wallet.png'| relative_url }}"></div>
+                    <div class="col-start-2 col-span-5  text-gray-500 dark:text-gray-300 text-left"><a id="andromeda-total-delegations">?</a> ANDR Staked </div>
+                    <div class="flex w-6 h-6 items-center justify-center text-sm text-center"><img src="{{'assets/images/delegation/watch.png'| relative_url }}"></div> 
+                    <div class="col-start-2 col-span-5 text-gray-500 dark:text-gray-300 text-left"><a id="andromeda-uptime">100%</a> Uptime</div>
+                </div> 
+                <div class="mt-4">
+                  <a class="mx-auto inline-flex items-center justify-center w-full h-12 px-8 text-white bg-hermes-gradient rounded-2xl shadow-2xl">Coming Soon</a>
+                </div>              
+              </div>
+            </div>
+          </div>
+          <div class="relative col-span-4 flex flex-col h-full p-1 bg-hermes-gradient rounded-3xl  opacity-0  js-show-from-left">
+            <div class=" px-8 bg-white dark:bg-gray-800 grow flex flex-col justify-between rounded-3xl">
+              <div>
+                <div class="mb-4 pt-8">
+                    <img class="w-auto h-16 mx-auto" src ="{{'assets/images/delegation/radix.svg'| relative_url }}">
                 </div>
-            </div>
-        </div>
-        <div class="grid grid-cols-1 mt-24 gap-14 lg:grid-cols-3">
-            <div class="flex text-gray-500 dark:text-gray-300">
-                <i class="fa-solid fa-wallet text-muddywaters-500 text-7xl w-20 h-20 mr-8 opacity-100"></i>
-                <div class="relative space-y-2">
-                    <h4 class="text-xl font-bold leading-relaxed" id="commission-rate">5%</h4>
-                    <p class="text-lg dark:text-gray-300">Commission
-                </p></div>
-            </div>
-
-            <div class="flex text-gray-500 dark:text-gray-300">
-                <img class="flex-shrink-0 w-20 h-20 mr-8" src="assets/images/luna.svg" />
-                <div class="relative space-y-2">
-                    <h4 class="text-2xl font-bold leading-relaxed" id="total-delegations">Loading...</h4>
-                    <p class="text-lg text-gray-500 dark:text-gray-300" id="luna-staked">Luna Staked</p>
+                <div class="flex justify-center">
+                        <h3 class="mt-3 pb-3 text-2xl text-center text-gray-500 dark:text-gray-300 border-b-2 border-muddywaters-500 dark:border-muddywaters-200">Radix</h3>
                 </div>
+              </div>
+              <div class=" mt-auto pb-8">
+                <div class="grid grid-cols-6 gap-4 w-full mt-3 text-md text-center ">                
+                    <div class="flex w-6 h-6 items-center justify-center text-sm text-center"><img src="{{'assets/images/delegation/wallet.png'| relative_url }}"></div> 
+                    <div class="col-start-2 col-span-5  text-gray-500 dark:text-gray-300 text-left"><a id="radix-commission-rate">5%</a> Commission</div>
+                    <div class="flex w-6 h-6 items-center justify-center text-sm text-center"><img src="{{'assets/images/delegation/wallet.png'| relative_url }}"></div>
+                    <div class="col-start-2 col-span-5  text-gray-500 flex flex-col dark:text-gray-300 text-left"><h4><a id="radix-total-delegations">50k</a> XRD Staked</h4><h5 class="text-xs"><a id="radix-delegators"></a></h5></div>
+                    <div class="flex w-6 h-6 items-center justify-center text-sm text-center"><img src="{{'assets/images/delegation/wallet.png'| relative_url }}"></div> 
+                    <div class="col-start-2 col-span-5 text-gray-500 dark:text-gray-300 text-left">Max cap 1%</div>
+                </div> 
+                <div class="mt-4">
+                  <a  data-modal-target="defaultModal" data-modal-toggle="defaultModal" class="mx-auto inline-flex items-center justify-center w-full h-12 px-8 text-white bg-hermes-gradient rounded-2xl shadow-2xl">Stake Now</a>
+                </div>              
+              </div>
             </div>
-
-            <div class="flex text-gray-500 dark:text-gray-300">
-                <i class="fa-solid fa-stopwatch text-muddywaters-500 text-7xl w-20 h-20 mr-8 opacity-100"></i>
-                <div class="relative space-y-2">
-                    <h4 class="text-xl font-bold leading-relaxed">100%</h4>
-                    <p class="text-lg text-gray-500 dark:text-gray-300">Uptime
-                </p></div>
+          </div>
+          <div class="relative md:col-start-3 col-span-4 flex flex-col h-full p-1 bg-hermes-gradient rounded-3xl  opacity-0  js-show-from-right">
+            <div class=" px-8 bg-white dark:bg-gray-800 grow flex flex-col justify-between rounded-3xl">
+            <div class="mb-4 pt-8">
+              <svg class="fill-gray-800 dark:fill-white w-auto h-16 mx-auto" fill="currentColor"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 38.922 35.38" preserveAspectRatio="xMinYMin meet">
+                <path d="M80.124,79.241c.2-.253.395-.511.582-.772l3.54,2.161H89.2l-7.138-4.359a17.947,17.947,0,0,0,1.173-2.779,19.691,19.691,0,0,0,1.014-6.1,19.14,19.14,0,0,0-1.039-6.129,18.65,18.65,0,0,0-3.136-5.72,15.436,15.436,0,0,0-5.334-4.217A17.174,17.174,0,0,0,67.07,49.73a16.266,16.266,0,0,0-7.408,1.593,15.751,15.751,0,0,0-5.26,4.2,17.848,17.848,0,0,0-3.11,5.72,19.771,19.771,0,0,0-1.012,6.154,21.211,21.211,0,0,0,.959,6.276,17.259,17.259,0,0,0,3.009,5.718,14.608,14.608,0,0,0,5.334,4.125,18.337,18.337,0,0,0,7.867,1.545,16.235,16.235,0,0,0,7.433-1.593c.308-.156.605-.322.9-.494l3.5,2.138h4.955l-6.171-3.763A15.32,15.32,0,0,0,80.124,79.241ZM69.743,76.259H64.787l7.964,4.853c-.09.062-.177.126-.269.177A9.184,9.184,0,0,1,67.4,82.666,10.313,10.313,0,0,1,62.03,81.33a10.727,10.727,0,0,1-3.658-3.561,16.6,16.6,0,0,1-2.06-4.955,22.846,22.846,0,0,1-.658-5.426,21.375,21.375,0,0,1,.69-5.324,17.047,17.047,0,0,1,2.124-4.947,11.661,11.661,0,0,1,3.6-3.623,9.215,9.215,0,0,1,5.062-1.377,9.707,9.707,0,0,1,5.242,1.377,11.387,11.387,0,0,1,3.644,3.649A17.757,17.757,0,0,1,78.16,62.1a20.529,20.529,0,0,1,.708,5.309,21.238,21.238,0,0,1-.692,5.281c-.092.354-.195.708-.3,1.041L74.7,71.8H69.744l7.145,4.352a16.846,16.846,0,0,1-.839,1.5,12.606,12.606,0,0,1-1.274,1.687Z" transform="translate(-50.28 -49.73)" fill-rule="evenodd"></path>
+              </svg>
             </div>
-        </div>
-    </div>
+            <div class="flex justify-center">
+                    <h3 class="mt-3 pb-3 text-2xl text-center text-gray-500 dark:text-gray-300 border-b-2 border-muddywaters-500 dark:border-muddywaters-200">Q Blockchain</h3>
+            </div>
+            <div class=" mt-auto mb-8">
+                
+                <div class="grid grid-cols-6 gap-4 w-full mt-3 text-md text-center ">                
+                    <div class="flex w-6 h-6 items-center justify-center text-sm text-center"><img src="{{'assets/images/delegation/wallet.png'| relative_url }}"></div> 
+                    <div class="col-start-2 col-span-5 text-gray-500 dark:text-gray-300 text-left"><a id="q-commission-rate">5%</a> Commission</div>
+                    <div class="flex w-6 h-6 items-center justify-center text-sm text-center"><img src="{{'assets/images/delegation/wallet.png'| relative_url }}"></div> 
+                    <div class="col-start-2 col-span-5 text-gray-500 dark:text-gray-300 text-left"><a id="q-total-delegations">?</a> Q Staked </div>
+                    <div class="flex w-6 h-6 items-center justify-center text-sm text-center"><img src="{{'assets/images/delegation/watch.png'| relative_url }}"></div> 
+                    <div class="col-start-2 col-span-5 text-gray-500 dark:text-gray-300 text-left"><a id="q-uptime">?%</a> Uptime </div>
+                </div> 
+                <div class="mt-4">
+                  <a class="mx-auto inline-flex items-center justify-center w-full h-12 px-8 text-white bg-hermes-gradient rounded-2xl shadow-2xl">Coming Soon</a>
+                </div>              
+              </div>
+            </div>
+          </div>
+          <div class="relative  col-span-4 flex flex-col h-full p-1 bg-hermes-gradient rounded-3xl  opacity-0  js-show-from-left">
+            <div class=" px-8 grow flex flex-col justify-between bg-white dark:bg-gray-800  rounded-3xl">
+              <div class=" pt-8">
+                <h1 class="text-7xl text-gray-500 dark:text-gray-300 text-center mx-auto">?</h1>
+              </div>
+              <div class="flex justify-center">
+                      <h3 class="mt-3 pb-3 text-2xl text-center text-gray-500 dark:text-gray-300 border-b-2 border-muddywaters-500 dark:border-muddywaters-200">TBD</h3>
+              </div>
+              <div class=" mb-auto ">
+                  <div class="grid grid-cols-6 gap-4 w-full mt-3 text-md text-center ">                
+                      <div class="flex w-6 h-6 items-center justify-center text-sm text-center"><img src="{{'assets/images/delegation/wallet.png'| relative_url }}"></div> 
+                      <div class="col-start-2 col-span-5 text-gray-500 dark:text-gray-300 text-left">? Commission </div>
+                      <div class="flex w-6 h-6 items-center justify-center text-sm text-center"><img src="{{'assets/images/delegation/wallet.png'| relative_url }}"></div>
+                      <div class="col-start-2 col-span-5 text-gray-500 dark:text-gray-300 text-left"> ? Staked</div>
+                      <div class="flex w-6 h-6 items-center justify-center text-sm text-center"><img src="{{'assets/images/delegation/watch.png'| relative_url }}"></div> 
+                      <div class="col-start-2 col-span-5 text-gray-500 dark:text-gray-300 text-left">?% Uptime</div>
+                  </div> 
+              </div>
+              <div class="mt-4 pb-8">
+                  <a class="mx-auto inline-flex items-center justify-center w-full h-12 px-8 text-white bg-hermes-gradient rounded-2xl shadow-2xl">Contact us</a>
+              </div>              
+            </div>
+          </div>
+      </div>
+  </div>
 </section>
 
+
+<!-- Main modal -->
+<div id="defaultModal" tabindex="-1" aria-hidden="true" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-modal md:h-full">
+    <div class="relative w-full h-full max-w-2xl md:h-auto">
+        <!-- Modal content -->
+        <div class="relative p-1 bg-hermes-gradient rounded-3xl shadow">
+          <div class="relative bg-white rounded-3xl dark:bg-gray-800">
+              <!-- Modal header -->
+              <div class="flex items-start justify-between p-4 border-b rounded-t dark:border-gray-600">
+                  <div class="items-center flex flex-row gap-4">
+                    <img class="w-auto h-6 " src ="{{'assets/images/delegation/radix.svg'| relative_url }}">
+                    <h3 class="text-xl font-semibold text-gray-500 dark:text-white">
+                        Radix Validator
+                    </h3>
+                  </div>
+                  <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-hide="defaultModal">
+                      <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                      <span class="sr-only">Close modal</span>
+                  </button>
+              </div>
+              <!-- Modal body -->
+              <div class="p-6 space-y-6">
+                  <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
+                      Delegate to our validator through Radix wallet 
+                  </p>
+                  <div class="flex flex-row gap-4">
+                    <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
+                      Validator ID: <input id="radix-id" class="text-gray-500 dark:text-gray-400 bg-transparent" value="rv1qdawftdkvx385rmgeejalhxca0xwxhpgrzt9tuv23p08hxr39ypwv8y9e8l">rv1qdawftdkvx385...8y9e8l</input>
+                    </p>
+
+                    <button class="focus:outline-none focus:ring-0" data-tooltip-target="tooltip-click" data-tooltip-trigger="click"  onclick="copy()"><i class="fa-regular fa-copy text-gray-500 dark:text-white" ></i></button>
+                    <div id="tooltip-click" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white bg-gray-700 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                      Copied!
+                    
+                     </div> 
+                </div>
+              </div>
+          </div>
+        </div>
+    </div>
+</div>
+
+
 <script>
-  $(document).ready(function () {
-      reloadChainValues();
+  docReady(() => {
+    reloadValues();
   });
 
-  async function reloadChainValues() {
+  /*$(document).ready(function () {
+    reloadValues();
+  });*/
+
+  async function reloadTerraChainValues() {
     const defaultTokens     = "1.2M",
           defaultCommission = "5%",
           defaultDelegators = "3700";
 
-    const short = await getValidatorInfo("terravaloper1g6pwngzfj73wnxm7y5gae0thylphugumc96gh3", true);
+    const short = await getTerraValidatorInfo("terravaloper1g6pwngzfj73wnxm7y5gae0thylphugumc96gh3", true);
 
     const [ shortTokens, commissionRate ] = [ short.shortTokens?? defaultTokens, short.commissionRate?? defaultCommission ];
 
-    document.getElementById("total-delegations").innerHTML = shortTokens;
-    document.getElementById("commission-rate").innerHTML = commissionRate;
+    document.getElementById("terra-total-delegations").innerHTML = shortTokens;
+    document.getElementById("terra-commission-rate").innerHTML = commissionRate;
 
-    const long = await getValidatorInfo("terravaloper1g6pwngzfj73wnxm7y5gae0thylphugumc96gh3", false);
+    const long = await getTerraValidatorInfo("terravaloper1g6pwngzfj73wnxm7y5gae0thylphugumc96gh3", false);
     const numDelegators = long?.numDelegators?? defaultDelegators;
-    document.getElementById("luna-staked").innerHTML += ` from ${numDelegators} delegators`;
+    document.getElementById("terra-delegators").innerHTML = ` from ${numDelegators} delegators`;
+  }
+
+  async function reloadRadixValues() {
+    const defaultTokens     = "50k",
+          defaultCommission = "5%",
+          defaultDelegators = "100";
+
+    const short = await getRadixValidatorInfo("rv1qdawftdkvx385rmgeejalhxca0xwxhpgrzt9tuv23p08hxr39ypwv8y9e8l");
+
+    const [ shortTokens, commissionRate, numDelegators ] = [ short.shortTokens?? defaultTokens, short.commissionRate?? defaultCommission, short.numDelegators?? defaultDelegators ];
+
+    document.getElementById("radix-total-delegations").innerHTML = shortTokens;
+    document.getElementById("radix-commission-rate").innerHTML = commissionRate;
+    if (numDelegators !== defaultDelegators)
+      document.getElementById("radix-delegators").innerHTML = ` from ${numDelegators} delegators`;
+  }
+
+  async function reloadValues() {
+    reloadTerraChainValues();
+    reloadRadixValues();
   }
 </script>
 
-<!-- <script>
-  function delegateSubmit() {
-    console.log("hello");
+<script>
+  function copy() {
+    // Get the text field
+    var copyText = document.getElementById("radix-id");
 
-    let errorField = [];
-    let formValues = {
-      amount: {
-        value: document.getElementById("amount").value,
-        label: document.getElementById("amount").id,
-      },
-    };
-
-    //validate if some of required field is empty, if empty add to errorField array field name to show the error message
-    for (const inputName in formValues) {
-      if (
-        formValues[inputName].value == "" ||
-        formValues[inputName].value == null
-      ) {
-        errorField.push(formValues[inputName].label);
-      }
-    }
-
-    //remove all errors
-    document.querySelectorAll(".input-wrapper").forEach(function (element) {
-      element.classList.remove("error");
-    });
-
-    //if array errorField is empty=no errors found, proceed, call integromat to send emails
-    if (errorField.length > 0) {
-      //if errors found, show errors in form inputs span
-      errorField.forEach((element) =>
-        document.getElementById(element).parentElement.classList.add("error")
-      );
-    }
+    // Copy the text inside the text field
+    navigator.clipboard.writeText(copyText.value);
   }
-</script> -->
+</script>

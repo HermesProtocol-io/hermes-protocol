@@ -4,7 +4,6 @@ baseurl: ""
 permalink: /:title/
 
 
-
 # Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
 social:
   - title: email
@@ -12,7 +11,7 @@ social:
   - title: facebook-box
     url: https://facebook.com
   - title: linkedin
-    url: https://linkedin.com/company/momentum-one
+    url: https://www.linkedin.com/company/HermesProtocol
 
 
 footer:

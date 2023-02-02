@@ -2,31 +2,36 @@
 layout: default
 ---
 
-<section class=" dark:from-gray-800 bg-gradient-to-b from-white via-muddywaters-200 to-white dark:to-gray-800 min-w-screen">
-
-    <div  class="relative pt-32 px-8 mx-auto max-w-7xl lg:px-12 xl:px-16 ">
-        <h2 class="my-4 text-3xl font-extrabold tracking-tight text-muddywaters-500 text-center sm:text-4xl md:text-5xl lg:pb-6 xl:text-4xl sm:leading-tight ">
+<section class="w-full">
+    <img class="absolute top-0 right-0 dark:hidden lozad" src="assets/images/bg/Top Banner.svg">
+    <img class="absolute top-0 right-0 hidden dark:block lozad"  src="assets/images/bg/Top Banner DM.svg">
+    <div  class="relative pt-32 px-8 mx-auto max-w-7xl lg:px-12 xl:px-16  z-10">
+        
+        <h1 class="mx-6 mt-6 text-lg text-center text-muddywaters-500 dark:text-muddywaters-200 lg:text-5xl sm:mx-0 ">
                     Integrated dApps
-        </h2>
+        </h1>
 
-        <div class="flex justify-end z-10 text-muddywaters-500 text-3xl"><a id="myBtn" class="items-end cursor-pointer"><i class="fa-solid fa-filter"></i></a></div>
-
-        <div class="modal" id="myModal">
+        <div class="relative flex justify-end z-10 text-muddywaters-500 dark:text-muddywaters-200 text-3xl">
+            <a id="filterChain" class="items-end cursor-pointer z-10">
+                <i class="fa-solid fa-filter"></i>
+            </a>
+        </div>
+        <div class="absolute z-20 modal1 " id="chainOptions">
             <div class="flex flex-row justify-end p-3 items-center" >
-                <div class="relative p-2 flex flex-col gap-2 items-start rounded-xl bg-white dark:bg-gray-700 shadow-xl">
-                    <div class="flex-1 text-muddywaters-500"><a class=" font-bold pb-2">Chain</a></div>
-                    <a onClick="writeHTML(`terraClassic`)" class="flex flex-row gap-1 font-bold "><img class="w-6 h-auto" src="https://s2.coinmarketcap.com/static/img/coins/64x64/4172.png">Terra Classic</a>
-                    <a onClick="writeHTML(`terra`)" class="flex flex-row gap-1 font-bold "><img class="w-6 h-auto" src="https://app.pulsar.finance/chains/Luna2-logo.png">Terra</a>
-                    <a class=" font-bold underline" onClick="writeHTML(`All`)">All</a>
+                <div class="relative p-2 flex flex-col gap-2 items-start opacity-100 bg-white dark:bg-gray-600 rounded-xl shadow-xl">
+                    <div class="flex-1 text-muddywaters-500 dark:text-muddywaters-200"><a class=" font-bold pb-2">Chain</a></div>
+                    <a onClick="writeHTML(`terraClassic`)" class="flex flex-row gap-1 font-bold text-white dark:text-gray-300 cursor-pointer"><img class="w-6 h-auto" src="https://s2.coinmarketcap.com/static/img/coins/64x64/4172.png">Terra Classic</a>
+                    <a onClick="writeHTML(`terra`)" class="flex flex-row gap-1 font-bold text-white dark:text-gray-300 cursor-pointer"><img class="w-6 h-auto" src="https://app.pulsar.finance/chains/Luna2-logo.png">Terra</a>
+                    <a class=" font-bold underline text-white dark:text-gray-300 cursor-pointer" onClick="writeHTML(`All`)">All</a>
                 </div>
             </div>
         </div>
+
         <div id="projectModel" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden modal2 fixed top-0 right-0 left-0 z-50 w-full md:inset-0 h-modal md:h-full"> 
 
 
         </div>
-        <div id="chain">
-
+        <div id="chain" class="z-10">
         </div>
 
     </div>
@@ -36,13 +41,9 @@ layout: default
 <script>
     // Get the modal
 
-    var modal = document.getElementById("myModal");
-    
-    // Get the button that opens the modal
-    var btn = document.getElementById("myBtn");
-    
-    // Get the <span> element that closes the modal
-    var span = document.getElementsByClassName("close")[0];
+    let modal = document.getElementById("chainOptions"),
+      btn = document.getElementById("filterChain"),
+        span = document.getElementsByClassName("close")[0];
     
     // When the user clicks the button, open the modal 
     btn.onclick = function() {
