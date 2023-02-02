@@ -174,9 +174,13 @@
 
 
 <script>
-  $(document).ready(function () {
-      reloadValues();
+  docReady(() => {
+    reloadValues();
   });
+
+  /*$(document).ready(function () {
+    reloadValues();
+  });*/
 
   async function reloadTerraChainValues() {
     const defaultTokens     = "1.2M",

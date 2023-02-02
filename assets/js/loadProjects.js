@@ -1,6 +1,10 @@
-$(document).ready(function () {
-    writeHTML("All")
+docReady(()=> {
+    writeHTML("All");
 });
+
+/*$(document).ready(function () {
+    
+});*/
 
 function loadTranslations(ready) {
     let data = JSON.parse(sessionStorage.getItem("translations"));

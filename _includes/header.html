@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="{{ 'assets/css/main.css' | relative_url }}">
     <link href="tailwind.css" rel="stylesheet">
     <link rel="shortcut icon" class="fill-muddywaters-500" href="{{ 'assets/images/icon.svg' | relative_url }}" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>-->
     <script rel="preload" as="script" src="{{ '/assets/js/utils.js'| prepend: site.baseurl_root  }}"></script>   
     <script rel="preload" as="script" src="{{ '/assets/js/loadProjects.js'| prepend: site.baseurl_root  }}"></script>
     <script rel="preload" as="script" src="{{ '/assets/js/blockchains/terra/validator-info.js'| prepend: site.baseurl_root  }}"></script>
@@ -16,18 +16,16 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lozad.js/1.0.8/lozad.min.js" integrity="sha512-Nt+V5JYamXCSvlHzNVleriGhTrolnfxckJ8sEXxv/BJ0tKV1HyPDXH+bIFNcUJ5hcthQ95uAeU2JClPT16mFyg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-    <script >
-
-        $(document).ready(function(){
+    <!-- No longer needed?
+    <script>
+        docReady(() => {
             var $moveable = $('.move-rect');
             var rectPosY = parseInt($('.move-rect').css('top'), 10);
             var rectPosX = parseInt($('.move-rect').css('left'), 10);
-            $(".area").mousemove(function(e){
+            $(".area").mousemove((e) => {
                 $moveable.css({'top': rectPosY-e.pageY/40,'left': rectPosX-e.pageX/40});
             });
-          });
-        
-      </script>
-
-    
+        });
+    </script>
+    -->
 </head>
