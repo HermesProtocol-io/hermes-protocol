@@ -1,6 +1,5 @@
 <footer>
-<script type="text/javascript">
-
+  <script type="text/javascript">
      const callback = function (entries) {
             entries.forEach((entry) => {
                 if (entry.isIntersecting) {
@@ -44,34 +43,25 @@
         targets4.forEach(function (target) {
             observer.observe(target);
         });
+  </script>
 
+  <script>
+      // On page load or when changing themes, best to add inline in `head` to avoid FOUC
+      if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+          document.documentElement.classList.add('dark');
+      } else {
+          document.documentElement.classList.remove('dark')
+      }
+  </script>
 
-
-</script>
-
-<script>
-    // On page load or when changing themes, best to add inline in `head` to avoid FOUC
-    if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-        document.documentElement.classList.add('dark');
-    } else {
-        document.documentElement.classList.remove('dark')
-    }
-</script>
-<script>
-
-
-// Using CommonJS modules
-var lozad = require('lozad');
-
-const observers = lozad(); 
-observers.observe();
-</script>
-
+  <script>
+    // Using CommonJS modules
+    var lozad = require('lozad');
+    const observers = lozad(); 
+    observers.observe();
+  </script>
 
     <!-- AlpineJS Library -->
    <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/2.8.0/alpine.js"></script>
    <script src="https://www.google.com/recaptcha/api.js"></script>
-
-
-
 </footer>

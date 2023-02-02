@@ -2,6 +2,6 @@ node_modules/
 .jekyll-cache/
 _site/
 .env
-.dev.vars
+.dev*
 
 *.Identifier
