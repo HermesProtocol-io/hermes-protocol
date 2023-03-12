@@ -4,6 +4,7 @@ module.exports = {
     './**/*.html',
     './_pages/**/*.{html,js,jsx,ts,tsx,vue}',
     './_includes/blocks/**/*.{html,js,jsx,ts,tsx,vue}',
+    './_includes/blocks/business/*.{html,js,jsx,ts,tsx,vue}',
     './**/*.{js,jsx,ts,tsx,vue}',
     './assets/js/*.{js,jsx,ts,tsx,vue}'
   ],
@@ -137,6 +138,5 @@ module.exports = {
   },
   variants: {
     extend: {},
-  },
-  plugins: [require("daisyui")],
+  }
 }
