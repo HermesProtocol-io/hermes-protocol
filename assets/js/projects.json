@@ -18,7 +18,7 @@
                     } 
                 }, 
                 "Phoenix Finance": {
-                    "img":"https://pbs.twimg.com/profile_images/1526504367918292992/7YSlOih7_400x400.jpg",
+                    "img":"https://www.phx.finance/static/section-3.28253e75.png",
                     "support":{
                         "priceAlert":["app","discord"],
                         "liquidityPool":["app","discord"]
@@ -26,13 +26,6 @@
                 }
             },
             "nft": {
-                "Knowhere Art":{
-                    "img":"https://knowhere.art/knowhere-icon.svg",
-                    "support":{
-                        "NFTMonitor":["app","discord"],
-                        "NewSale":["discord"]
-                    }
-                },
                 "Talis Protocol":{
                     "img":"https://talis.art/icons/talis/logo.svg",
                     "support":{
@@ -71,6 +64,14 @@
                         "domainRegistration":["app","discord"],
                         "domainChanges":["app","discord"],
                         "newDomain":["discord"]
+                    }
+                }
+            },
+            "DAO":{
+                "Entreprise Protocol":{
+                    "img":"https://images2.imgbox.com/c9/73/wADKtP1e_o.png",
+                    "support":{
+                        "governancePoll":["app","discord"]
                     }
                 }
             },
@@ -131,24 +132,17 @@
 
             },
             "nft": {
-                "Knowhere Art":{
-                    "img":"https://knowhere.art/knowhere-icon.svg",
-                    "support":{
-                        "NFTMonitor":["app"],
-                        "NewSale":["discord"]
-                    }
-                },
                 "Random Earth":{
                     "img":"https://randomearth.io/static/compiled/865883277bf6d24d865f09ec1e8b8b6f.png",
                     "support":{
-                        "NFTMonitor":["app"],
+                        "NFTMonitor":["app","discord"],
                         "NewSale":["discord"]
                     }
                 },
                 "Talis Protocol":{
                     "img":"https://talis.art/icons/talis/logo.svg",
                     "support":{
-                        "NFTMonitor":["app"],
+                        "NFTMonitor":["app","discord"],
                         "NewSale":["discord"]
                     }
                 }
@@ -198,12 +192,74 @@
             "Launchpad":{
                 "StarTerra":{
                     "img":"https://app.pulsar.finance/pulsar-token.svg"
+                }
+            }
+        }
+    },
+    "radix": {
+        "active": {
+            "nft": {
+                "Viking Land":{
+                    "img":"https://www.vikingland.net/static/media/logo.4267ef94.png",
+                    "support":{
+                        "NFTMonitor":["app","discord"]
+                    }
+                }
+            },
+            "blockchain": {
+                "General Radix":{
+                    "img": "https://assets-global.website-files.com/6053f7fca5bf627283b582c2/6266da249c0c7cd4101e952a_Radix-Icon-400x400.png",
+                    "support":{
+                        "walletWatcher":["app","discord"],
+                        "staking":["app","discord"]
+                    }  
+                }
+            }
+        },
+        "inactive":{
+            "Domain System":{
+                "XRD Domains":{
+                    "img":"https://xrd.domains/images/favicon/apple-touch-icon.png",
+                    "support":{
+                        "domainRegistration":["app","discord"],
+                        "domainChanges":["app","discord"],
+                        "newDomain":["discord"]
+                    }
+                }
+            },
+            "DEX":{
+                "DSOR":{
+                    "img":"https://dsor.io/images/logo.svg",
+                    "support":{
+                        "PriceAlert":["app","discord"]
+                    }
                 },
-                "Pylon Protocol":{
-                    "img":"https://assets.pylon.rocks/logo/MINE.png"
-                } 
+                "Ociswap":{
+                    "img":"https://ociswap.com/img/logo-header.png",
+                    "support":{
+                        "PriceAlert":["app","discord"]
+                    }
+                },
+                "AlphaDEX":{
+                    "img":"https://www.alphadex.net/apple-touch-icon.png",
+                    "support":{
+                        "PriceAlert":["app","discord"]
+                    }
+                }
+            },
+            "nft": {
+                "Foton":{
+                    "img":"https://foton.is/images/favicon.png",
+                    "support":{
+                        "NFTMonitor":["app","discord"]
+                    }
+                }
+            },
+            "Launchpad":{
+                "RadLock":{
+                    "img":"https://radlock.io/favicon/apple-touch-icon.png"
+                }
             }
         }
     }
-
 }
