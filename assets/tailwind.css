@@ -634,10 +634,6 @@ video {
   left: 0px;
 }
 
-.bottom-0 {
-  bottom: 0px;
-}
-
 .right-4 {
   right: 1rem;
 }
@@ -680,6 +676,10 @@ video {
 
 .right-6 {
   right: 1.5rem;
+}
+
+.bottom-0 {
+  bottom: 0px;
 }
 
 .top-full {
@@ -1078,24 +1078,28 @@ video {
   margin-top: 1rem;
 }
 
-.mt-36 {
-  margin-top: 9rem;
-}
-
-.mb-24 {
-  margin-bottom: 6rem;
-}
-
-.mb-12 {
-  margin-bottom: 3rem;
-}
-
 .mt-10 {
   margin-top: 2.5rem;
 }
 
 .mb-8 {
   margin-bottom: 2rem;
+}
+
+.mt-12 {
+  margin-top: 3rem;
+}
+
+.mb-12 {
+  margin-bottom: 3rem;
+}
+
+.mt-36 {
+  margin-top: 9rem;
+}
+
+.mb-24 {
+  margin-bottom: 6rem;
 }
 
 .mb-6 {
@@ -1124,10 +1128,6 @@ video {
 
 .ml-auto {
   margin-left: auto;
-}
-
-.mt-12 {
-  margin-top: 3rem;
 }
 
 .-mt-2 {
@@ -1322,10 +1322,6 @@ video {
   height: 4rem;
 }
 
-.h-2\/3 {
-  height: 66.666667%;
-}
-
 .h-7 {
   height: 1.75rem;
 }
@@ -1406,6 +1402,10 @@ video {
   height: 0px;
 }
 
+.h-2\/3 {
+  height: 66.666667%;
+}
+
 .max-h-96 {
   max-height: 24rem;
 }
@@ -1450,14 +1450,6 @@ video {
   width: 12rem;
 }
 
-.w-3\/4 {
-  width: 75%;
-}
-
-.w-16 {
-  width: 4rem;
-}
-
 .w-7 {
   width: 1.75rem;
 }
@@ -1468,6 +1460,10 @@ video {
 
 .w-1\/2 {
   width: 50%;
+}
+
+.w-16 {
+  width: 4rem;
 }
 
 .w-3 {
@@ -1578,12 +1574,12 @@ video {
   max-width: 20rem;
 }
 
-.max-w-6xl {
-  max-width: 72rem;
+.max-w-3xl {
+  max-width: 48rem;
 }
 
-.max-w-5xl {
-  max-width: 64rem;
+.max-w-6xl {
+  max-width: 72rem;
 }
 
 .max-w-4xl {
@@ -1594,8 +1590,8 @@ video {
   max-width: 36rem;
 }
 
-.max-w-3xl {
-  max-width: 48rem;
+.max-w-5xl {
+  max-width: 64rem;
 }
 
 .max-w-\[400px\] {
@@ -1739,11 +1735,6 @@ video {
 
 .-translate-x-1\/2 {
   --tw-translate-x: -50%;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.-rotate-12 {
-  --tw-rotate: -12deg;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -3185,9 +3176,14 @@ video {
   background-color: transparent;
 }
 
-.bg-pink-50 {
+.bg-gray-100 {
   --tw-bg-opacity: 1;
-  background-color: rgb(253 242 248 / var(--tw-bg-opacity));
+  background-color: rgb(243 244 246 / var(--tw-bg-opacity));
+}
+
+.bg-gray-50 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(249 250 251 / var(--tw-bg-opacity));
 }
 
 .bg-gray-700 {
@@ -3350,12 +3346,12 @@ video {
   background-image: linear-gradient(135deg, #C49A6D, #E9BF90);
 }
 
-.bg-gradient-to-b {
-  background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
-}
-
 .bg-gradient-to-br {
   background-image: linear-gradient(to bottom right, var(--tw-gradient-stops));
+}
+
+.bg-gradient-to-b {
+  background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
 }
 
 .bg-gradient-to-t {
@@ -3563,10 +3559,6 @@ video {
 
 .p-2\.5 {
   padding: 0.625rem;
-}
-
-.p-12 {
-  padding: 3rem;
 }
 
 .p-1\.5 {
@@ -3785,16 +3777,16 @@ video {
   padding-bottom: 8rem;
 }
 
+.pb-12 {
+  padding-bottom: 3rem;
+}
+
 .pb-10 {
   padding-bottom: 2.5rem;
 }
 
 .pt-4 {
   padding-top: 1rem;
-}
-
-.pb-12 {
-  padding-bottom: 3rem;
 }
 
 .pt-8 {
@@ -4614,16 +4606,16 @@ video {
           backdrop-filter: none;
 }
 
-.transition {
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+.transition-all {
+  transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
 
-.transition-all {
-  transition-property: all;
+.transition {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
@@ -5024,11 +5016,6 @@ form .input-wrapper.error .error {
   background-color: rgb(75 85 99 / var(--tw-bg-opacity));
 }
 
-.dark .dark\:bg-gray-900 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(17 24 39 / var(--tw-bg-opacity));
-}
-
 .dark .dark\:bg-gray-700 {
   --tw-bg-opacity: 1;
   background-color: rgb(55 65 81 / var(--tw-bg-opacity));
@@ -5093,11 +5080,6 @@ form .input-wrapper.error .error {
 .dark .dark\:hover\:bg-gray-700:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(55 65 81 / var(--tw-bg-opacity));
-}
-
-.dark .hover\:dark\:bg-muddywaters-300:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(232 215 197 / var(--tw-bg-opacity));
 }
 
 .dark .dark\:hover\:bg-gray-600:hover {
@@ -5387,6 +5369,14 @@ form .input-wrapper.error .error {
     margin-right: 1rem;
   }
 
+  .md\:mt-36 {
+    margin-top: 9rem;
+  }
+
+  .md\:mb-24 {
+    margin-bottom: 6rem;
+  }
+
   .md\:mb-20 {
     margin-bottom: 5rem;
   }
@@ -5399,16 +5389,8 @@ form .input-wrapper.error .error {
     margin-top: 0px;
   }
 
-  .md\:mb-24 {
-    margin-bottom: 6rem;
-  }
-
   .md\:ml-16 {
     margin-left: 4rem;
-  }
-
-  .md\:mt-36 {
-    margin-top: 9rem;
   }
 
   .md\:mb-8 {
@@ -5459,6 +5441,10 @@ form .input-wrapper.error .error {
     height: 100px;
   }
 
+  .md\:w-3\/4 {
+    width: 75%;
+  }
+
   .md\:w-16 {
     width: 4rem;
   }
@@ -5497,6 +5483,15 @@ form .input-wrapper.error .error {
 
   .md\:max-w-\[250px\] {
     max-width: 250px;
+  }
+
+  .md\:-rotate-12 {
+    --tw-rotate: -12deg;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+
+  .md\:transform {
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   }
 
   .md\:grid-cols-2 {
@@ -5541,6 +5536,10 @@ form .input-wrapper.error .error {
     background-color: transparent;
   }
 
+  .md\:p-12 {
+    padding: 3rem;
+  }
+
   .md\:p-9 {
     padding: 2.25rem;
   }
@@ -5561,6 +5560,11 @@ form .input-wrapper.error .error {
   .md\:px-32 {
     padding-left: 8rem;
     padding-right: 8rem;
+  }
+
+  .md\:px-16 {
+    padding-left: 4rem;
+    padding-right: 4rem;
   }
 
   .md\:px-8 {
@@ -5648,9 +5652,9 @@ form .input-wrapper.error .error {
     line-height: 1.5rem;
   }
 
-  .md\:text-4xl {
-    font-size: 2.25rem;
-    line-height: 2.5rem;
+  .md\:text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
   }
 
   .md\:text-3xl {
@@ -5666,9 +5670,9 @@ form .input-wrapper.error .error {
     font-size: 40px;
   }
 
-  .md\:text-xl {
-    font-size: 1.25rem;
-    line-height: 1.75rem;
+  .md\:text-4xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
   }
 
   .dark .md\:dark\:bg-transparent {
@@ -6018,16 +6022,6 @@ form .input-wrapper.error .error {
     line-height: 1;
   }
 
-  .lg\:text-4xl {
-    font-size: 2.25rem;
-    line-height: 2.5rem;
-  }
-
-  .lg\:text-lg {
-    font-size: 1.125rem;
-    line-height: 1.75rem;
-  }
-
   .lg\:text-6xl {
     font-size: 3.75rem;
     line-height: 1;
@@ -6035,6 +6029,16 @@ form .input-wrapper.error .error {
 
   .lg\:text-xl {
     font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+
+  .lg\:text-4xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+
+  .lg\:text-lg {
+    font-size: 1.125rem;
     line-height: 1.75rem;
   }
 
@@ -6126,14 +6130,14 @@ form .input-wrapper.error .error {
     padding-right: 3rem;
   }
 
-  .xl\:py-3 {
-    padding-top: 0.75rem;
-    padding-bottom: 0.75rem;
-  }
-
   .xl\:px-0 {
     padding-left: 0px;
     padding-right: 0px;
+  }
+
+  .xl\:py-3 {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
   }
 
   .xl\:px-10 {
