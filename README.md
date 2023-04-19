@@ -1,4 +1,4 @@
-# Hermes Protocol - Push Notification Service for Terra & Cosmos blockchains
+# Hermes Protocol - Notification Service for Web3
 Hosted @ https://hermesprotocol.io
 
 This repository serves two purposes:
