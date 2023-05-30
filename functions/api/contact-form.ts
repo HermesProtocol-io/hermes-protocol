@@ -114,8 +114,8 @@ export async function onRequestPost({request, env}) {
 
         const [ userResult, staffResult,  ] = await Promise.all( 
             [
-                fetch("https://api.sendinblue.com/v3/smtp/email", userData).then((r) => handleJsonRequest(r,1)) as any,
-                fetch("https://api.sendinblue.com/v3/smtp/email", staffData).then((r) => handleJsonRequest(r,2)) as any, 
+                fetch("https://api.brevo.com/v3/smtp/email", userData).then((r) => handleJsonRequest(r,1)) as any,
+                fetch("https://api.brevo.com/v3/smtp/email", staffData).then((r) => handleJsonRequest(r,2)) as any, 
             ]
         );
 
