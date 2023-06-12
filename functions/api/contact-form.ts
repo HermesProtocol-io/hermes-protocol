@@ -96,11 +96,11 @@ export async function onRequestPost({request, env}) {
                 "content-type": "application/json"
             }
         },
-            HERMES_CONTACT_FORM_TEMPLATE = 9;
+        HERMES_CONTACT_FORM_TEMPLATE = 9;
 
         const userData = { 
-            ...structuredClone(headerData),
-            body: JSON.stringify(createDataBodyForUser(HERMES_CONTACT_FORM_TEMPLATE, output.email))
+                ...structuredClone(headerData),
+                body: JSON.stringify(createDataBodyForUser(HERMES_CONTACT_FORM_TEMPLATE, output.email))
             },
             staffData = {
                 ...structuredClone(headerData),
