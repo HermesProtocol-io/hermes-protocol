@@ -7,7 +7,7 @@ function handleJsonRequest(r) {
 // address -> terravaloper address
 // shortInfo -> boolean to get full Validator info or not
 async function getTerraValidatorInfo( address, shortInfo ) {
-    const	classicLcd = "columbus-lcd.terra.dev",
+    const	classicLcd = "terra-classic-lcd.publicnode.com",
             phoenixLcd = "phoenix-lcd.terra.dev",
             reqUrl = (isClassic, validatorAddress, getDelegations = false) => {
                 return `https://${isClassic? classicLcd : phoenixLcd}/cosmos/staking/v1beta1/validators/${validatorAddress}${getDelegations? "/delegations?pagination.limit=20000" : ''}`
@@ -20,16 +20,16 @@ async function getTerraValidatorInfo( address, shortInfo ) {
             jsonHeader = { headers: { 'Accept': 'application/json' }};
 
     try {
-        const [classicValidator, phoenixValidator, yearlyStakingReturns] = await Promise.all(
+        const [/*classicValidator,*/ phoenixValidator, yearlyStakingReturns] = await Promise.all(
             [	// Terra
-                fetch(reqUrl(true, address), jsonHeader).then(r => r.json()),
+                /*fetch(reqUrl(true, address), jsonHeader).then(r => r.json()),*/
                 fetch(reqUrl(false, address), jsonHeader).then(r => r.json()),
                 fetch(stakingReturnUrl, jsonHeader).then(r => handleJsonRequest(r)),
             ]
         );
         
-        const network = phoenixValidator?.validator? "terra" : "terraClassic",
-            validator = network === "terraClassic"? classicValidator.validator : phoenixValidator.validator;
+        const network = /*phoenixValidator?.validator?*/ "terra" /*: "terraClassic"*/,
+            validator = /*network === "terraClassic"? classicValidator.validator :*/ phoenixValidator.validator;
 
         if (!validator) {
             console.error('Invalid validator operator address (terravaloper...).');
